@@ -5,6 +5,5 @@
       <slot />
     </div>
     <Footer />
-    <div class="footer-bg" />
   </div>
 </template>
