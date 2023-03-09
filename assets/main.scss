@@ -36,6 +36,10 @@ $bg: #131716;
     line-height: 1.43;
   }
 
+  p.link  {
+    @apply hover:text-primary-500 cursor-pointer transition;
+  }
+
   input[type="text"] {
     @apply box px-3 py-2 outline-none;
   }
