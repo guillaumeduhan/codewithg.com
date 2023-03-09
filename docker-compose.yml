@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  nuxt:
+    build:
+      context: .
+    image: devfrontendschool
+    container_name: devfrontendschool
+    command: npm run dev
+    volumes:
+    - /app
+    - /app/node_modules
+    ports:
+      - "3000:3000"
+      - "24678:24678"
