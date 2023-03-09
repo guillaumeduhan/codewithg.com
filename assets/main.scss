@@ -7,7 +7,7 @@
 $bg: #131716;
 
 @layer base {
-  body {
+  html {
     @apply min-h-screen text-lg text-white;
     font-family: "Sen", sans-serif;
     background-color: $bg;
@@ -15,6 +15,20 @@ $bg: #131716;
     background-size: 100%;
     background-position: top top;
     background-repeat: no-repeat;
+  }
+
+  .footer-bg {
+    z-index: -1;
+    min-width: 100%;
+    min-height: 800px;
+    background-color: $bg;
+    background-image: url("/vue.png");
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    transform: scaleY(-1);
+    position: absolute;
+    bottom: 0px;
   }
 
   h1 {

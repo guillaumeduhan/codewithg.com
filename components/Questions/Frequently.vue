@@ -39,7 +39,7 @@ const questions = [
 </script>
 
 <template>
-  <div class="py-4 mx-auto lg:my-32 QuestionsFrequently">
+  <div class="py-4 mx-auto overflow-auto lg:my-32 QuestionsFrequently">
     <header class="mb-8 text-center">
       <h2 class="text-center">Frequently asked questions</h2>
       <p>Everything you need to know about the product and billing.</p>

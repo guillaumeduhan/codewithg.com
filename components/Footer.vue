@@ -32,7 +32,7 @@ const socials = ref([{
 </script>
 
 <template>
-  <footer class="py-10 mb-8 text-white">
+  <footer class="relative pt-10 pb-24 text-white">
     <div class="container mx-auto mb-8">
       <Logo :hideText="true" class="mb-4" />
       <p class="w-80">A school online to learn webdevelopment & webmarketing.</p>

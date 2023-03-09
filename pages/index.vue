@@ -37,7 +37,7 @@ useHead({
 </script>
 
 <template>
-  <div class="Main">
+  <div class="relative Main">
     <Hero class="mb-32" />
     <CoursesList class="mb-12" />
     <Testimonials />
