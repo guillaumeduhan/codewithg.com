@@ -11,10 +11,11 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxtjs/supabase", "@pinia/nuxt"],
-  // supabase: {
-  //   redirect: {
-  //     login: "/",
-  //     callback: "/profile",
-  //   },
-  // },
+  supabase: {
+    url: "https://jpbegoqdzfcsctsvohia.supabase.co",
+    //   redirect: {
+    //     login: "/",
+    //     callback: "/profile",
+    //   },
+  },
 });
