@@ -2,7 +2,7 @@
 const client = useSupabaseClient();
 
 const state = reactive({
-  loading: true,
+  loading: false,
   disabled: false,
   error: undefined,
   courses: [],
