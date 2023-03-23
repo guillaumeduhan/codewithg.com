@@ -15,7 +15,6 @@ const fetchCourses = async () => {
       .from("courses")
       .select("*")
       .eq('hidden', false)
-      .order("released_at", { ascending: true });
 
     if (courses.length > 0) {
       state.courses = courses;
@@ -27,7 +26,7 @@ const fetchCourses = async () => {
   }
 };
 
-// fetchCourses()
+fetchCourses()
 </script>
 
 <template>

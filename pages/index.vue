@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  middleware: 'signup'
+});
+
 useHead({
   title:
     "Codewithguillaume.com | An online School for Developers | Learn to Code with the Best | Advance Your Career",

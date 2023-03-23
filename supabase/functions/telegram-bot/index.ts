@@ -18,32 +18,21 @@ const handleUpdate = webhookCallback(bot, "std/http");
 console.log(`Bot is running bro!`);
 
 const channel_id = "-1001710117883";
-
 serve(async (req: Request) => {
   try {
-    if (
-      !req.headers.get("supasecret") &&
-      req.headers.get("supasecret") !== Deno.env.get("FUNCTION_SECRET")
-    ) {
-      bot.api.sendMessage(channel_id, "❌ No supasecret.");
-      return new Response("not allowed", { status: 405 });
-    }
+    // if (
+    //   !req.headers.get("supasecret") &&
+    //   req.headers.get("supasecret") !== Deno.env.get("FUNCTION_SECRET")
+    // ) {
+    //   bot.api.sendMessage(channel_id, "❌ No supasecret.");
+    //   return new Response("not allowed", { status: 405 });
+    // }
 
-    let body;
+    let url = new URL(req.url);
 
-    if (req.headers.get("Content-type") === "application/json") {
-      body = await req.json();
-    } else {
-      body = await req.text();
-      body = await JSON.parse(body);
-    }
+    console.log(url);
 
-    if (!body.message) {
-      bot.api.sendMessage(channel_id, "❌ No message.");
-      return new Response("error", { status: 400 });
-    }
-
-    const message = body.message;
+    const message = decodeURIComponent(url.searchParams.get("message") || "");
 
     bot.api.sendMessage(channel_id, message);
 

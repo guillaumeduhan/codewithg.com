@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   alias: {
     "@": "/<srcDir>",
   },
+  app: {
+    head: {
+      script: [{ children: "https://player.vimeo.com/api/player.js" }],
+    },
+  },
   css: ["~/assets/main.scss"],
   postcss: {
     plugins: {
@@ -17,5 +22,11 @@ export default defineNuxtConfig({
     //     login: "/",
     //     callback: "/profile",
     //   },
+  },
+  runtimeConfig: {
+    public: {
+      SUPABASE_SECRET: process.env.SUPABASE_SECRET,
+      SUPABASE_SERVICE_KEY: process.env.SUPABASE_SERVICE_KEY,
+    },
   },
 });
