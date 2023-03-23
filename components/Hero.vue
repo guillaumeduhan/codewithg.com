@@ -11,7 +11,7 @@
       Level up your skills on development & marketing.
     </p>
     <div class="mx-auto overflow-hidden bg-slate-500/10 rounded-xl"
-      style="width: 800px; height: 450px;position:relative;"><iframe
+      style="max-width: 800px; height: 450px; position:relative;"><iframe
         src="https://player.vimeo.com/video/809862220?h=f6c506eec6&amp;badge=0&amp;autoplay=1&amp;player_id=0&amp;app_id=58479"
         frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
         style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Welcome to codewithguillaume.com"></iframe>
