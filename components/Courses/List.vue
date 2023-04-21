@@ -26,7 +26,7 @@ const fetchCourses = async () => {
   }
 };
 
-fetchCourses()
+// fetchCourses()
 </script>
 
 <template>

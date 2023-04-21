@@ -62,8 +62,6 @@ serve(async (request: any) => {
 
   // there are 4 events, we want to catch only 1 to record only 1 order
   if (type === "checkout.session.completed") {
-    console.log("okay celui-là c'est bon");
-    console.log("--------------------------------");
     const { object } = receivedEvent.data;
     const { id, customer_details, amount_total, metadata, payment_intent } =
       object;

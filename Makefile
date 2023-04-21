@@ -12,7 +12,7 @@ secret-new-order:
 	supabase secrets set --env-file ./supabase/functions/new-order/.env
 
 deploy-new-order:
-	supabase functions deploy --no-verify-jwt new-order --legacy-bundle
+	supabase functions deploy --no-verify-jwt new-order 
 
 sl:
 	stripe listen --forward-to localhost:54321/functions/v1/
