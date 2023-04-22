@@ -23,7 +23,7 @@ const course = props.course;
         Coming soon
       </div>
     </div>
-    <img v-if="course.img_url" :src="course.img_url" class="mb-4" />
+    <img v-if="course.img" :src="course.img" class="mb-4" />
     <div v-else class="w-full h-40 mb-4 rounded-lg loading" />
     <div>
       <h3 v-if="course.title">{{ course.title }}</h3>
