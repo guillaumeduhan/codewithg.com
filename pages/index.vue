@@ -42,7 +42,7 @@ useHead({
 
 <template>
   <div class="relative Main">
-    <Hero class="mb-32" />
+    <Hero class="mb-24" />
     <CoursesList class="mb-12" />
     <Testimonials />
     <QuestionsFrequently />
