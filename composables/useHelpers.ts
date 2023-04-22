@@ -1,4 +1,4 @@
-import courses from "../public/courses.json";
+import courses from "../static/courses.json";
 
 export const useHelpers = () => {
   const openUrl = (url: string) => window.open(url, "_blank");
