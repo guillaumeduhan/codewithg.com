@@ -16,9 +16,9 @@ const user = useSupabaseUser()
         <Avatar :email="user.email" class="cursor-pointer" @click="$router.push('/profile')" />
       </div>
       <div v-else>
-        <button class="btn btn-primary" @click="$router.push('/login')">
+        <!-- <button class="btn btn-primary" @click="$router.push('/login')">
           {{ $t("general.login") }}
-        </button>
+        </button> -->
       </div>
     </div>
   </div>
