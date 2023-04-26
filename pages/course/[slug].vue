@@ -1,7 +1,12 @@
-<script setup>
-// const route = useRoute();
-// const slug = route.params.slug;
-// const client = useSupabaseClient();
+<script setup lang="ts">
+const route = useRoute();
+const client = useSupabaseClient();
+const slug = route.params.slug;
+const { courses } = useHelpers()
+
+const getCourse = computed(() => {
+  return courses.find(x => x.slug === slug)
+})
 
 // const state = reactive({
 //   loading: false,
@@ -40,25 +45,28 @@
 // await fetchCourse();
 
 useHead({
-  title: course?.title || "This course does not exist.",
-  description: course?.description || "This course does not exist.",
+  title: getCourse.title || "This course does not exist.",
+  description: getCourse.description || "This course does not exist.",
 });
 </script>
 
 <template>
-  <div class="container" v-if="course">
-    <!-- <LoadingSlug v-if="state.loading" />
-    <div v-else class="mx-auto slug" style="max-width: 900px;">
-      <img :src="course.img_url" class="w-full mb-4" />
-      <h2 v-if="course.title">{{ course.title }}</h2>
-      <p class="mb-4 description" v-if="course.description">
-        {{ course.description }}
+  <div class="container">
+    {{ getCourse }}
+    <header class="container px-2 mx-auto my-6">
+      <h1 v-if="getCourse.title" class="mb-2 text-center">
+        {{ getCourse.title }}
+      </h1>
+      <p v-if="getCourse.description" class="mx-auto text-xl text-center description" style="max-width: 800px">
+        {{ getCourse.description }}
       </p>
-      <div v-if="state.loading">
-        <div class="w-full mx-auto mb-4 loading rounded-xl" style="height: 340px" />
-        <div class="w-full h-12 mb-4 w-72 loading rounded-xl" />
+      <div v-if="getCourse.vimeo_url" class="mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
+        style="max-width: 900px; height: 515px; position:relative;"><iframe :src="getCourse.vimeo_url" frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          title="Welcome to codewithguillaume.com"></iframe>
       </div>
-    </div> -->
+    </header>
   </div>
 </template>
 

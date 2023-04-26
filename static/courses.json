@@ -1,12 +1,10 @@
-{
-  "8d953dc4-8649-42c5-90ba-f36d4ccebfe8": {
-    "id": "8d953dc4-8649-42c5-90ba-f36d4ccebfe8",
-    "title": "Build a SaaS with Nuxt, Supabase & Stripe",
+[{
+    "title": "Build a SaaS — Nuxt, Supabase & Stripe",
     "price": 99,
     "description": "We'll create a complete app with payment system with Nuxt 3, Supabase, Stripe & ChatGPT.",
     "img": "https://jpbegoqdzfcsctsvohia.supabase.co/storage/v1/object/public/courses/nuxt3.png",
     "slug": "nuxt3-supabase-stripe-chatgpt",
-    "level": "beginner",
-    "stripe_url": ""
-  }
-}
+    "level": "advanced",
+    "vimeo_url": "https://vimeo.com/codewithguillaume/nuxt-supabase-intro?share=copy",
+    "stripe_url": "https://buy.stripe.com/9AQ8z8dCL0oZ2BidQS"
+  }]

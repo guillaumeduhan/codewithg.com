@@ -8,11 +8,11 @@ const user = useSupabaseUser()
     <div class="flex items-center justify-end">
       <div v-if="user" class="flex items-center justify-center">
         <button class="btn btn-info" @click="$router.push('/courses')">
-          Courses
+          My courses
         </button>
-        <button class="btn btn-info" @click="$router.push('/community')">
+        <!-- <button class="btn btn-info" @click="$router.push('/community')">
           Community
-        </button>
+        </button> -->
         <Avatar :email="user.email" class="cursor-pointer" @click="$router.push('/profile')" />
       </div>
       <div v-else>
