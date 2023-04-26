@@ -1,6 +1,11 @@
 <script setup>
 const client = useSupabaseAuthClient()
 
+useHead({
+  title: "Login to codewithguillaume.com",
+  description: "Page to login or to create an account on codewithguillaume.com."
+})
+
 const state = reactive({
   loading: false,
   status: undefined,
