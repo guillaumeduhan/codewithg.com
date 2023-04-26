@@ -51,7 +51,7 @@ useHead({
 </script>
 
 <template>
-  <div class="container">
+  <div class="container course">
     <header class="container px-2 mx-auto my-6">
       <h1 v-if="getCourse.title" class="mb-2 text-center">
         {{ getCourse.title }}
@@ -60,10 +60,11 @@ useHead({
         {{ getCourse.description }}
       </p>
       <div v-if="getCourse.vimeo_url" class="mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
-        style="max-width: 900px; height: 515px; position:relative;"><iframe :src="getCourse.vimeo_url" frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-          style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          title="Welcome to codewithguillaume.com"></iframe>
+        style="max-width: 900px; height: 515px; position:relative;">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+            src="https://player.vimeo.com/video/821197744?h=0916683e32&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Intro"></iframe></div>
       </div>
     </header>
   </div>
