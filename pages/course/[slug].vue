@@ -59,14 +59,19 @@ useHead({
       <p v-if="getCourse.description" class="mx-auto text-xl text-center description" style="max-width: 800px">
         {{ getCourse.description }}
       </p>
-      <div v-if="getCourse.vimeo_url" class="mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
+      <div v-if="getCourse.vimeo_url" class="relative mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
         style="max-width: 900px; height: 515px; position:relative;">
-        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
-            src="https://player.vimeo.com/video/821197744?h=0916683e32&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Intro"></iframe></div>
+        <iframe
+          src="https://player.vimeo.com/video/821197744?h=0916683e32&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Intro"></iframe>
       </div>
     </header>
+    <div class="flex items-center justify-center">
+      <button class="btn btn-primary">
+        Buy for ${{ getCourse.price }}
+      </button>
+    </div>
   </div>
 </template>
 

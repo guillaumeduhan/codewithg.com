@@ -5,10 +5,11 @@ const state = reactive({
   loading: false,
   status: undefined,
   message: undefined,
-  email: "guillaume@yopmail.com"
+  email: undefined
 });
 
 const sendEmail = async () => {
+  if (!state.email) return alert("Please enter an email")
   try {
     state.loading = true
     let { data, error } = await client.auth.signInWithOtp({
