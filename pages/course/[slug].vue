@@ -52,7 +52,6 @@ useHead({
 
 <template>
   <div class="container">
-    {{ getCourse }}
     <header class="container px-2 mx-auto my-6">
       <h1 v-if="getCourse.title" class="mb-2 text-center">
         {{ getCourse.title }}
