@@ -68,9 +68,9 @@ useHead({
       </div>
     </header>
     <div class="flex items-center justify-center">
-      <button class="btn btn-primary">
+      <!-- <button class="btn btn-primary">
         Buy for ${{ getCourse.price }}
-      </button>
+      </button> -->
     </div>
   </div>
 </template>
