@@ -1,25 +1,15 @@
 <script setup>
-import dayjs from "dayjs";
-
-const props = defineProps(["course"]);
+const props = defineProps(["course", "price"]);
 const course = props.course;
 </script>
 
 <template>
-  <div
-    class="relative mb-4 transition cursor-pointer CoursesItem hover:opacity-80"
-  >
+  <div class="relative mb-4 transition cursor-pointer CoursesItem hover:opacity-80">
     <div class="absolute top-0 z-50 flex items-center m-3">
-      <div
-        class="mr-2 text-white label bg-sky-500"
-        v-if="course.new"
-      >
+      <div class="mr-2 text-white label bg-sky-500" v-if="course.new">
         New
       </div>
-      <div
-        class="text-white bg-purple-500 label"
-        v-if="course.coming_soon"
-      >
+      <div class="text-white bg-purple-500 label" v-if="course.coming_soon">
         Coming soon
       </div>
     </div>
@@ -30,7 +20,7 @@ const course = props.course;
       <p v-if="course.description" class="mb-2 text-base description">
         {{ course.description }}
       </p>
-      <p>${{ course.price }}</p>
+      <p v-if="props.price">${{ course.price }}</p>
     </div>
   </div>
 </template>

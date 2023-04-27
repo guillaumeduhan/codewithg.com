@@ -4,12 +4,19 @@ const client = useSupabaseClient();
 const slug = route.params.slug;
 const { openUrl, courses } = useHelpers()
 
+const state = reactive({
+  loading: true,
+  disabled: false,
+  error: undefined
+})
+
 const getCourse = computed(() => {
   return courses.find(x => x.slug === slug)
 })
 
-
-// Fetcher si j'ai le cours, si oui afficher la vidéo et supprimer le bouton acheter
+// TODO: Fetcher si j'ai le cours, si oui afficher la vidéo et supprimer le bouton acheter
+// TODO: 
+// si je ne suis pas connecté, je dois d'abord me connecter
 
 // const state = reactive({
 //   loading: false,
@@ -53,7 +60,6 @@ useHead({
 });
 
 const checkUrl = () => {
-  // si je ne suis pas connecté, je dois d'abord me connecter
   openUrl(getCourse.value.stripe_url)
 }
 </script>
@@ -70,18 +76,22 @@ const checkUrl = () => {
       <div v-if="getCourse.level" class="flex items-center justify-center mt-4">
         <div :class="`label label--level`">{{ getCourse.level.toUpperCase() }}</div>
       </div>
+    </header>
+    <LoadingSlug v-if="state.loading" />
+    <div v-else>
       <div v-if="getCourse.trailer_url" class="relative mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
         style="max-width: 900px; height: 515px; position:relative;">
         <iframe
           src="https://player.vimeo.com/video/821197744?h=0916683e32&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-          style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Intro"></iframe>
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          title="Introduction to Nuxt 3, Supabase &amp;amp; Stripe course"></iframe>
       </div>
-    </header>
-    <div class="flex items-center justify-center">
-      <button class="btn btn-primary" @click="checkUrl">
-        Buy for ${{ getCourse.price }}
-      </button>
+      <div class="flex items-center justify-center">
+        <button class="btn btn-primary" @click="checkUrl">
+          Buy for ${{ getCourse.price }}
+        </button>
+      </div>
     </div>
   </div>
 </template>

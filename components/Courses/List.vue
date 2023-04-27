@@ -20,7 +20,7 @@ const getCourses = computed(() => {
 <template>
   <div class="container CoursesList">
     <div class="grid gap-8 lg:grid-cols-3">
-      <CoursesItem v-for="(course, index) in getCourses" :key="index" :course="course"
+      <CoursesItem v-for="(course, index) in getCourses" :key="index" :course="course" :price="!props.orders"
         @click="$router.push(`/course/${course.slug}`)" />
     </div>
   </div>
