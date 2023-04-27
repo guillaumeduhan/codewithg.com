@@ -4,69 +4,23 @@ const client = useSupabaseClient();
 const slug = route.params.slug;
 const { openUrl, courses } = useHelpers()
 
-const state = reactive({
-  loading: true,
-  disabled: false,
-  error: undefined
-})
-
 const getCourse = computed(() => {
   return courses.find(x => x.slug === slug)
 })
 
-// TODO: Fetcher si j'ai le cours, si oui afficher la vidéo et supprimer le bouton acheter
-// TODO: 
-// si je ne suis pas connecté, je dois d'abord me connecter
-
-// const state = reactive({
-//   loading: false,
-//   disabled: false,
-//   error: undefined,
-//   course: undefined,
-// });
-
-// let course = reactive({});
-
-// const fetchCourse = async () => {
-//   if (!slug) {
-//     return (state.error = "This course does not exist.");
-//   }
-//   try {
-//     state.loading = true;
-
-//     // fetch l'order
-//     let { data, error } = await client
-//       .from("courses")
-//       .select(`
-//         *
-//       `)
-//       .eq("slug", slug)
-//       .single();
-
-//     if (course) course = data;
-//     if (error) state.error = error;
-//   } catch (error) {
-//     console.log(error);
-//   } finally {
-//     state.loading = false;
-//   }
-// };
-
-// await fetchCourse();
-
 useHead({
-  title: getCourse.title,
-  description: getCourse.description,
+  title: getCourse.value?.title
 });
 
 const checkUrl = () => {
+  if (!getCourse.value) return
   openUrl(getCourse.value.stripe_url)
 }
 </script>
 
 <template>
   <div class="container course">
-    <header class="container px-2 mx-auto my-6">
+    <header v-if="getCourse" class="container px-2 mx-auto my-6">
       <h1 v-if="getCourse.title" class="mb-2 text-center">
         {{ getCourse.title }}
       </h1>
@@ -77,8 +31,7 @@ const checkUrl = () => {
         <div :class="`label label--level`">{{ getCourse.level.toUpperCase() }}</div>
       </div>
     </header>
-    <LoadingSlug v-if="state.loading" />
-    <div v-else>
+    <div v-if="getCourse">
       <div v-if="getCourse.trailer_url" class="relative mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
         style="max-width: 900px; height: 515px; position:relative;">
         <iframe
