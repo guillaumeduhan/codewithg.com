@@ -43,13 +43,13 @@ onMounted(async () => {
           title="Introduction to Nuxt 3, Supabase &amp;amp; Stripe course"></iframe>
       </div>
       <SlugHeader v-if="getCourse && getCourse.vimeo_url" :course="getCourse" />
-      <div class="flex items-center justify-center">
+      <!-- <div class="flex items-center justify-center">
         <button v-if="getCourse.vimeo_url" class="btn btn-primary" @click="openUrl(getCourse.tally_url)">Ask me a
           question</button>
         <button v-else class="btn btn-primary" @click="checkUrl">
           Buy for ${{ getCourse.price }}
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
