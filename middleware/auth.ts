@@ -3,6 +3,4 @@ export default defineNuxtRouteMiddleware(async (to, _from) => {
   if (!user.value) {
     return navigateTo("/login");
   }
-  const { fetchOrders } = useSupabase() as any;
-  await fetchOrders();
 });

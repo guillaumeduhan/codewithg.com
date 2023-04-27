@@ -5,7 +5,7 @@ export function useStore() {
   const ordersStore = useOrders();
 
   const { setOrders } = ordersStore;
-  const { getOrders } = storeToRefs(ordersStore);
+  const { getOrders, getOrdersCourses } = storeToRefs(ordersStore);
 
-  return { getOrders, setOrders };
+  return { getOrders, getOrdersCourses, setOrders };
 }

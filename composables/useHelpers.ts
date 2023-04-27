@@ -3,8 +3,19 @@ import courses from "../static/courses.json";
 export const useHelpers = () => {
   const openUrl = (url: string) => window.open(url, "_blank");
 
+  const formatCourse = (localCourse: any, order: any) => {
+    const { courses, id, ...rest } = order;
+    return {
+      order_id: id,
+      vimeo_url: courses.vimeo_url,
+      ...rest,
+      ...localCourse,
+    };
+  };
+
   return {
-    openUrl,
     courses,
+    formatCourse,
+    openUrl,
   };
 };
