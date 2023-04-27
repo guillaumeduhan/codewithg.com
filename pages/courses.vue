@@ -12,19 +12,19 @@ const state = reactive({
   orders: []
 })
 
-// fetch orders then courses
-
 const fetchOrders = async () => {
   if (!user.value.email) return
   try {
     state.loading = true
-    let { data, error } = await client
+    let { data } = await client
       .from('orders')
-      .select()
+      .select(`*, courses (
+        *
+      )`)
       .eq('email', user.value.email)
 
     if (data) {
-      state.orders.push([...data])
+      state.orders = data
     }
   } catch (error) {
     console.log(error)
@@ -42,14 +42,16 @@ onMounted(() => {
   <div class="container my-6 Community">
     <header class="mb-8 text-center">
       <h2>Courses</h2>
-      <p class="text-center">Your course list.</p>
+      <p class="text-center">Your courses list.</p>
     </header>
-    <p>{{ state.orders }}</p>
-    <div class="text-center user-card">You have no course yet.</div>
-    <div class="my-12 suggestions">
+    <div v-if="!state.loading && state.orders.length > 0">
+      <CoursesList class="my-8" :orders="state.orders" />
+    </div>
+    <div v-else class="text-center user-card">You have no course yet.</div>
+    <!-- <div class="my-12 suggestions">
       <h3>You may be interested by...</h3>
       <CoursesList class="my-8" />
-    </div>
+    </div> -->
   </div>
 </template>
 

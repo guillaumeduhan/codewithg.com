@@ -7,8 +7,6 @@ const router = useRouter()
 const client = useSupabaseAuthClient()
 const user = useSupabaseUser()
 
-const { getOrders } = useStore()
-
 const logout = () => {
   client.auth.signOut()
   router.push('/')
@@ -36,7 +34,8 @@ const badges = [{
 }]
 
 const getCurrentBadge = computed(() => {
-  const length = getOrders.value.length
+  return
+  // const length = getOrders.value.length
   if (!length) {
     return badges[0]
   }
@@ -60,7 +59,7 @@ const getCurrentBadge = computed(() => {
       <div class="mb-12">
         <Avatar :email="user.email" class="mb-4" />
         <p class="mb-4 text-white">{{ user.email }}</p>
-        <div class="mb-8 member">
+        <!-- <div class="mb-8 member">
           <p class="mb-4 wavy">Current badge</p>
           <div v-if="getCurrentBadge" class="flex items-center mx-auto cursor-pointer badge" style="max-width: 600px;">
             <div class="mr-6 overflow-hidden rounded-full"
@@ -71,7 +70,7 @@ const getCurrentBadge = computed(() => {
               <p class="text-sm">{{ getCurrentBadge.icon }}.</p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div>
         <button class="btn btn-primary" @click="logout">Logout</button>
