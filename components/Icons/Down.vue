@@ -6,9 +6,3 @@
       clipRule="evenodd"></path>
   </svg>
 </template>
-
-<script lang="ts">
-export default {
-  name: 'GgArrowLongDownC'
-}
-</script>

@@ -12,9 +12,3 @@
     ></path>
   </svg>
 </template>
-
-<script>
-export default {
-  name: "IcOutlineSubdirectoryArrowRight",
-};
-</script>
