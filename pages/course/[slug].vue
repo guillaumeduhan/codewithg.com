@@ -4,6 +4,10 @@ const client = useSupabaseClient();
 const slug = route.params.slug;
 const { openUrl, courses } = useHelpers()
 
+const { getOrders } = useStore()
+
+console.log(getOrders.value)
+
 const getCourse = computed(() => {
   return courses.find(x => x.slug === slug)
 })
