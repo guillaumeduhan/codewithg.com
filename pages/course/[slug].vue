@@ -2,11 +2,14 @@
 const route = useRoute();
 const client = useSupabaseClient();
 const slug = route.params.slug;
-const { courses } = useHelpers()
+const { openUrl, courses } = useHelpers()
 
 const getCourse = computed(() => {
   return courses.find(x => x.slug === slug)
 })
+
+
+// Fetcher si j'ai le cours, si oui afficher la vidéo et supprimer le bouton acheter
 
 // const state = reactive({
 //   loading: false,
@@ -48,6 +51,11 @@ useHead({
   title: getCourse.title,
   description: getCourse.description,
 });
+
+const checkUrl = () => {
+  // si je ne suis pas connecté, je dois d'abord me connecter
+  openUrl(getCourse.value.stripe_url)
+}
 </script>
 
 <template>
@@ -59,6 +67,9 @@ useHead({
       <p v-if="getCourse.description" class="mx-auto text-xl text-center description" style="max-width: 800px">
         {{ getCourse.description }}
       </p>
+      <div v-if="getCourse.level" class="flex items-center justify-center mt-4">
+        <div :class="`label label--level`">{{ getCourse.level.toUpperCase() }}</div>
+      </div>
       <div v-if="getCourse.trailer_url" class="relative mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
         style="max-width: 900px; height: 515px; position:relative;">
         <iframe
@@ -68,7 +79,7 @@ useHead({
       </div>
     </header>
     <div class="flex items-center justify-center">
-      <button class="btn btn-primary">
+      <button class="btn btn-primary" @click="checkUrl">
         Buy for ${{ getCourse.price }}
       </button>
     </div>
