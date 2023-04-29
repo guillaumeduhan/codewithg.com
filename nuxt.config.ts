@@ -5,7 +5,14 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      script: [{ children: "https://player.vimeo.com/api/player.js" }],
+      script: [
+        { src: "https://player.vimeo.com/api/player.js" },
+        {
+          src: "https://plausible.io/js/script.js",
+          defer: true,
+          "data-domain": "codewithguillaume.com",
+        },
+      ],
     },
   },
   css: ["~/assets/main.scss"],
