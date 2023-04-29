@@ -7,7 +7,7 @@ const supUrl = Deno.env.get("_SUPABASE_URL") as string;
 const supKey = Deno.env.get("_SUPABASE_SERVICE_KEY") as string;
 const supabase = createClient(supUrl, supKey);
 
-const stripe = new Stripe(Deno.env.get("STRIPE_API_KEY") as string, {
+const stripe = new Stripe(Deno.env.get("STRIPE_API_KEY_TEST") as string, {
   apiVersion: "2022-11-15",
   httpClient: Stripe.createFetchHttpClient(),
 });
@@ -29,7 +29,8 @@ const sendMessage = async (msg: string) => {
   //   }),
   // });
   await fetch(
-    `https://jpbegoqdzfcsctsvohia.functions.supabase.co/telegram-bot?message=${msg}`
+    `https://jpbegoqdzfcsctsvohia.functions.supabase.co/telegram-bot?message=${msg}`,
+    { headers }
   )
     .then((response) => {
       if (!response.ok) {
@@ -69,6 +70,7 @@ serve(async (request: any) => {
       cryptoProvider
     );
   } catch (err) {
+    console.log(err);
     message = `❌ Impossible de construire l'appel Stripe.`;
     console.log(message);
     await sendMessage(message);
@@ -78,7 +80,7 @@ serve(async (request: any) => {
   const { type } = receivedEvent;
 
   if (!type) {
-    message = `❌ Pas de type reçue de l'event.`;
+    message = `❌ Pas de type reçu de l'event.`;
     console.log(message);
     await sendMessage(message);
     return new Response(message, {
