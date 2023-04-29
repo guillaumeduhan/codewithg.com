@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std/http/server.ts";
 
-import Stripe from "https://esm.sh/stripe@11.8.0?target=deno";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.0";
+import Stripe from "https://esm.sh/stripe@11.8.0?target=deno&target=deno&no-check";
 
 const supUrl = Deno.env.get("_SUPABASE_URL") as string;
 const supKey = Deno.env.get("_SUPABASE_SERVICE_KEY") as string;
@@ -21,13 +21,24 @@ const headers = {
   Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs`,
 };
 
-const sendMessage = async (message: string) => {
-  return await supabase.functions.invoke("telegram-bot", {
-    headers,
-    body: JSON.stringify({
-      message,
-    }),
-  });
+const sendMessage = async (msg: string) => {
+  // return await supabase.functions.invoke("telegram-bot", {
+  //   headers,
+  //   body: JSON.stringify({
+  //     message: msg,
+  //   }),
+  // });
+  await fetch(
+    `https://jpbegoqdzfcsctsvohia.functions.supabase.co/telegram-bot?message=${msg}`
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => console.log(data))
+    .catch((error) => error);
 };
 
 serve(async (request: any) => {
@@ -40,8 +51,13 @@ serve(async (request: any) => {
 
   if (!body) {
     message = `❌ Body n'a pas été transformé en text.`;
-    await sendMessage(message);
-    return new Response(message, { status: 400 });
+    console.log(message);
+    await sendMessage(
+      `❌ Tentative de paiement échouée: body n'a pas été complété.`
+    );
+    return new Response(message, {
+      status: 400,
+    });
   }
   let receivedEvent;
   try {
@@ -54,11 +70,21 @@ serve(async (request: any) => {
     );
   } catch (err) {
     message = `❌ Impossible de construire l'appel Stripe.`;
+    console.log(message);
     await sendMessage(message);
     return new Response(message, { status: 400 });
   }
 
   const { type } = receivedEvent;
+
+  if (!type) {
+    message = `❌ Pas de type reçue de l'event.`;
+    console.log(message);
+    await sendMessage(message);
+    return new Response(message, {
+      status: 400,
+    });
+  }
 
   // there are 4 events, we want to catch only 1 to record only 1 order
   if (type === "checkout.session.completed") {
@@ -73,7 +99,8 @@ serve(async (request: any) => {
       !metadata &&
       !payment_intent
     ) {
-      let message = `❌ Modèle incomplet pour continuer.`;
+      message = `❌ Modèle incomplet pour continuer.`;
+      console.log(message);
       await sendMessage(message);
       return new Response(message, { status: 400 });
     }
@@ -88,12 +115,14 @@ serve(async (request: any) => {
     let { error } = await supabase.from("orders").insert(new_order);
 
     if (error) {
-      let message = `❌ Erreur enregistrement Supabase commande: ${id}`;
+      message = `❌ Erreur enregistrement Supabase commande: ${id}`;
+      console.log(message);
       await sendMessage(message);
       return new Response(message, { status: 400 });
     }
 
     message = `💶 ${new_order.amount}€ — ${new_order.email}`;
+    console.log(message);
     await sendMessage(message);
 
     return new Response(message, { status: 200 });
@@ -101,7 +130,7 @@ serve(async (request: any) => {
 
   // message =
   //   "❌ Transaction inhabituelle, sans entrer dans checkout.session.completed. Checker Stripe!";
+  // console.log(message);
   // await sendMessage(message);
-
   return new Response(message, { status: 400 });
 });

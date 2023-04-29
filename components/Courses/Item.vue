@@ -20,7 +20,7 @@ const course = props.course;
       <p v-if="course.description" class="mb-2 text-base description">
         {{ course.description }}
       </p>
-      <!-- <p v-if="props.price">${{ course.price }}</p> -->
+      <p v-if="props.price">${{ course.price }}</p>
     </div>
   </div>
 </template>
