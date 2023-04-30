@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  middleware: 'default',
+  middleware: 'auth',
   layout: 'school'
 })
 const router = useRouter()
