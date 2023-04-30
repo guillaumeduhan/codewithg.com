@@ -83,6 +83,7 @@ serve(async (request: any) => {
       status: 400,
     });
   }
+  console.log(type);
 
   if (type === "checkout.session.completed") {
     const { object } = receivedEvent.data;

@@ -1,8 +1,17 @@
+import dayjs from "dayjs";
 import community from "../static/community.json";
 import courses from "../static/courses.json";
 
 export const useHelpers = () => {
   const openUrl = (url: string) => window.open(url, "_blank");
+
+  const getDaysDiff = (dateString: string) => {
+    const today = dayjs();
+    const otherDate = dayjs(dateString, "YYYY-MM-DD");
+    console.log(otherDate);
+    const diff = otherDate.diff(today, "day");
+    return diff;
+  };
 
   const formatCourse = (localCourse: any, order: any) => {
     const { courses, id, ...rest } = order;
@@ -17,6 +26,7 @@ export const useHelpers = () => {
   return {
     courses,
     community,
+    getDaysDiff,
     formatCourse,
     openUrl,
   };

@@ -1,6 +1,8 @@
 <script setup>
 const props = defineProps(["course", "price"]);
 const course = props.course;
+
+const { getDaysDiff } = useHelpers();
 </script>
 
 <template>
@@ -20,7 +22,10 @@ const course = props.course;
       <p v-if="course.description" class="mb-2 text-base description">
         {{ course.description }}
       </p>
-      <p v-if="props.price">${{ course.price }}</p>
+      <p v-if="props.price" class="text-xl font-bold"><span class="mr-2 text-primary-500">${{ course.price }}</span> —
+        <span class="text-sm">{{ getDaysDiff(course.promo_until) }}
+          days left then $99.</span>
+      </p>
     </div>
   </div>
 </template>

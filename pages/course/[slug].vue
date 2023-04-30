@@ -1,11 +1,10 @@
 <script setup>
-import dayjs from 'dayjs';
 
 const route = useRoute();
 const slug = route.params.slug;
 const { getOrdersCourses } = useStore();
 const { fetchOrders } = useSupabase();
-const { openUrl, courses } = useHelpers()
+const { openUrl, courses, getDaysDiff } = useHelpers()
 
 let loading = ref(false);
 
@@ -20,14 +19,6 @@ const getCourse = computed(() => {
   }
   return courses.find(x => x.slug === slug)
 })
-
-const getDaysDiff = (dateString) => {
-  const today = dayjs();
-  const otherDate = dayjs(dateString, 'YYYY-MM-DD');
-  console.log(otherDate)
-  const diff = otherDate.diff(today, 'day');
-  return diff;
-}
 
 useHead({
   title: getCourse.value?.title
@@ -60,9 +51,7 @@ onMounted(async () => {
           <button class="mb-3 btn btn-primary" @click="checkUrl">
             Buy for ${{ getCourse.price }}
           </button>
-          <div class="text-xs alert alert-success">You have {{ getDaysDiff(getCourse.promo_until) }} days left to take
-            advantage of the price of $69 instead of
-            $99.</div>
+          <div class="text-xs alert alert-success">{{ getDaysDiff(getCourse.promo_until) }} days left then $99.</div>
         </div>
       </div>
     </div>
