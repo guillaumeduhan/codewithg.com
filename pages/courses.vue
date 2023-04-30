@@ -6,6 +6,8 @@ definePageMeta({
 
 let loading = ref(false);
 
+const { openUrl } = useHelpers();
+
 const { getOrders } = useStore();
 
 const { fetchOrders } = useSupabase();
@@ -23,11 +25,14 @@ onMounted(async () => {
       <h2>Courses</h2>
       <p class="text-center">Your courses list.</p>
     </header>
-    <div>
-      <div v-if="getOrders.length > 0">
+    <div v-if="!loading">
+      <div v-if="getOrders && getOrders.length > 0">
         <CoursesList class="my-8" :orders="getOrders" />
       </div>
-      <div v-else class="text-center user-card">You have no course yet.</div>
+      <div v-else class="pt-6 pb-8 text-center user-card">
+        <p class="mb-4 text-white">You have no course yet.</p>
+        <button class="btn btn-primary" @click="openUrl('https://tally.so/r/nGeW4p')">I don't see my course</button>
+      </div>
       <!-- <div class="my-12 suggestions">
       <h3>You may be interested by...</h3>
       <CoursesList class="my-8" />
