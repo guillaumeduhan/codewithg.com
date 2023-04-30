@@ -1,5 +1,7 @@
-<script setup>
-const { user } = useSupabaseUser()
+<script setup lang="ts">
+const user = useSupabaseUser()
+
+console.log(user)
 </script>
 
 <template>
