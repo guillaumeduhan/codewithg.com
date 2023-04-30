@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/supabase", "@pinia/nuxt"],
   supabase: {
     url: process.env.SUPABASE_URL,
-    key: process.env.SUPABASE_KEY,
+    key: process.env.SUPABASE_API_KEY,
     //   redirect: {
     //     login: "/",
     //     callback: "/profile",
