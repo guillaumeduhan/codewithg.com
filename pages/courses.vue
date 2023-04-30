@@ -4,7 +4,17 @@ definePageMeta({
   layout: "school",
 });
 
+let loading = ref(false);
+
 const { getOrders } = useStore();
+
+const { fetchOrders } = useSupabase();
+
+onMounted(async () => {
+  loading.value = true;
+  await fetchOrders();
+  loading.value = false;
+})
 </script>
 
 <template>
