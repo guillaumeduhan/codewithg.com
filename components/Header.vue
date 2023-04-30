@@ -1,8 +1,10 @@
 <script setup lang="ts">
 const user = useSupabaseUser()
 
-console.log("Header")
-console.log(user.value)
+watch(user, () => {
+  console.log("Header")
+  console.log(user.value)
+})
 </script>
 
 <template>
