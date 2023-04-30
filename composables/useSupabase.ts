@@ -1,16 +1,15 @@
-export const useSupabase = async () => {
+export const useSupabase = () => {
   const supabase = useSupabaseAuthClient();
   const client = useSupabaseClient();
   let user = ref<any | null>(null);
   const { setOrders } = useStore();
 
-  const response = await supabase.auth.getUser();
-  if (response) {
-    const { data } = response;
-    user.value = data.user;
-  }
-
   const fetchOrders = async () => {
+    const response = await supabase.auth.getUser();
+    if (response) {
+      const { data } = response;
+      user.value = data.user;
+    }
     if (!user.value) return;
     try {
       const { data } = await client
