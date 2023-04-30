@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  middleware: "auth",
+  middleware: "default",
   layout: "school",
 });
 

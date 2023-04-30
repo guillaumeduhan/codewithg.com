@@ -9,7 +9,6 @@ export const useHelpers = () => {
     if (!dayjs) return;
     const today = dayjs();
     const otherDate = dayjs(dateString, "YYYY-MM-DD");
-    console.log(otherDate);
     const diff = otherDate.diff(today, "day");
     return diff;
   };

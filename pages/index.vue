@@ -1,4 +1,9 @@
 <script setup>
+definePageMeta({
+  middleware: "default",
+  layout: "school",
+});
+
 useHead({
   title:
     "Codewithguillaume.com | An online School for Developers | Learn to Code with the Best | Advance Your Career",
