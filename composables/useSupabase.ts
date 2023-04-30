@@ -10,14 +10,14 @@ export const useSupabase = () => {
         .from("orders")
         .select(
           `*,
-        courses (
-        *
-        )`
+          courses (
+            *
+          )`
         )
         .eq("email", user.value.email);
 
+      console.log(data);
       if (data) {
-        console.log(data);
         setOrders(data);
         return data;
       }
