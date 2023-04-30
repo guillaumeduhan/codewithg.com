@@ -5,7 +5,6 @@ definePageMeta({
 })
 
 const { openUrl, community } = useHelpers()
-const { user } = useSupabaseUser()
 </script>
 
 <template>
