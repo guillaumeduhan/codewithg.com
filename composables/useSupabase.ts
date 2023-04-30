@@ -1,7 +1,14 @@
-export const useSupabase = () => {
+export const useSupabase = async () => {
+  const supabase = useSupabaseAuthClient();
   const client = useSupabaseClient();
-  const user = useSupabaseUser();
+  let user = ref<any | null>(null);
   const { setOrders } = useStore();
+
+  const response = await supabase.auth.getUser();
+  if (response) {
+    const { data } = response;
+    user.value = data.user;
+  }
 
   const fetchOrders = async () => {
     if (!user.value) return;
