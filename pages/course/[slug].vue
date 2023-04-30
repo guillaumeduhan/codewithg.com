@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  layout: "school"
+})
+
 const route = useRoute();
 const slug = route.params.slug;
 const { getOrdersCourses } = useStore();
@@ -32,7 +36,7 @@ onMounted(async () => {
 
 <template>
   <LoadingSlug v-if="loading" />
-  <div v-else class="container course">
+  <div v-else class="container mb-8 course">
     <SlugHeader v-if="getCourse && !getCourse.vimeo_url" :course="getCourse" />
     <div v-if="getCourse">
       <div class="relative mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
