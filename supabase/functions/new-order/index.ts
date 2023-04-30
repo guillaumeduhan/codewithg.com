@@ -7,14 +7,6 @@ const supUrl = Deno.env.get("_SUPABASE_URL") as string;
 const supKey = Deno.env.get("_SUPABASE_SERVICE_KEY") as string;
 const supabase = createClient(supUrl, supKey);
 
-const stripe = new Stripe(Deno.env.get("STRIPE_API_KEY_TEST") as string, {
-  apiVersion: "2022-11-15",
-  httpClient: Stripe.createFetchHttpClient(),
-});
-const cryptoProvider = Stripe.createSubtleCryptoProvider();
-
-console.log("✅ Supabase Function new-order running...");
-
 const headers = {
   "Content-type": "application/json",
   supasecret: "my_secret_telegram_brooooo",
@@ -22,40 +14,42 @@ const headers = {
 };
 
 const sendMessage = async (msg: string) => {
-  // return await supabase.functions.invoke("telegram-bot", {
-  //   headers,
-  //   body: JSON.stringify({
-  //     message: msg,
-  //   }),
-  // });
-  await fetch(
+  const response = await fetch(
     `https://jpbegoqdzfcsctsvohia.functions.supabase.co/telegram-bot?message=${msg}`,
     { headers }
-  )
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => console.log(data))
-    .catch((error) => error);
+  );
+  return response ? response.json() : null;
 };
+
+const stripe = new Stripe(Deno.env.get("STRIPE_API_KEY_LIVE") as string, {
+  apiVersion: "2022-11-15",
+  httpClient: Stripe.createFetchHttpClient(),
+});
+const cryptoProvider = Stripe.createSubtleCryptoProvider();
+
+console.log("✅ Supabase Function new-order running...");
 
 serve(async (request: any) => {
   const signature = request.headers.get("Stripe-Signature");
   let message;
+
+  if (!signature) {
+    message = `❌ Pas de signature Stripe.`;
+    console.log(message);
+    await sendMessage(message);
+    return new Response(message, {
+      status: 400,
+    });
+  }
 
   // First step is to verify the event. The .text() method must be used as the
   // verification relies on the raw request body rather than the parsed JSON.
   const body = await request.text();
 
   if (!body) {
-    message = `❌ Body n'a pas été transformé en text.`;
+    message = `❌ Tentative de paiement échouée: body n'a pas été complété.`;
     console.log(message);
-    await sendMessage(
-      `❌ Tentative de paiement échouée: body n'a pas été complété.`
-    );
+    await sendMessage(message);
     return new Response(message, {
       status: 400,
     });
@@ -69,11 +63,13 @@ serve(async (request: any) => {
       undefined,
       cryptoProvider
     );
+    // erreur ici: signature et header
   } catch (err) {
     console.log(err);
     message = `❌ Impossible de construire l'appel Stripe.`;
     console.log(message);
     await sendMessage(message);
+    await sendMessage(err.toString());
     return new Response(message, { status: 400 });
   }
 
@@ -88,7 +84,6 @@ serve(async (request: any) => {
     });
   }
 
-  // there are 4 events, we want to catch only 1 to record only 1 order
   if (type === "checkout.session.completed") {
     const { object } = receivedEvent.data;
     const { id, customer_details, amount_total, metadata, payment_intent } =
@@ -117,7 +112,7 @@ serve(async (request: any) => {
     let { error } = await supabase.from("orders").insert(new_order);
 
     if (error) {
-      message = `❌ Erreur enregistrement Supabase commande: ${id}`;
+      message = `❌ Erreur enregistrement Supabase commande stripe: ${id}`;
       console.log(message);
       await sendMessage(message);
       return new Response(message, { status: 400 });

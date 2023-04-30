@@ -8,7 +8,7 @@ gt:
 serve-new-order:
 	supabase functions serve --no-verify-jwt new-order --env-file ./supabase/functions/new-order/.env
 
-secret-new-order:
+secrets-new-order:
 	supabase secrets set --env-file ./supabase/functions/new-order/.env
 
 deploy-new-order:
