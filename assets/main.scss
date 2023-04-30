@@ -10,11 +10,15 @@ $bg: #131716;
   html {
     @apply min-h-screen text-lg text-white;
     font-family: "Sen", sans-serif;
+  }
+
+  body {
     background-color: $bg;
     background-image: url("/vue.png");
     background-size: 100%;
-    background-position: top top;
+    background-position: top center;
     background-repeat: no-repeat;
+    z-index: 1000;
   }
 
   .footer-bg {
@@ -22,7 +26,7 @@ $bg: #131716;
     min-width: 100%;
     min-height: 800px;
     background-color: $bg;
-    background-image: url("/vue.png");
+    // background-image: url("/vue.png");
     background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;

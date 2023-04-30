@@ -2,7 +2,6 @@
 const supabase = useSupabaseAuthClient();
 const user = ref<any>(null)
 
-
 onMounted(async () => {
   const response = await supabase.auth.getUser()
   if (response) {

@@ -8,7 +8,7 @@ const { getOrders } = useStore();
 </script>
 
 <template>
-  <div class="container my-6 Community">
+  <div class="container my-6 courses">
     <header class="mb-8 text-center">
       <h2>Courses</h2>
       <p class="text-center">Your courses list.</p>

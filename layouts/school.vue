@@ -1,7 +1,9 @@
 <template>
   <div class="container SchoolLayout">
     <Header />
-    <slot />
-    <Footer />
+    <div style="min-height: 600px;">
+      <slot />
+    </div>
+    <!-- <Footer /> -->
   </div>
 </template>
