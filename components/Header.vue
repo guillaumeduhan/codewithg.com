@@ -1,9 +1,16 @@
 <script setup lang="ts">
-const user = useSupabaseUser()
+const supabase = useSupabaseAuthClient();
+const user = ref<any>(null)
 
-watch(user, () => {
-  console.log("Header")
-  console.log(user.value)
+
+onMounted(async () => {
+  const response = await supabase.auth.getUser()
+  if (response) {
+    const { data } = response
+    if (data) {
+      user.value = data.user
+    }
+  }
 })
 </script>
 
