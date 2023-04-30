@@ -6,6 +6,7 @@ export const useHelpers = () => {
   const openUrl = (url: string) => window.open(url, "_blank");
 
   const getDaysDiff = (dateString: string) => {
+    if (!dayjs) return;
     const today = dayjs();
     const otherDate = dayjs(dateString, "YYYY-MM-DD");
     console.log(otherDate);
