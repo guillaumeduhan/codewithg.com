@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const user = useSupabaseUser()
 
+console.log("Header")
 console.log(user.value)
 </script>
 
