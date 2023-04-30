@@ -1,14 +1,19 @@
-<script setup>
+<script setup lang="ts">
 definePageMeta({
   middleware: 'auth',
   layout: 'school'
 })
 const router = useRouter()
-const client = useSupabaseAuthClient()
-const user = useSupabaseUser()
+const supabase = useSupabaseAuthClient()
+const user = ref<any | null>(null)
+const response = await supabase.auth.getUser();
+if (response) {
+  const { data } = response;
+  user.value = data.user;
+}
 
 const logout = () => {
-  client.auth.signOut()
+  supabase.auth.signOut()
   router.push('/')
 }
 
