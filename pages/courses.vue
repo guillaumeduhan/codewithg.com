@@ -4,7 +4,7 @@ definePageMeta({
   layout: "school",
 });
 
-let loading = ref(false);
+let loading = ref(true);
 
 const { openUrl } = useHelpers();
 
@@ -25,7 +25,10 @@ onMounted(async () => {
       <h2>Courses</h2>
       <p class="text-center">Your courses list.</p>
     </header>
-    <div v-if="!loading">
+    <div v-if="loading" class="grid grid-cols-3 gap-3">
+      <LoadingArticle v-for="item in 6" :key="item.id" />
+    </div>
+    <div v-else>
       <div v-if="getOrders && getOrders.length > 0">
         <CoursesList class="my-8" :orders="getOrders" />
       </div>
