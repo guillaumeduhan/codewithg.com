@@ -54,7 +54,6 @@ onMounted(async () => {
           <button class="mb-3 btn btn-primary" @click="checkUrl">
             Buy for ${{ getCourse.price }}
           </button>
-          <div class="text-xs alert alert-success">0 days left then $99.</div>
         </div>
       </div>
     </div>
