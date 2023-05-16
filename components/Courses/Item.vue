@@ -22,8 +22,7 @@ const { getDaysDiff } = useHelpers();
       <p v-if="course.description" class="mb-2 text-base description">
         {{ course.description }}
       </p>
-      <p v-if="props.price" class="text-xl font-bold"><span class="mr-2 text-primary-500">${{ course.price }}</span> —
-        <span class="text-sm">0 days left then $99.</span>
+      <p v-if="props.price" class="text-xl font-bold"><span class="mr-2 text-primary-500">${{ course.price }}
       </p>
     </div>
   </div>
