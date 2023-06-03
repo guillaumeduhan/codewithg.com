@@ -5,6 +5,9 @@ gt:
 
 # new order
 
+sl:
+	stripe listen --forward-to localhost:54321/functions/v1/
+
 serve-new-order:
 	supabase functions serve --no-verify-jwt new-order --env-file ./supabase/functions/new-order/.env
 
@@ -13,9 +16,6 @@ secrets-new-order:
 
 deploy-new-order:
 	supabase functions deploy --no-verify-jwt new-order 
-
-sl:
-	stripe listen --forward-to localhost:54321/functions/v1/
 
 stc:
 	stripe trigger checkout.session.completed --add checkout:receipt_email=coolos2@yopmail.com --add checkout:currency=eur --add checkout:metadata.course_id=8d953dc4-8649-42c5-90ba-f36d4ccebfe8

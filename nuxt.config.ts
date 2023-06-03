@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
+        { src: "https://tally.so/widgets/embed.js" },
         { src: "https://player.vimeo.com/api/player.js" },
         {
           defer: true,

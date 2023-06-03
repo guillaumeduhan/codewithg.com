@@ -24,9 +24,6 @@ onMounted(async () => {
         <button class="btn btn-info" @click="$router.push('/courses')">
           Courses
         </button>
-        <button class="btn btn-info" @click="$router.push('/community')">
-          Community
-        </button>
         <Avatar :email="user.email" class="cursor-pointer" @click="$router.push('/profile')" />
       </div>
       <div v-else>
