@@ -36,8 +36,16 @@ $bg: #131716;
   }
 
   h1 {
-    @apply text-4xl lg:text-6xl font-extrabold;
+    @apply text-4xl lg:text-5xl font-extrabold;
     line-height: 1.155;
+  }
+
+  h1::after {
+    content: "";
+  }
+
+  h1::after:nth-last-child(-n + 2) {
+    @apply text-primary-500;
   }
 
   .course {

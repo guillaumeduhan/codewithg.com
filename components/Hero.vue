@@ -1,14 +1,10 @@
-<script setup>
-</script>
-
 <template>
   <header class="container px-2 mx-auto my-6">
     <h1 class="mb-2 text-center">
-      Learn through
-      <span style="color: #22e26c">project-based</span> courses
+      {{ $t('hero.title') }}
     </h1>
     <p class="mx-auto text-xl text-center description" style="max-width: 800px">
-      Level up your skills on development & marketing.
+      {{ $t('hero.description') }}
     </p>
     <div class="mx-auto mt-6 mb-12 overflow-hidden bg-slate-500/10 rounded-xl"
       style="max-width: 900px; height: 515px; position:relative;"><iframe
@@ -21,5 +17,3 @@
     </div>
   </header>
 </template>
-
-<style lang='scss'></style>

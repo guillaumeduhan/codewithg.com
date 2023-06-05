@@ -1,0 +1,66 @@
+{
+  "general": {
+    "ask": "Posez-moi une question",
+    "buy": "Acheter pour",
+    "magic_link": "Recevoir un magic link",
+    "new": "Nouveau"
+  },
+  "header": {
+    "login": "Connexion",
+    "courses": "Cours"
+  },
+  "hero": {
+    "title": "Apprenez à travers des cours basés sur des projets",
+    "description": "Améliorez vos compétences en développement et en marketing."
+  },
+  "login": {
+    "title": "Connexion",
+    "description": "Entrez votre adresse e-mail pour recevoir un lien magique",
+    "note": "Si vous n'avez pas de compte, il sera créé automatiquement."
+  },
+  "questions": {
+    "title": "FAQ",
+    "description": "Tout ce que vous devez savoir sur le produit et la facturation.",
+    "list": [
+      {
+        "question": "Qui est Guillaume ?",
+        "answer":
+          "Guillaume est un CTO et un développeur Front-End Senior qui travaille en tant que Freelancer depuis les 10 dernières années. Il a travaillé dans plus de 50 start-ups allant de 4 à 1000 employés à Paris, Londres et Berlin, et a participé à plus de 100 projets. Depuis 2015, Guillaume est classé parmi les 1% des freelancers les mieux notés sur Malt, la première plateforme de freelancing dans l'UE. Parmi les clients notables avec lesquels il a travaillé, on trouve Samsung, Sendinblue, Zalando et Franprix.<br><br>De plus, Guillaume a créé plus de 20 cours sur Udemy, avec jusqu'à 50 000 étudiants inscrits. Il est également membre du jury et enseignant pour le diplôme national de développeur en France (IFOCOP Paris 11), où il enseigne Vue, React, Nuxt et Next.js. Récemment, Guillaume a créé sa propre chaîne Youtube (@codewithguillaume) pour partager son expérience avec les autres."
+      },
+      {
+        "question": "Comment cela fonctionne-t-il ?",
+        "answer":
+          "Nos cours sont dispensés en ligne grâce à des vidéos interactives, des sessions de questions-réponses en direct et des projets pratiques."
+      },
+      {
+        "question": "Quel est le format ?",
+        "answer":
+          "Nos cours sont des tutoriels basés sur des projets vidéo. Vous pouvez ensuite poser des questions dans la section Communauté et vous avez accès à une discussion avec Guillaume."
+      },
+      {
+        "question": "Quels sont les ressources disponibles ?",
+        "answer":
+          "Les étudiants auront accès à des vidéos, des lectures et des sessions en direct."
+      },
+      {
+        "question": "Quel est le prix ?",
+        "answer": "Le prix dépend de la durée et du contenu du cours."
+      },
+      {
+        "question": "Combien de temps faut-il pour terminer un cours ?",
+        "answer":
+          "La durée d'un cours dépend du sujet spécifique, mais la plupart peuvent être terminés en 1 semaine avec un engagement à temps partiel."
+      },
+      {
+        "question": "Y a-t-il des prérequis pour s'inscrire ?",
+        "answer":
+          "Certains cours peuvent avoir des prérequis, tels qu'une expérience préalable dans un langage de programmation spécifique, mais nous proposons des cours adaptés aux débutants pour ceux qui n'ont aucune expérience préalable."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que disent les étudiants...",
+    "description": "Améliorez vos compétences en développement et en marketing.",
+    "button": "Ajoutez votre témoignage"
+  }
+}

@@ -89,13 +89,14 @@ const testimonials = [
 
 <template>
   <div class="my-8 Testimonials lg:my-32">
-    <h2 class="text-center">What students say...</h2>
+    <h2 class="text-center">
+      {{ $t('testimonials.title') }}</h2>
     <div class="container grid w-full gap-4 my-8 overflow-hidden lg:grid-cols-3">
       <TestimonialsItem v-for="(item, index) in testimonials.slice(0, 6)" :key="index" :item="item" />
     </div>
     <div class="flex items-center justify-center">
       <button class="btn btn-primary" @click="openUrl('https://tally.so/r/waOVxy')">
-        Add your testimony
+        {{ $t('testimonials.button') }}
       </button>
     </div>
   </div>
