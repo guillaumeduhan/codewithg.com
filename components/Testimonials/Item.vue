@@ -12,7 +12,7 @@ const item = props.item;
       </div>
       <div v-if="item.country" class="text-2xl">{{ item.country }}</div>
     </header>
-    <div class="font-medium">{{ item.description }}</div>
+    <div class="text-xs font-medium">{{ item.description }}</div>
   </div>
 </template>
 

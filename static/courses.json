@@ -1,10 +1,10 @@
 [{
-    "title": "Build a SaaS — Nuxt, Supabase & Stripe",
+    "title": "Build a SaaS with <span class='text-primary-500'>Nuxt, Supabase & Stripe</span>",
     "price": 69,
     "description": "We'll create a complete app with payment system with Nuxt 3, Supabase, Stripe & ChatGPT.",
     "img": "https://jpbegoqdzfcsctsvohia.supabase.co/storage/v1/object/public/courses/nuxt3.png",
     "slug": "nuxt3-supabase-stripe-chatgpt",
-    "level": "expert",
+    "level": "medium",
     "trailer_url": "https://player.vimeo.com/video/821197744",
     "stripe_url": "https://buy.stripe.com/bIY3eO6aj6Nn5Nu4gj",
     "promo_until": "2023-05-08"

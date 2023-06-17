@@ -18,11 +18,11 @@ const { getDaysDiff } = useHelpers();
     <img v-if="course.img" :src="course.img" class="mb-4" />
     <div v-else class="w-full h-40 mb-4 rounded-lg loading" />
     <div>
-      <h3 v-if="course.title">{{ course.title }}</h3>
-      <p v-if="course.description" class="mb-2 text-base description">
+      <h3 v-if="course.title" class="text-base" v-html="course.title" />
+      <p v-if="course.description" class="mb-2 text-sm description">
         {{ course.description }}
       </p>
-      <p v-if="props.price" class="text-xl font-bold"><span class="mr-2 text-primary-500">${{ course.price }}</span>
+      <p v-if="props.price" class="text-base font-bold"><span class="mr-2 text-primary-500">${{ course.price }}</span>
       </p>
     </div>
   </div>

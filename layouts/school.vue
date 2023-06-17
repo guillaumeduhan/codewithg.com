@@ -1,5 +1,5 @@
 <template>
-  <div class="container SchoolLayout">
+  <div class="SchoolLayout">
     <Header />
     <div style="min-height: 600px;">
       <slot />

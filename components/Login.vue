@@ -32,9 +32,9 @@ const sendEmail = async () => {
 
 <template>
   <div class="my-8 text-center Login" style="max-width: 400px">
-    <h2 class="mb-6">{{ $t("login.title") }}</h2>
+    <h2 class="mb-6">Login</h2>
     <div class="mb-4">
-      <p class="description">{{ $t("login.description") }}</p>
+      <p class="description">Enter your e-mail to receive a magic link</p>
     </div>
     <div v-if="state.success" class="alert alert-success">
       An e-mail has been sent to your mail address.
@@ -42,9 +42,9 @@ const sendEmail = async () => {
     <div v-else>
       <input :disabled="state.loading" type="text" v-model="state.email" class="w-full mb-4" />
       <div class="mb-3">
-        <Button class="block w-full" :loading="state.loading" :text="$t('general.magic_link')" @click="sendEmail" />
+        <Button class="block w-full" :loading="state.loading" @click="sendEmail" text="Login with magic link" />
       </div>
-      <p class="note">{{ $t("login.note") }}</p>
+      <p class="note">If you don't have an account, it will be automatically created.</p>
     </div>
   </div>
 </template>

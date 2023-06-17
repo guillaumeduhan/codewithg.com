@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import community from "../static/community.json";
 import courses from "../static/courses.json";
 
 export const useHelpers = () => {
@@ -25,7 +24,6 @@ export const useHelpers = () => {
 
   return {
     courses,
-    community,
     getDaysDiff,
     formatCourse,
     openUrl,

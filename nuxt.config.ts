@@ -24,11 +24,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxtjs/supabase", "@pinia/nuxt", "@nuxtjs/i18n"],
-  i18n: {
-    vueI18n: "./i18n.config.ts",
-    skipSettingLocaleOnNavigate: true,
-  },
+  modules: ["@nuxtjs/supabase", "@pinia/nuxt"],
   supabase: {
     url: process.env.SUPABASE_URL,
     key: process.env.SUPABASE_API_KEY,

@@ -48,11 +48,11 @@ onMounted(async () => {
       </div>
       <SlugHeader v-if="getCourse && getCourse.vimeo_url" :course="getCourse" />
       <div class="flex items-center justify-center">
-        <button v-if="getCourse.vimeo_url" class="btn btn-primary" @click="openUrl(getCourse.tally_url)">{{
-          $t('general.ask') }}</button>
+        <button v-if="getCourse.vimeo_url" class="btn btn-primary" @click="openUrl(getCourse.tally_url)">
+          Ask me a question</button>
         <div v-else class="text-center">
           <button class="mb-3 btn btn-primary" @click="checkUrl">
-            {{ $t('general.buy') }} ${{ getCourse.price }}
+            Buy ${{ getCourse.price }}
           </button>
         </div>
       </div>
