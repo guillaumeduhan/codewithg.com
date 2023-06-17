@@ -25,7 +25,7 @@
       {
         "question": "Who is Guillaume?",
         "answer":
-          "Guillaume is a CTO and Senior Front-End Developer who has been working as a Freelancer for the past 10 years. He has worked in over 50 start-ups ranging from 4 to 1000 employees in Paris, London, and Berlin, and has joined over 100 projects. Since 2015, Guillaume has been ranked in the top 1% of freelancers on Malt, which is the first freelancing platform in the EU. Some notable clients he has worked with include Samsung, Sendinblue, Zalando, and Franprix.<br><br>Additionally, Guillaume has created more than 20 courses on Udemy, with up to 50, 000 students enrolled.He also serves as a jury and teacher for the national developer degree in France(IFOCOP Paris 11), where he lectures on Vue, React, Nuxt, and Next.js.Recently, Guillaume has created his own Youtube channel(@codewithguillaume) to share his experience with others."
+          "Guillaume is a CTO and Senior Front-End Developer who has been working as a Freelancer for the past 10 years. He has worked in over 50 start-ups ranging from 4 to 1000 employees in Paris, London, and Berlin, and has joined over 100 projects. Since 2015, Guillaume has been ranked in the top 1% of freelancers on Malt, which is the first freelancing platform in the EU. Some notable clients he has worked with include Samsung, Sendinblue, Zalando, and Franprix.Additionally, Guillaume has created more than 20 courses on Udemy, with up to 50, 000 students enrolled.He also serves as a jury and teacher for the national developer degree in France(IFOCOP Paris 11), where he lectures on Vue, React, Nuxt, and Next.js.Recently, Guillaume has created his own Youtube channel(codewithguillaume) to share his experience with others."
       },
       {
         "question": "How does it work?",
@@ -39,8 +39,7 @@
       },
       {
         "question": "What resources?",
-        "answer":
-          "Students will have access to videos, readings, and lives."
+        "answer": "Students will have access to videos, readings, and lives."
       },
       {
         "question": "What is the price?",
