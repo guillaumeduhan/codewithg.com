@@ -44,8 +44,8 @@ useHead({
 <template>
   <div class="relative Main">
     <Hero class="mb-24" />
-    <CoursesList class="mb-12" />
+    <!-- <CoursesList class="mb-12" />
     <Testimonials />
-    <QuestionsFrequently />
+    <QuestionsFrequently /> -->
   </div>
 </template>

@@ -7,7 +7,7 @@ const props = defineProps(["hideText"])
     <div class="mr-3 overflow-hidden rounded-full">
       <img src="/logo.jpg" :class="`${props.hideText ? 'w-24' : 'w-8'}`" />
     </div>
-    <span v-if="!props.hideText" class="font-bold">codewithguillaume.com</span>
+    <span v-if="!props.hideText" class="hidden md:flex font-bold">Codewithguillaume.com</span>
   </div>
 </template>
 

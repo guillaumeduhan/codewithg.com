@@ -1,0 +1,19 @@
+{
+  "buttons": {
+    "create_account": "Créer un compte",
+    "signup": "S'inscrire",
+    "youtube": "Ma chaîne Youtube"
+  },
+  "hero": {
+    "title": "50.000 développeurs déjà formés dans le monde entier",
+    "description":
+      "CTO et développeur depuis 20 ans, j'ai travaillé avec 50+ start-ups dont Google, Samsung, Zalando & Sendinblue entre Paris, Londres et Berlin. J'ai formé plus de 50.000 développeurs à travers mes cours en ligne."
+  },
+  "login": {
+    "title": "Se connecter ou s'inscrire",
+    "description": "Enter your e-mail to receive a magic link",
+    "success": "An e-mail has been sent to your mail address.",
+    "magic_link": "Recevoir le lien",
+    "note": "Si vous n'avez pas de compte, il sera automatiquement créé."
+  }
+}
