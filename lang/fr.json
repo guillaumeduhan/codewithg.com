@@ -4,14 +4,18 @@
     "signup": "S'inscrire",
     "youtube": "Ma chaîne Youtube"
   },
+  "general": {
+    "free": "Gratuit",
+    "new": "Nouveau"
+  },
   "hero": {
-    "title": "50.000 développeurs déjà formés dans le monde entier",
+    "title": "50.000 développeurs déjà formés",
     "description":
-      "CTO et développeur depuis 20 ans, j'ai travaillé avec 50+ start-ups dont Google, Samsung, Zalando & Sendinblue entre Paris, Londres et Berlin. J'ai formé plus de 50.000 développeurs à travers mes cours en ligne."
+      "Freelances, employés ou entrepreneurs, je vous livre mes 15 ans d'expérience en tant que CTO et développeur aux côtés de géants tels que Google, Samsung et Zalando entre Paris, Londres et Berlin."
   },
   "login": {
     "title": "Se connecter ou s'inscrire",
-    "description": "Enter your e-mail to receive a magic link",
+    "description": "Entrez votre email pour recevoir un lien de connexion",
     "success": "An e-mail has been sent to your mail address.",
     "magic_link": "Recevoir le lien",
     "note": "Si vous n'avez pas de compte, il sera automatiquement créé."

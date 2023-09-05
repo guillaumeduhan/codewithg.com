@@ -15,6 +15,7 @@
     background-position: top center;
     background-repeat: no-repeat;
     z-index: 1000;
+    line-height: 1.32;
   }
 
   h1 {
@@ -114,14 +115,6 @@
     animation: fadeInOut 2s ease-in-out infinite;
   }
 
-  .label {
-    @apply block px-2 py-1 rounded-lg text-xs font-bold;
-
-    &--level {
-      @apply bg-primary-500 text-black;
-    }
-  }
-
   .loading {
     @apply bg-slate-500/10 fadeInOut;
   }
@@ -149,18 +142,6 @@
   .Testimonials {
     &--Item {
       @apply p-5 rounded-lg bg-primary-900/5 border border-primary-500/5;
-    }
-  }
-
-  .topics {
-    @apply flex-wrap my-2;
-
-    .topic {
-      @apply label box cursor-pointer mr-1 mb-1 transition hover:bg-primary-500 hover:text-white;
-
-      &:first-child {
-        @apply ml-0;
-      }
     }
   }
 

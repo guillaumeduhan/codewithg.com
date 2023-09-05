@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxtjs/supabase", "@nuxtjs/i18n", "@pinia/nuxt"],
+  modules: ["@nuxtjs/supabase", "@nuxtjs/i18n", "@pinia/nuxt", "nuxt-lodash"],
   i18n: {
     vueI18n: "./i18n.config.ts",
   },

@@ -26,34 +26,39 @@ const socials = ref([{
 </script>
 
 <template>
-  <footer class="relative pt-10 pb-24 text-white">
-    <div class="container mx-auto mb-2">
-      <Logo :hideText="true" class="mb-4" />
-      <p class="w-80">A school online to learn webdevelopment & webmarketing.</p>
-    </div>
-    <!-- <div class="container items-center mb-2 md:flex">
-      <div v-for="column, index in options" :key="index">
-        <p class="mb-4 mr-6 transition cursor-pointer text-secondary-500 hover:text-primary-500">{{ column.title
-        }}</p>
-      </div>
-    </div> -->
-    <div class="container grid-cols-2 pt-8 mx-auto md:grid border-secondary-500">
-      <div>
-        <p class="mb-4">© 2023 Codewithguillaume.com. All rights reserved.</p>
-        <p class="flex items-start leading-4">Made with
-          <IconsNuxt class="mx-1" />
-          <span>, Tailwindcss & Supabase.</span>
-        </p>
-      </div>
-      <div class="flex mt-8 md:mt-0 md:justify-end md:items-center">
-        <div v-for="item, index in socials" :key="index">
-          <component :is="item.icon" @click="item.action()"
-            class="mx-2 text-4xl transition cursor-pointer text-secondary-500 hover:text-primary-500" />
+  <footer class="relative bg-[#101B17] pt-10 pb-24 text-white">
+    <div class="container">
+      <!-- <div class="w-full grid grid-cols-12 mx-auto mb-2">
+        <div class="col-span-2">
+          <Logo :hideText="true" class="mb-4 w-[50px]" />
+          hello
+        </div>
+        <div class="col-span-2">
+          <p class="text-white font-medium text-sm">Free videos</p>
+        </div>
+        <div class="col-span-2">
+          <p class="text-white font-medium text-sm">Tools</p>
+        </div>
+        <div class="col-span-2">
+          <p class="text-white font-medium text-sm">Social</p>
+        </div>
+      </div> -->
+      <div class="flex items-center justify-between w-full">
+        <div>
+          <p class="flex items-start leading-4">Made with
+            <IconsNuxt class="mx-1" />
+            <span>, Tailwindcss & Supabase.</span>
+          </p>
+        </div>
+        <div class="flex mt-8 md:mt-0 md:justify-end md:items-center">
+          <div v-for="item, index in socials" :key="index">
+            <component :is="item.icon" @click="item.action()"
+              class="mx-2 text-4xl transition cursor-pointer text-secondary-500 hover:text-primary-500" />
+          </div>
         </div>
       </div>
     </div>
   </footer>
-  <div class="footer-bg" />
 </template>
 
 <style lang='scss'></style>

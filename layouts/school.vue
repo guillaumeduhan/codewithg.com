@@ -1,9 +1,9 @@
 <template>
   <div class="SchoolLayout">
     <Header />
-    <div style="min-height: 600px;">
+    <div class="mb-12">
       <slot />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>

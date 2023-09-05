@@ -4,10 +4,14 @@
     "signup": "Signup",
     "youtube": "My Youtube channel"
   },
+  "general": {
+    "free": "Free",
+    "new": "New"
+  },
   "hero": {
-    "title": "Over 50,000 developers already trained worldwide.",
+    "title": "Over 50,000 developers already trained worldwide",
     "description":
-      "CTO and developer for the past 20 years, I have worked with 50+ startups including Google, Samsung, Zalando & Sendinblue in cities like Paris, London, and Berlin. I have trained over 50,000 developers through my online courses."
+      "CTO and developer for the past 20 years, I have worked with 50+ startups including Google, Samsung, Zalando & Sendinblue in cities like Paris, London, and Berlin."
   },
   "login": {
     "title": "Log in or Register",

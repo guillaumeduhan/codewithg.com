@@ -1,11 +1,33 @@
-[{
-    "title": "Build a SaaS with <span class='text-primary-500'>Nuxt, Supabase & Stripe</span>",
+[
+  {
+    "title": "Nextjs 13 en Français — Niveau débutant",
+    "price": 49,
+    "lang": "fr",
+    "filters": ["Next.js", "Français"],
+    "description": "",
+    "slug": "learn-nextjs-13-fr",
+    "img": "./courses/nextjs-13-fr-beg.png",
+    "new": true
+  },
+  {
+    "title": "VSCode en Français — Guide pour débutant",
+    "price": 0,
+    "lang": "fr",
+    "filters": ["Free", "Français"],
+    "description": "",
+    "slug": "learn-vscode-fr",
+    "img": "./courses/vscode-fr.png",
+    "new": true
+  },
+  {
+    "title": "Build a SaaS with Nuxt, Supabase & Stripe",
     "price": 69,
+    "lang": "en",
+    "filters": ["Nuxt.js", "Supabase", "Stripe"],
     "description": "We'll create a complete app with payment system with Nuxt 3, Supabase, Stripe & ChatGPT.",
     "img": "https://jpbegoqdzfcsctsvohia.supabase.co/storage/v1/object/public/courses/nuxt3.png",
     "slug": "nuxt3-supabase-stripe-chatgpt",
-    "level": "medium",
     "trailer_url": "https://player.vimeo.com/video/821197744",
-    "stripe_url": "https://buy.stripe.com/bIY3eO6aj6Nn5Nu4gj",
-    "promo_until": "2023-05-08"
-  }]
+    "stripe_url": "https://buy.stripe.com/bIY3eO6aj6Nn5Nu4gj"
+  }
+]

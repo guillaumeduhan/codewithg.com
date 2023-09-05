@@ -3,7 +3,7 @@ import fr from "./lang/fr.json";
 
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: "fr",
+  locale: "en",
   messages: {
     en,
     fr,

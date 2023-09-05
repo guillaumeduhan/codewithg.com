@@ -14,7 +14,7 @@ const isDev = ref(true);
           @click="openUrl('https://www.youtube.com/@codewithguillaume')" />
       </div>
     </div>
-    <div class="col-span-12 lg:col-span-7 relative flex items-center justify-end my-4 w-full h-[400px]">
+    <div class="col-span-12 lg:col-span-7 relative flex items-center justify-end my-4 w-full h-[300px]">
       <iframe v-if="isDev"
         src="https://player.vimeo.com/video/809862220?h=f6c506eec6&amp;badge=0&amp;autoplay=1&amp;player_id=0&amp;app_id=58479"
         frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
