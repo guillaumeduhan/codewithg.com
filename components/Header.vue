@@ -26,11 +26,11 @@ onMounted(async () => {
       <Logo class="mr-2" />
     </div>
     <div class="flex items-center justify-end">
-      <div class="flex gap-4">
+      <!-- <div class="flex gap-4">
         <div v-for="item, index in availableLocales" :key="index" @click="setLocale(item.code)">
           <img v-if="locale !== item.code" class="w-6 h-6 cursor-pointer" :src="item.img" />
         </div>
-      </div>
+      </div> -->
       <div v-if="user" class="flex gap-4 items-center justify-center">
         <p class="text-black cta" @click="$router.push('/courses')">Courses</p>
         <Avatar :email="user.email" class="cursor-pointer" @click="$router.push('/profile')" />

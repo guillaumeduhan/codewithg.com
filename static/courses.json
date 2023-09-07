@@ -10,16 +10,6 @@
     "new": true
   },
   {
-    "title": "VSCode en Français — Guide pour débutant",
-    "price": 0,
-    "lang": "fr",
-    "filters": ["Free", "Français"],
-    "description": "",
-    "slug": "learn-vscode-fr",
-    "img": "./courses/vscode-fr.png",
-    "new": true
-  },
-  {
     "title": "Build a SaaS with Nuxt, Supabase & Stripe",
     "price": 69,
     "lang": "en",
