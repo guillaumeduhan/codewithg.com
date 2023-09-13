@@ -1,18 +1,90 @@
 [
   {
+    "title": "Docker en Français",
+    "price": 49,
+    "soon": true,
+    "date": "2023-09-10 00:00",
+    "lang": "fr",
+    "filters": ["Docker", "Français"],
+    "slug": "docker-fr",
+    "tally_url": "https://tally.so/r/woeNAM",
+    "img": "/courses/docker-fr.png",
+    "description": ""
+  },
+  {
+    "title": "Supabase en Français — Avancé",
+    "price": 49,
+    "soon": true,
+    "date": "2023-09-10 00:00",
+    "lang": "fr",
+    "filters": ["Supabase", "Français"],
+    "slug": "supabase-advanced-fr",
+    "tally_url": "https://tally.so/r/mRMe0p",
+    "img": "/courses/supabase-advanced-fr.png",
+    "description": ""
+  },
+  {
+    "title": "Supabase en Français",
+    "price": 49,
+    "soon": true,
+    "date": "2023-09-10 00:00",
+    "lang": "fr",
+    "filters": ["Supabase", "Français"],
+    "slug": "supabase-fr",
+    "tally_url": "https://tally.so/r/mY0BQ6",
+    "img": "/courses/supabase-fr.png",
+    "description": ""
+  },
+  {
+    "title": "Devenir développeur Wordpress",
+    "price": 49,
+    "soon": true,
+    "date": "2023-09-10 00:00",
+    "lang": "fr",
+    "filters": ["Wordpress", "Français"],
+    "slug": "wordpress",
+    "tally_url": "https://tally.so/r/3XJADd",
+    "img": "/courses/wordpress-fr.png",
+    "description": ""
+  },
+  {
+    "title": "Nuxt 3 en Français — Avancé",
+    "price": 49,
+    "soon": true,
+    "date": "2023-09-10 00:00",
+    "lang": "fr",
+    "filters": ["Nuxt.js", "Français"],
+    "slug": "nuxt3-advanced-fr",
+    "tally_url": "https://tally.so/r/wMNZbg",
+    "img": "/courses/nuxt3-advanced-fr.png",
+    "description": ""
+  },
+  {
+    "title": "Nuxt 3 en Français",
+    "price": 49,
+    "soon": true,
+    "date": "2023-09-10 00:00",
+    "lang": "fr",
+    "filters": ["Nuxt.js", "Français"],
+    "slug": "nuxt3-fr",
+    "tally_url": "https://tally.so/r/wL7xbO",
+    "img": "/courses/nuxt3-fr.png",
+    "description": ""
+  },
+  {
     "title": "Créer son agence marketing en ligne",
     "price": 49,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
     "filters": ["Marketing", "Avancé"],
-    "slug": "marketing-fr",
+    "slug": "marketing-agency-fr",
     "tally_url": "https://tally.so/r/3NlNrB",
-    "img": "/courses/marketing-fr.png",
+    "img": "/courses/marketing-agency-fr.png",
     "description": ""
   },
   {
-    "title": "Nextjs 13 en Français — Niveau avancé",
+    "title": "Nextjs 13 en Français — Avancé",
     "price": 49,
     "soon": true,
     "date": "2023-09-10 00:00",
@@ -24,7 +96,7 @@
     "description": ""
   },
   {
-    "title": "Nextjs 13 en Français — Niveau débutant",
+    "title": "Nextjs 13 en Français",
     "price": 49,
     "soon": true,
     "date": "2023-09-10 00:00",

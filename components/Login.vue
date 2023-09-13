@@ -37,7 +37,8 @@ const sendEmail = async () => {
     <div class="mb-4">
       <p class="description">{{ translate('login', 'description') }}</p>
     </div>
-    <div v-if="state.success" class="alert alert-success">
+    <div v-if="state.success"
+      class="bg-primary-50/50 text-sm text-primary-500 px-3 py-2 rounded border border-primary-500">
       {{ translate('login', 'success') }}
     </div>
     <div v-else>
