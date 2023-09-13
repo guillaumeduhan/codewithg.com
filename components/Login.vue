@@ -1,5 +1,6 @@
 <script setup>
 const client = useSupabaseAuthClient()
+const { translate, setLocale } = useStore()
 
 useHead({
   title: "Login to codewithguillaume.com",
@@ -32,21 +33,20 @@ const sendEmail = async () => {
 
 <template>
   <div class="my-8 text-center Login" style="max-width: 400px">
-    <h2 class="mb-6">{{ $t('login.title') }}</h2>
+    <h2 class="mb-6">{{ translate('login', 'title') }}</h2>
     <div class="mb-4">
-      <p class="description">{{ $t('login.description') }}</p>
+      <p class="description">{{ translate('login', 'description') }}</p>
     </div>
     <div v-if="state.success" class="alert alert-success">
-      {{ $t('login.success') }}
+      {{ translate('login', 'success') }}
     </div>
     <div v-else>
       <input :disabled="state.loading" type="text" v-model="state.email" class="w-full mb-4" />
       <div class="mb-3">
-        <Button class="block w-full" :loading="state.loading" @click="sendEmail" :text="$t('login.magic_link')" />
+        <Button class="block w-full" :loading="state.loading" @click="sendEmail"
+          :text="translate('login', 'magic_link')" />
       </div>
-      <p class="note">{{ $t('login.note') }}</p>
+      <p class="note">{{ translate('login', 'note') }}</p>
     </div>
   </div>
 </template>
-
-<style lang='scss'></style>

@@ -1,7 +1,5 @@
 <script setup>
 const props = defineProps(["orders"]);
-const { courses: localCourses } = useHelpers();
-const { locale } = useI18n()
 const langs = [
   {
     code: "en",
@@ -13,28 +11,7 @@ const langs = [
   },
 ];
 
-let filter = ref(null);
-
-const getCourses = computed(() => {
-  if (props.orders && props.orders.length > 0) {
-    return props.orders.map(({ id, courses, ...rest }) => {
-      const localCourse = localCourses.find((x) => x.slug === courses.slug);
-      return {
-        order_id: id,
-        vimeo_url: courses.vimeo_url,
-        ...rest,
-        ...localCourse,
-      };
-    });
-  }
-  if (filter.value && filter.value.length > 0)
-    return localCourses.filter((x) => x.lang === filter.value);
-  return localCourses;
-});
-
-onMounted(() => {
-  filter.value = locale.value
-})
+let filter = ref('en');
 </script>
 
 <template>
@@ -47,18 +24,8 @@ onMounted(() => {
       </div>
     </div>
     <div v-if="filter">
-      <div v-if="filter === 'fr'">
-        <div class="grid gap-8 lg:grid-cols-3">
-          <CoursesItem v-for="(course, index) in getCourses" :key="index" :course="course"
-            @click="$router.push(`/course/${course.slug}`)" />
-        </div>
-      </div>
-      <div v-else>
-        <div class="grid gap-8 lg:grid-cols-3">
-          <CoursesItem v-for="(course, index) in getCourses" :key="index" :course="course"
-            @click="$router.push(`/course/${course.slug}`)" />
-        </div>
-      </div>
+      <CoursesEnglish v-if="filter === 'en'" />
+      <CoursesFrench v-else />
     </div>
   </div>
 </template>
