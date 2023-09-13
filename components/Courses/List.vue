@@ -1,5 +1,6 @@
 <script setup>
 const props = defineProps(["orders"]);
+const { courses: localCourses } = useHelpers();
 const langs = [
   {
     code: "en",
@@ -11,21 +12,43 @@ const langs = [
   },
 ];
 
-let filter = ref('en');
+let filter = ref("en");
+
+const getCourses = computed(() => {
+  if (props.orders && props.orders.length > 0)
+    return props.orders.map(({ id, courses, ...rest }) => {
+      const localCourse = localCourses.find((x) => x.slug === courses.slug);
+      return {
+        order_id: id,
+        vimeo_url: courses.vimeo_url,
+        ...rest,
+        ...localCourse,
+      };
+    });
+});
 </script>
 
 <template>
   <div class="container CoursesList">
-    <div class="flex gap-2 my-4">
-      <div @click="filter = item.code" v-for="(item, index) in langs" :key="index" :class="`text-xs font-medium cursor-pointer px-2 py-1 relative ${filter === item.code ? 'bg-slate-800 text-white' : 'bg-slate-100 text-gray-900'
-        }`">
-        {{ item.title }}
-        <div v-if="item.code === 'fr'" class="bg-primary-500 rounded-full h-2 w-2 absolute -top-1 -right-1"></div>
+    <div v-if="!props.orders">
+      <div class="flex gap-2 my-4">
+        <div @click="filter = item.code" v-for="(item, index) in langs" :key="index" :class="`text-xs font-medium cursor-pointer px-2 py-1 relative ${filter === item.code
+            ? 'bg-slate-800 text-white'
+            : 'bg-slate-100 text-gray-900'
+          }`">
+          {{ item.title }}
+          <div v-if="item.code === 'fr'" class="bg-primary-500 rounded-full h-2 w-2 absolute -top-1 -right-1"></div>
+        </div>
+      </div>
+      <div v-if="filter">
+        <CoursesEnglish v-if="filter === 'en'" />
+        <CoursesFrench v-else />
       </div>
     </div>
-    <div v-if="filter">
-      <CoursesEnglish v-if="filter === 'en'" />
-      <CoursesFrench v-else />
+    <div v-else>
+      <div class="grid gap-8 lg:grid-cols-3">
+        <CoursesItem v-for="(course, index) in getCourses" :key="index" :course="course" />
+      </div>
     </div>
   </div>
 </template>
