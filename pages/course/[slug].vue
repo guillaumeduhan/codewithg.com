@@ -57,7 +57,7 @@ onMounted(async () => {
       </div>
       <SlugHeader :course="getCourse" />
     </div>
-    <div class="col-span-3">
+    <div v-if="!getCourse.vimeo_url" class="col-span-3">
       <div class="border border-slate-500/10 p-4">
         <img class="w-32 mb-4" v-if="getCourse.img" :src="getCourse.img" />
         <div class="border-b pb-2 mb-4">
