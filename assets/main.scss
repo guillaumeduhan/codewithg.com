@@ -4,39 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
-$bg: #131716;
-
 @layer base {
   html {
-    @apply min-h-screen text-lg text-white;
+    @apply min-h-screen text-lg text-black;
     font-family: "Sen", sans-serif;
   }
 
   body {
-    background-color: $bg;
-    background-image: url("/vue.png");
     background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;
     z-index: 1000;
-  }
-
-  .footer-bg {
-    z-index: -1;
-    min-width: 100%;
-    min-height: 800px;
-    background-color: $bg;
-    // background-image: url("/vue.png");
-    background-size: 100%;
-    background-position: top center;
-    background-repeat: no-repeat;
-    transform: scaleY(-1);
-    position: absolute;
-    bottom: 0px;
+    line-height: 1.32;
+    @apply bg-[#101B17];
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl font-extrabold;
+    @apply text-4xl font-extrabold mb-2;
     line-height: 1.155;
   }
 
@@ -58,12 +42,9 @@ $bg: #131716;
 
   p,
   .description {
-    @apply text-secondary-500;
+    @apply text-gray-400 font-normal;
     line-height: 1.43;
-  }
-
-  p.link  {
-    @apply hover:text-primary-500 cursor-pointer transition;
+    font-weight: 400;
   }
 
   input[type="text"] {
@@ -72,18 +53,6 @@ $bg: #131716;
 
   select {
     @apply bg-transparent border-2 border-slate-700 rounded px-2 py-1 cursor-pointer outline-none;
-  }
-
-  .alert {
-    @apply rounded-lg mb-4 px-4 py-3;
-
-    &-success {
-      @apply bg-primary-500/10 text-primary-500;
-    }
-
-    &-danger {
-      @apply bg-red-500/10 text-red-500;
-    }
   }
 
   .avatar {
@@ -107,18 +76,14 @@ $bg: #131716;
   }
 
   .btn {
-    @apply transition rounded-lg px-4 py-2 cursor-pointer font-bold text-center;
-
-    &-mini {
-      @apply text-sm transition rounded-lg px-2 py-1 cursor-pointer font-bold text-center;
-    }
+    @apply transition px-6 py-2 cursor-pointer font-bold text-center;
 
     &-primary {
-      @apply bg-primary-500 hover:bg-primary-600 text-white;
+      @apply bg-primary-500 hover:bg-primary-600 text-black;
     }
 
     &-info {
-      @apply text-white bg-slate-500/5 hover:bg-slate-600/20 hover:text-primary-500 mx-1;
+      @apply text-white bg-slate-200 hover:bg-slate-200 text-black hover:text-primary-500 mx-1;
 
       &-active {
         @apply bg-primary-500/5 text-primary-500;
@@ -132,11 +97,11 @@ $bg: #131716;
 
   .container {
     @apply px-6 lg:px-0;
-    max-width: 1300px !important;
+    max-width: 1400px !important;
   }
 
   .cta {
-    @apply text-sm cursor-pointer text-slate-400 underline decoration-wavy underline-offset-4 transition;
+    @apply text-black font-bold transition cursor-pointer;
 
     &:hover {
       @apply text-primary-500;
@@ -149,14 +114,6 @@ $bg: #131716;
 
   .fadeInOut {
     animation: fadeInOut 2s ease-in-out infinite;
-  }
-
-  .label {
-    @apply block px-2 py-1 rounded-lg text-xs font-bold;
-
-    &--level {
-      @apply bg-primary-500 text-black;
-    }
   }
 
   .loading {
@@ -186,18 +143,6 @@ $bg: #131716;
   .Testimonials {
     &--Item {
       @apply p-5 rounded-lg bg-primary-900/5 border border-primary-500/5;
-    }
-  }
-
-  .topics {
-    @apply flex-wrap my-2;
-
-    .topic {
-      @apply label box cursor-pointer mr-1 mb-1 transition hover:bg-primary-500 hover:text-white;
-
-      &:first-child {
-        @apply ml-0;
-      }
     }
   }
 

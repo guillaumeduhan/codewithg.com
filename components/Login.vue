@@ -1,5 +1,6 @@
 <script setup>
 const client = useSupabaseAuthClient()
+const { translate, setLocale } = useStore()
 
 useHead({
   title: "Login to codewithguillaume.com",
@@ -32,21 +33,21 @@ const sendEmail = async () => {
 
 <template>
   <div class="my-8 text-center Login" style="max-width: 400px">
-    <h2 class="mb-6">Login</h2>
+    <h2 class="mb-6">{{ translate('login', 'title') }}</h2>
     <div class="mb-4">
-      <p class="description">Enter your e-mail to receive a magic link</p>
+      <p class="description">{{ translate('login', 'description') }}</p>
     </div>
-    <div v-if="state.success" class="alert alert-success">
-      An e-mail has been sent to your mail address.
+    <div v-if="state.success"
+      class="bg-primary-50/50 text-sm text-primary-500 px-3 py-2 rounded border border-primary-500">
+      {{ translate('login', 'success') }}
     </div>
     <div v-else>
       <input :disabled="state.loading" type="text" v-model="state.email" class="w-full mb-4" />
       <div class="mb-3">
-        <Button class="block w-full" :loading="state.loading" @click="sendEmail" text="Login with magic link" />
+        <Button class="block w-full" :loading="state.loading" @click="sendEmail"
+          :text="translate('login', 'magic_link')" />
       </div>
-      <p class="note">If you don't have an account, it will be automatically created.</p>
+      <p class="note">{{ translate('login', 'note') }}</p>
     </div>
   </div>
 </template>
-
-<style lang='scss'></style>
