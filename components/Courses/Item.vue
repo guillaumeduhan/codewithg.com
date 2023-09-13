@@ -1,31 +1,31 @@
-<script setup>
-const props = defineProps(["course", "price"]);
+<script setup lang="ts">
+const props = defineProps(["course", "locale"]);
 const course = props.course;
 
-const { getDaysDiff } = useHelpers();
+const { getPrice, openUrl } = useHelpers();
 </script>
 
 <template>
-  <div class="relative mb-4 transition cursor-pointer CoursesItem hover:opacity-80">
-    <div class="absolute top-0 z-50 flex items-center m-3">
-      <div class="mr-2 text-white label bg-sky-500" v-if="course.new">
-        New
-      </div>
-      <div class="text-white bg-purple-500 label" v-if="course.coming_soon">
-        Coming soon
-      </div>
-    </div>
-    <img v-if="course.img" :src="course.img" class="mb-4" />
+  <div
+    class="relative mb-4 transition cursor-pointer CoursesItem hover:opacity-80"
+    @click="
+      course.soon ? openUrl(course.tally_url) : $router.push(`/course/${course.slug}`)
+    "
+  >
+    <img v-if="course.img" :src="course.img" class="mb-2" />
     <div v-else class="w-full h-40 mb-4 rounded-lg loading" />
-    <div>
-      <h3 v-if="course.title" class="text-base" v-html="course.title" />
-      <p v-if="course.description" class="mb-2 text-sm description">
-        {{ course.description }}
-      </p>
-      <p v-if="props.price" class="text-base font-bold"><span class="mr-2 text-primary-500">${{ course.price }}</span>
-      </p>
+    <div class="flex flex-col gap-1">
+      <h3 v-if="course.title" class="text-base mb-0" v-html="course.title" />
+      <div v-if="!course.soon" class="flex items-center gap-2 description">
+        {{ getPrice(course.price, locale) || "general.free" }}
+      </div>
+      <div v-else class="flex">
+        <p
+          class="description text-white font-bold bg-purple-500/80 rounded-xl px-3 py-1 text-[13px]"
+        >
+          {{ course.lang === "fr" ? "Bientôt" : "Coming soon" }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
-
-<style lang='scss'></style>

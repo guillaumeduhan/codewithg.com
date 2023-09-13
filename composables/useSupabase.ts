@@ -22,7 +22,6 @@ export const useSupabase = () => {
         )
         .eq("email", user.value.email);
 
-      console.log(data);
       if (data) {
         setOrders(data);
         return data;

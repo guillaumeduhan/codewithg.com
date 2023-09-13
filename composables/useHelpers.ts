@@ -22,9 +22,17 @@ export const useHelpers = () => {
     };
   };
 
+  const getPrice = (price: number, locale: any = "en") => {
+    if (!price) return;
+    if (price === 0) return;
+    if (!locale) return `$${price}`;
+    return `${locale === "en" ? "$" : ""}${price}${locale === "fr" ? "€" : ""}`;
+  };
+
   return {
     courses,
     getDaysDiff,
+    getPrice,
     formatCourse,
     openUrl,
   };

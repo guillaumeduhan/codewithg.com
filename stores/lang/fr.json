@@ -1,0 +1,25 @@
+{
+  "buttons": {
+    "create_account": "Créer un compte",
+    "signup": "S'inscrire",
+    "youtube": "Ma chaîne Youtube"
+  },
+  "general": {
+    "access": "Accès illimité aux 2 heures de cours",
+    "buy": "Acheter ce cours",
+    "free": "Gratuit",
+    "new": "Nouveau"
+  },
+  "hero": {
+    "title": "50.000 développeurs déjà formés",
+    "description":
+      "Freelances, employés ou entrepreneurs, je vous livre mes 15 ans d'expérience en tant que CTO et développeur aux côtés de géants tels que Google, Samsung et Zalando entre Paris, Londres et Berlin."
+  },
+  "login": {
+    "title": "Se connecter ou s'inscrire",
+    "description": "Entrez votre email pour recevoir un lien de connexion",
+    "success": "An e-mail has been sent to your mail address.",
+    "magic_link": "Recevoir le lien",
+    "note": "Si vous n'avez pas de compte, il sera automatiquement créé."
+  }
+}
