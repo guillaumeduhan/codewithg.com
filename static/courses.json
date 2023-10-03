@@ -1,7 +1,7 @@
 [
   {
     "title": "Docker en Français",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
@@ -13,7 +13,7 @@
   },
   {
     "title": "Supabase en Français — Avancé",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
@@ -25,7 +25,7 @@
   },
   {
     "title": "Supabase en Français",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
@@ -37,7 +37,7 @@
   },
   {
     "title": "Devenir développeur Wordpress",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
@@ -49,7 +49,7 @@
   },
   {
     "title": "Nuxt 3 en Français — Avancé",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
@@ -61,7 +61,7 @@
   },
   {
     "title": "Nuxt 3 en Français",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
@@ -73,7 +73,7 @@
   },
   {
     "title": "Créer son agence marketing en ligne",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
@@ -85,7 +85,7 @@
   },
   {
     "title": "Nextjs 13 en Français — Avancé",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
@@ -97,19 +97,144 @@
   },
   {
     "title": "Nextjs 13 en Français",
-    "price": 49,
+    "description":"Pour ceux qui souhaitent devenir développeur full-stack sur Next.js 13 et pour les entrepreneurs qui veulent lancer leur SaaS.",
+    "price": 59,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "fr",
+    "keywords": "nextjs, nextjs 13, apprendre nextjs 13, cours nextjs 13 en français, nextjs 13 en français",
     "filters": ["Next.js", "Français"],
     "slug": "nextjs-fr",
     "tally_url": "https://tally.so/r/wa5JOv",
     "img": "/courses/nextjs-fr.png",
-    "description": "En 2 heures, je vous apprends à développer des applications Front-End sur Next.js 13. De la création de projet, architecture en passant par le contexte et le rendering... Je vous livre ici toutes mes astuces."
+    "landing": {
+      "title": "Next.js 13 pour créer des apps full-stack",
+      "description":"Pour ceux qui souhaitent devenir développeur full-stack sur Next.js 13 et pour les entrepreneurs qui veulent lancer leur SaaS.",
+      "notes": "Cours complet de 2h30 • Accès illimité",
+      "color": "blue",
+      "price": 59,
+      "program": [
+          {
+            "title": "Créer une app et la déployer",
+            "content": [
+              "Créer sa première app Next.js 13",
+              "Comment déployer sur Vercel?",
+              "Comment fonctionne un build?"
+            ]
+          },
+          {
+            "title": "Pages",
+            "content": [
+              "Créer une page statique",
+              "Créer une page dynamique",
+              "Créer des sous-pages",
+              "Comment architecturer ses pages",
+              "Attraper les params et queries"
+            ]
+          },
+          {
+            "title": "Layouts",
+            "content": [
+              "C’est quoi un layout?",
+              "Comment créer un layout?",
+              "Navigation entre layouts et pages",
+              "Différence entre Link et Anchor"
+            ]
+          },
+          {
+            "title": "Composants",
+            "content": [
+              "Créer des composants",
+              "Scope des composants",
+              "Partir du design pour arriver au composant",
+              "Logique design, logique business",
+              "Passer une props et toutes les props d’un coup",
+              "Usage des slots",
+              "Best practices"
+            ]
+          },
+          {
+            "title": "Contexte & Store",
+            "content": [
+              "Qu’est-ce qu’un contexte?",
+              "Comment l’installer?",
+              "Dans quel cas l’utiliser?",
+              "Exemple d’authentification"
+            ]
+          },
+          {
+            "title": "APIs",
+            "content": [
+              "Utiliser l’API de Next.js 13",
+              "Créer une ou plusieurs routes imbriquées",
+              "Recevoir les params et le body",
+              "Best practices"
+            ]
+          },
+          {
+            "title": "SEO et Metas",
+            "content": [
+              "Le SEO avec Next.js",
+              "Créer des metadatas statiques et dynamiques",
+              "Pourquoi et quand les utiliser?",
+              "Optimiser son SEO pour sa logique business"
+            ]
+          },
+          {
+            "title": "SSR (Server-Side Rendering) et CSR (Client-Side Rendering)",
+            "content": [
+              "Comment fonctionne les modes de rendus sous Next.js?",
+              "Quelle différence entre le SSR et le CSR?",
+              "Pourquoi et quand les utiliser?"
+            ]
+          },
+          {
+            "title": "Architecture complète d’un projet",
+            "content": [
+              "Cas concret de découpe d’un projet Front-End",
+              "Architecturer ses pages, composants et utils…"
+            ]
+          },
+          {
+            "title": "Les librairies indispensables",
+            "content": [
+              "Une liste complète des librairies indispensables dans votre vide développeur"
+            ]
+          }
+      ],
+      "questions": [
+        {
+          "question": "Est-ce que j'ai le niveau pour suivre ce cours?",
+          "answer":
+            "Ce cours s'addresse à des profils débutants et intermédiaires — je reprends les bases de Next.js 13 mais je pousse également l'explication sur des concepts incontournables pour comprendre et maîtriser le fonctionnement du framework."
+        },
+        {
+          "question": "Qu'est-ce que Next.js et pourquoi devrais-je l'apprendre ?",
+          "answer": "Next.js est un framework JavaScript très populaire pour le développement d'applications web. Il facilite la création d'applications full-stack en utilisant React.js pour le front-end et Node.js pour le back-end. Apprendre Next.js vous permettra de construire des applications web modernes, performantes et évolutives."
+        },
+        {
+          "question": "Quels sont les prérequis pour ce cours ?",
+          "answer": "Pour suivre ce cours, vous devriez avoir des connaissances de base en JavaScript, React.js, et une compréhension de base de Node.js. Une connaissance préalable de concepts tels que les composants React et les routes web sera utile, mais nous couvrirons également les bases au début du cours."
+        },
+        {
+          "question": "À qui s'adresse ce cours ?",
+          "answer": "Ce cours s'adresse aux développeurs web et aux personnes qui souhaitent créer des applications web full-stack avec Next.js. Il convient aux débutants qui veulent apprendre Next.js ainsi qu'aux développeurs expérimentés qui veulent approfondir leurs compétences dans ce framework."
+        },
+        {
+          "question": "Quels sujets seront couverts dans le cours ?",
+          "answer": "Ce cours couvrira un large éventail de sujets liés à Next.js 13 — le plan se trouve au dessus. Vous acquerrez également des compétences pour déployer vos applications en production."
+        },
+        {
+          "question": "Comment puis-je m'inscrire à ce cours ?",
+          "answer": "Pour vous inscrire à ce cours, il vous suffit de vous rendre sur notre page d'inscription, de remplir le formulaire d'inscription et de choisir votre mode de paiement. Une fois inscrit, vous aurez accès à tout le contenu du cours et pourrez commencer à apprendre Next.js 13 dès maintenant."
+        }
+      ]
+
+    }
   },
   {
     "title": "The ultimate LinkedIn profile for job success",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "en",
@@ -121,7 +246,7 @@
   },
   {
     "title": "Sveltekit Advanced",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "en",
@@ -133,7 +258,7 @@
   },
   {
     "title": "Supabase Advanced",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "en",
@@ -145,7 +270,7 @@
   },
   {
     "title": "Nuxt 3 Advanced",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "en",
@@ -157,7 +282,7 @@
   },
   {
     "title": "Nextjs 13 Advanced",
-    "price": 49,
+    "price": 99,
     "soon": true,
     "date": "2023-09-10 00:00",
     "lang": "en",
@@ -170,6 +295,7 @@
   {
     "title": "Build a SaaS with Nuxt, Supabase & Stripe",
     "price": 69,
+    "layout": "green",
     "lang": "en",
     "date": "2023-05-20 00:00",
     "filters": ["Nuxt.js", "Supabase", "Stripe"],

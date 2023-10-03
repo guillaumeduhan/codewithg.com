@@ -1,15 +1,14 @@
-<script setup>
+<script setup lang="ts">
 definePageMeta({
-  layout: "school",
-});
-
+  layout: 'school'
+})
 const { translate } = useStore();
-
 const route = useRoute();
 const slug = route.params.slug;
 const { getOrdersCourses } = useStore();
 const { fetchOrders } = useSupabase();
 const { openUrl, courses, getPrice } = useHelpers();
+
 
 let loading = ref(true);
 
@@ -17,7 +16,8 @@ const checkUrl = function () {
   if (!getCourse.value) return;
   openUrl(getCourse.value.stripe_url);
 };
-const getCourse = computed(() => {
+
+const getCourse = computed<any>(() => {
   if (getOrdersCourses.value) {
     const find = getOrdersCourses.value.find((x) => x.slug === slug);
     if (find) {
@@ -30,8 +30,7 @@ const getCourse = computed(() => {
 });
 
 useHead({
-  title: getCourse.value?.title,
-  content: getCourse.value?.description,
+  title: getCourse.value?.title
 });
 
 onMounted(async () => {

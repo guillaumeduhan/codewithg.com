@@ -2,11 +2,11 @@
   "buttons": {
     "create_account": "Create an account",
     "signup": "Signup",
-    "youtube": "Free courses on Youtube"
+    "youtube": "Free courses on Youtube",
+    "buy": "Buy"
   },
   "general": {
     "access": "Unlimited access to course",
-    "buy": "Buy",
     "free": "Free",
     "new": "New"
   },

@@ -7,7 +7,7 @@ const { translate, setLocale } = useStore()
 <template>
   <div class="container grid grid-cols-12 items-center gap-2 mx-auto my-12 px-4 md:px-2">
     <div class="col-span-12 lg:col-span-5">
-      <h1 class="mb-4">{{ translate('hero', 'title') }}</h1>
+      <h1 class="mb-4 font-extrabold">{{ translate('hero', 'title') }}</h1>
       <p class="mb-6 leading-6 font-light">{{ translate('hero', 'description') }}</p>
       <div class="flex md:flex-row gap-2 mx-auto items-center justify-start w-full my-8">
         <Button :text="translate('buttons', 'create_account')" :small="true" @click="$router.push('/login')" />

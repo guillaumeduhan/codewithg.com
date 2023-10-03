@@ -6,12 +6,9 @@ const { getPrice, openUrl } = useHelpers();
 </script>
 
 <template>
-  <div
-    class="relative mb-4 transition cursor-pointer CoursesItem hover:opacity-80"
-    @click="
-      course.soon ? openUrl(course.tally_url) : $router.push(`/course/${course.slug}`)
-    "
-  >
+  <div class="relative mb-4 transition cursor-pointer CoursesItem hover:opacity-80" @click="
+    course.soon ? openUrl(course.tally_url) : $router.push(`/course/${course.slug}`)
+    ">
     <img v-if="course.img" :src="course.img" class="mb-2" />
     <div v-else class="w-full h-40 mb-4 rounded-lg loading" />
     <div class="flex flex-col gap-1">
@@ -20,9 +17,7 @@ const { getPrice, openUrl } = useHelpers();
         {{ getPrice(course.price, locale) || "general.free" }}
       </div>
       <div v-else class="flex">
-        <p
-          class="description text-white font-bold bg-purple-500/80 rounded-xl px-3 py-1 text-[13px]"
-        >
+        <p class="description text-white font-bold bg-purple-500/80 rounded-xl px-3 py-1 text-[13px]">
           {{ course.lang === "fr" ? "Bientôt" : "Coming soon" }}
         </p>
       </div>
