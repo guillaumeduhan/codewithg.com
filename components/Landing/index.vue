@@ -1,7 +1,7 @@
 <script setup>
 const props = defineProps(["course"])
 const { translate } = useStore();
-const { getPrice } = useHelpers();
+const { getPrice, openUrl } = useHelpers();
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const { getPrice } = useHelpers();
         </h1>
         <p class="text-base lg:text-lg m-auto max-w-[700px] font-extralight">{{ course.description }}</p>
         <div>
-          <button class="btn mb-4">
+          <button class="btn mb-4" @click="openUrl(course.stripe_url)">
             Acheter ce cours — {{ getPrice(course.price, 'fr') }}
           </button>
           <p class="text-xs text-gray-500">{{ course.notes }}</p>

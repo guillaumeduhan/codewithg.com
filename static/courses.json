@@ -106,10 +106,12 @@
     "filters": ["Next.js", "Français"],
     "slug": "nextjs-fr",
     "tally_url": "https://tally.so/r/wa5JOv",
+    "stripe_url": "https://buy.stripe.com/bIYg1A1U3fjTb7O149",
     "img": "/courses/nextjs-fr.png",
     "landing": {
       "trailer_code": "-VsxXw7ChWQ",
       "title": "Next.js 13 pour créer des apps full-stack",
+      "stripe_url": "https://buy.stripe.com/bIYg1A1U3fjTb7O149",
       "description":"Pour ceux qui souhaitent devenir développeur full-stack sur Next.js 13 et pour les entrepreneurs qui veulent lancer leur SaaS.",
       "notes": "Cours complet de 2h30 • Accès illimité",
       "color": "blue",
