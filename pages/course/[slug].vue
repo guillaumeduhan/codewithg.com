@@ -9,7 +9,6 @@ const { getOrdersCourses } = useStore();
 const { fetchOrders } = useSupabase();
 const { openUrl, courses, getPrice } = useHelpers();
 
-
 let loading = ref(true);
 
 const checkUrl = function () {

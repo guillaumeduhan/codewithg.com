@@ -7,8 +7,9 @@ const { getPrice, openUrl } = useHelpers();
 const router = useRouter();
 
 const redirect = () => {
+  if (course.soon) return openUrl(course.tally_url)
   if (course.website) return openUrl(`/${course.website}`)
-  course.soon ? openUrl(course.tally_url) : router.push(`/course/${course.slug}`)
+  return router.push(`/course/${course.slug}`)
 }
 </script>
 
