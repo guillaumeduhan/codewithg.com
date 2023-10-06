@@ -8,7 +8,6 @@ const router = useRouter();
 
 const redirect = () => {
   if (course.soon) return openUrl(course.tally_url)
-  if (course.website) return openUrl(`/${course.website}`)
   return router.push(`/course/${course.slug}`)
 }
 </script>
