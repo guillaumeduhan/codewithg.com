@@ -16,20 +16,11 @@
     background-repeat: no-repeat;
     z-index: 1000;
     line-height: 1.32;
-    @apply bg-[#101B17];
   }
 
   h1 {
-    @apply text-4xl font-extrabold mb-2;
-    line-height: 1.155;
-  }
-
-  h1::after {
-    content: "";
-  }
-
-  h1::after:nth-last-child(-n + 2) {
-    @apply text-primary-500;
+    @apply font-semibold mb-2;
+    line-height: 1.45;
   }
 
   h2 {
@@ -42,9 +33,8 @@
 
   p,
   .description {
-    @apply text-gray-400 font-normal;
+    @apply text-gray-500 font-normal;
     line-height: 1.43;
-    font-weight: 400;
   }
 
   input[type="text"] {
@@ -56,15 +46,7 @@
   }
 
   .avatar {
-    @apply rounded-full overflow-hidden;
-
-    &--mini {
-      @apply w-10 h-10;
-    }
-
-    &--normal {
-      @apply w-12 h-12 rounded-full;
-    }
+    @apply flex w-12 h-12 text-white font-bold text-xl items-center justify-center mx-auto uppercase rounded-full bg-primary-600;
   }
 
   .badge {
@@ -72,7 +54,11 @@
   }
 
   .box {
-    @apply border-2 bg-primary-700/5 border-primary-500/10 rounded-lg;
+    @apply border-2  rounded-lg;
+
+    &--thumbnail {
+      @apply text-2xl font-extrabold px-4 py-3 border rounded-lg;
+    }
   }
 
   .btn {
@@ -116,6 +102,57 @@
     animation: fadeInOut 2s ease-in-out infinite;
   }
 
+  .landing {
+    @apply relative;
+    min-height: 100vh;
+
+    &--green {
+      @apply bg-primary-950 text-white;
+      min-height: 100vh;
+
+      .btn {
+        @apply bg-primary-500;
+      }
+    }
+    &--blue {
+      @apply bg-blue-next-950 text-white;
+      background-image: url("./bg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+
+      .avatar {
+        @apply bg-blue-next-500;
+      }
+
+      .btn {
+        @apply bg-blue-next-500;
+      }
+
+      .box {
+        @apply bg-blue-next-700/5 border-blue-next-500/10 cursor-pointer hover:bg-blue-next-700/10 transition;
+
+        &--thumbnail {
+          @apply border-blue-next-500/40;
+        }
+      }
+
+      .icon {
+        @apply text-blue-700 w-12 mb-4;
+      }
+
+      .questions {
+        &--item {
+          @apply cursor-pointer;
+        }
+
+        &--selected {
+          @apply text-blue-700;
+        }
+      }
+    }
+  }
+
   .loading {
     @apply bg-slate-500/10 fadeInOut;
   }
@@ -134,15 +171,15 @@
     }
   }
 
-  .Questions {
-    &--Item {
-      @apply text-sm p-3 rounded-lg hover:bg-slate-700/40  border border-slate-800 cursor-pointer transition;
+  .questions {
+    &--item {
+      @apply text-sm p-3 rounded-lg cursor-pointer transition;
     }
   }
 
-  .Testimonials {
+  .testimonial {
     &--Item {
-      @apply p-5 rounded-lg bg-primary-900/5 border border-primary-500/5;
+      @apply p-5 rounded-lg border;
     }
   }
 
@@ -151,8 +188,22 @@
   }
 
   .wavy {
-    @apply underline decoration-wavy underline-offset-4 decoration-primary-500
-underline decoration-wavy underline-offset-4 decoration-primary-500;
+    @apply underline decoration-wavy underline-offset-4;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -165,14 +216,5 @@ underline decoration-wavy underline-offset-4 decoration-primary-500;
   }
   100% {
     opacity: 0.5;
-  }
-}
-
-@keyframes carousel {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
   }
 }

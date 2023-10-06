@@ -2,11 +2,11 @@
   "buttons": {
     "create_account": "Créer un compte",
     "signup": "S'inscrire",
-    "youtube": "Ma chaîne Youtube"
+    "youtube": "Ma chaîne Youtube",
+    "buy": "Acheter"
   },
   "general": {
     "access": "Accès illimité aux 2 heures de cours",
-    "buy": "Acheter ce cours",
     "free": "Gratuit",
     "new": "Nouveau"
   },

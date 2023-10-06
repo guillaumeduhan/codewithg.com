@@ -24,6 +24,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  ssr: true,
   modules: ["@nuxtjs/supabase", "@pinia/nuxt", "nuxt-lodash"],
   supabase: {
     url: process.env.SUPABASE_URL,

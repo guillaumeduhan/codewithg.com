@@ -5,6 +5,7 @@ gt:
 
 # new order
 
+# stripe login if api_key problem
 sl:
 	stripe listen --forward-to localhost:54321/functions/v1/
 
@@ -18,7 +19,7 @@ deploy-new-order:
 	supabase functions deploy --no-verify-jwt new-order 
 
 stc:
-	stripe trigger checkout.session.completed --add checkout:receipt_email=coolos2@yopmail.com --add checkout:currency=eur --add checkout:metadata.course_id=8d953dc4-8649-42c5-90ba-f36d4ccebfe8
+	stripe trigger charge.succeeded --add checkout:receipt_email=test@yopmail.com --add checkout:currency=eur --add checkout:metadata.course_id=8d953dc4-8649-42c5-90ba-f36d4ccebfe8
 
 # telegram-bot
 

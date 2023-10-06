@@ -4,7 +4,7 @@ const item = props.item;
 </script>
 
 <template>
-  <div class="Questions--Item">
+  <div class="questions--item">
     <header class="flex items-start justify-between mb-1">
       <div>
         <p class="font-bold text-white">{{ item.name }}</p>

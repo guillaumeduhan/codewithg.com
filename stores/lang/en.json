@@ -2,16 +2,16 @@
   "buttons": {
     "create_account": "Create an account",
     "signup": "Signup",
-    "youtube": "Free courses on Youtube"
+    "youtube": "Free courses on Youtube",
+    "buy": "Buy"
   },
   "general": {
     "access": "Unlimited access to course",
-    "buy": "Buy",
     "free": "Free",
     "new": "New"
   },
   "hero": {
-    "title": "Over 50,000 developers already trained worldwide",
+    "title": "Over 100k developers already trained worldwide",
     "description":
       "CTO and developer for the past 20 years, I have worked with 50+ startups including Google, Samsung, Zalando & Sendinblue in cities like Paris, London, and Berlin."
   },
