@@ -3,11 +3,17 @@ const props = defineProps(["course", "locale"]);
 const course = props.course;
 
 const { getPrice, openUrl } = useHelpers();
+
+const router = useRouter();
+
+const redirect = () => {
+  if (course.website) return openUrl(`/${course.website}`)
+  course.soon ? openUrl(course.tally_url) : router.push(`/course/${course.slug}`)
+}
 </script>
 
 <template>
-  <div class="relative mb-4 transition cursor-pointer CoursesItem hover:opacity-80" @click="
-    course.soon ? openUrl(course.tally_url) : $router.push(`/course/${course.slug}`)
+  <div class="relative mb-4 transition cursor-pointer CoursesItem hover:opacity-80" @click="redirect()
     ">
     <img v-if="course.img" :src="course.img" class="mb-2" />
     <div v-else class="w-full h-40 mb-4 rounded-lg loading" />
