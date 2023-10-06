@@ -35,7 +35,7 @@ useHead({
     { property: "og:url", content: "https://codewithguillaume.com/nextjs-13" },
     {
       property: "og:image",
-      content: "https://codewithguillaume.com/images/courses/nextjs-fr.png",
+      content: "https://codewithguillaume.com/courses/nextjs-fr.png",
     },
     {
       property: "og:description",
