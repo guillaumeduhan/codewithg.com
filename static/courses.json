@@ -108,6 +108,7 @@
     "tally_url": "https://tally.so/r/wa5JOv",
     "img": "/courses/nextjs-fr.png",
     "landing": {
+      "trailer_code": "-VsxXw7ChWQ",
       "title": "Next.js 13 pour créer des apps full-stack",
       "description":"Pour ceux qui souhaitent devenir développeur full-stack sur Next.js 13 et pour les entrepreneurs qui veulent lancer leur SaaS.",
       "notes": "Cours complet de 2h30 • Accès illimité",
@@ -116,6 +117,7 @@
       "program": [
           {
             "title": "Créer une app et la déployer",
+            "time": 14,
             "content": [
               "Créer sa première app Next.js 13",
               "Comment déployer sur Vercel?",
@@ -124,6 +126,7 @@
           },
           {
             "title": "Pages",
+            "time": 14,
             "content": [
               "Créer une page statique",
               "Créer une page dynamique",
@@ -134,6 +137,7 @@
           },
           {
             "title": "Layouts",
+            "time": 10,
             "content": [
               "C’est quoi un layout?",
               "Comment créer un layout?",
@@ -143,6 +147,7 @@
           },
           {
             "title": "Composants",
+            "time": 20,
             "content": [
               "Créer des composants",
               "Scope des composants",
@@ -155,6 +160,7 @@
           },
           {
             "title": "Contexte & Store",
+            "time": 21,
             "content": [
               "Qu’est-ce qu’un contexte?",
               "Comment l’installer?",
@@ -164,8 +170,9 @@
           },
           {
             "title": "APIs",
+            "time": 17,
             "content": [
-              "Utiliser l’API de Next.js 13",
+              "Utiliser l'API de Next.js 13",
               "Créer une ou plusieurs routes imbriquées",
               "Recevoir les params et le body",
               "Best practices"
@@ -173,6 +180,7 @@
           },
           {
             "title": "SEO et Metas",
+            "time": 15,
             "content": [
               "Le SEO avec Next.js",
               "Créer des metadatas statiques et dynamiques",
@@ -182,6 +190,7 @@
           },
           {
             "title": "SSR (Server-Side Rendering) et CSR (Client-Side Rendering)",
+            "time": 12,
             "content": [
               "Comment fonctionne les modes de rendus sous Next.js?",
               "Quelle différence entre le SSR et le CSR?",
@@ -189,7 +198,8 @@
             ]
           },
           {
-            "title": "Architecture complète d’un projet",
+            "title": "Architecture complète d'un projet",
+            "time": 18,
             "content": [
               "Cas concret de découpe d’un projet Front-End",
               "Architecturer ses pages, composants et utils…"
@@ -197,6 +207,7 @@
           },
           {
             "title": "Les librairies indispensables",
+            "time": 7,
             "content": [
               "Une liste complète des librairies indispensables dans votre vide développeur"
             ]
@@ -229,7 +240,6 @@
           "answer": "Pour vous inscrire à ce cours, il vous suffit de vous rendre sur notre page d'inscription, de remplir le formulaire d'inscription et de choisir votre mode de paiement. Une fois inscrit, vous aurez accès à tout le contenu du cours et pourrez commencer à apprendre Next.js 13 dès maintenant."
         }
       ]
-
     }
   },
   {

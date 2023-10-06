@@ -19,16 +19,8 @@
   }
 
   h1 {
-    @apply text-4xl font-semibold mb-2;
-    line-height: 1.155;
-  }
-
-  h1::after {
-    content: "";
-  }
-
-  h1::after:nth-last-child(-n + 2) {
-    @apply text-primary-500;
+    @apply font-semibold mb-2;
+    line-height: 1.45;
   }
 
   h2 {
@@ -41,7 +33,7 @@
 
   p,
   .description {
-    @apply text-gray-400 font-normal;
+    @apply text-gray-500 font-normal;
     line-height: 1.43;
   }
 
@@ -54,15 +46,7 @@
   }
 
   .avatar {
-    @apply rounded-full overflow-hidden;
-
-    &--mini {
-      @apply w-10 h-10;
-    }
-
-    &--normal {
-      @apply w-12 h-12 rounded-full;
-    }
+    @apply flex w-12 h-12 text-white font-bold text-xl items-center justify-center mx-auto uppercase rounded-full bg-primary-600;
   }
 
   .badge {
@@ -136,6 +120,10 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: top center;
+
+      .avatar {
+        @apply bg-blue-next-500;
+      }
 
       .btn {
         @apply bg-blue-next-500;

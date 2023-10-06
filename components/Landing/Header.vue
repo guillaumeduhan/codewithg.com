@@ -21,7 +21,7 @@ onMounted(async () => {
     </div>
     <div class="flex items-center justify-end">
       <div v-if="user" class="flex gap-4 items-center justify-center">
-        <p class="text-black cta" @click="$router.push('/courses')">Courses</p>
+        <p class="text-white cta" @click="$router.push('/courses')">Courses</p>
         <Avatar :email="user.email" class="cursor-pointer" @click="$router.push('/profile')" />
       </div>
       <div v-else class="w-[150px] flex justify-end">

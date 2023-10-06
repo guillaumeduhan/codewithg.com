@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std/http/server.ts";
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.0";
-import Stripe from "https://esm.sh/stripe@11.8.0?target=deno&target=deno&no-check";
+import Stripe from "https://esm.sh/stripe@13.8.0?target=deno&target=deno&no-check";
 
 const supUrl = Deno.env.get("_SUPABASE_URL") as string;
 const supKey = Deno.env.get("_SUPABASE_SERVICE_KEY") as string;
@@ -21,11 +21,11 @@ const sendMessage = async (msg: string) => {
   return response ? response.json() : null;
 };
 
-const stripe = new Stripe(Deno.env.get("STRIPE_API_KEY_LIVE") as string, {
+const stripe: any = new Stripe(Deno.env.get("STRIPE_API_KEY_LIVE") as string, {
   apiVersion: "2022-11-15",
   httpClient: Stripe.createFetchHttpClient(),
 });
-const cryptoProvider = Stripe.createSubtleCryptoProvider();
+const cryptoProvider: any = Stripe.createSubtleCryptoProvider();
 
 console.log("✅ Supabase Function new-order running...");
 
@@ -42,8 +42,6 @@ serve(async (request: any) => {
     });
   }
 
-  // First step is to verify the event. The .text() method must be used as the
-  // verification relies on the raw request body rather than the parsed JSON.
   const body = await request.text();
 
   if (!body) {
@@ -54,7 +52,7 @@ serve(async (request: any) => {
       status: 400,
     });
   }
-  let receivedEvent;
+    let receivedEvent;
   try {
     receivedEvent = await stripe.webhooks.constructEventAsync(
       body,
@@ -67,9 +65,7 @@ serve(async (request: any) => {
   } catch (err) {
     console.log(err);
     message = `❌ Impossible de construire l'appel Stripe.`;
-    console.log(message);
     await sendMessage(message);
-    await sendMessage(err.toString());
     return new Response(message, { status: 400 });
   }
 
@@ -77,13 +73,11 @@ serve(async (request: any) => {
 
   if (!type) {
     message = `❌ Pas de type reçu de l'event.`;
-    console.log(message);
     await sendMessage(message);
     return new Response(message, {
       status: 400,
     });
   }
-  console.log(type);
 
   if (type === "checkout.session.completed") {
     const { object } = receivedEvent.data;
@@ -114,12 +108,11 @@ serve(async (request: any) => {
 
     if (error) {
       message = `❌ Erreur enregistrement Supabase commande stripe: ${id}`;
-      console.log(message);
       await sendMessage(message);
       return new Response(message, { status: 400 });
     }
 
-    message = `💶 ${new_order.amount}€ — ${new_order.email}`;
+    message = `💶 ${new_order.amount}€ — ${new_order.email} — ${metadata.name}`;
     console.log(message);
     await sendMessage(message);
 

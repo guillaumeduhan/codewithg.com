@@ -20,14 +20,21 @@ const { getPrice } = useHelpers();
           </button>
           <p class="text-xs text-gray-500">{{ course.notes }}</p>
         </div>
-        <div class="bg-slate-900/50 mx-auto h-[500px] w-[800px]"></div>
+        <div class="flex items-center justify-center my-4">
+          <iframe width="700" height="435"
+            :src="`https://www.youtube.com/embed/${course.trailer_code}?amp;controls=0&rel=0&web-share=0`"
+            title="YouTube video player" frameborder="0" allow="" controls=0 rel=0 allowfullscreen></iframe>
+        </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div v-for="c, index in course.program" :key="index" class="box border border-gray-800 px-6 py-4 min-h-[300px]">
           <div class="icon">
             <IconsPlay />
           </div>
-          <p class="text-xl font-bold text-white mb-2">{{ index + 1 }}. {{ c.title }}</p>
+          <header>
+            <p class="text-xl font-bold text-white mb-2">{{ index + 1 }}. {{ c.title }}</p>
+            <p class="text-base text-white/75 mb-2">{{ c.time }} min</p>
+          </header>
           <ul>
             <li class="description text-[13px] my-1" v-for="line, key in c.content" :key="key">{{ line }}</li>
           </ul>
