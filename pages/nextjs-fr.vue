@@ -68,10 +68,10 @@ onMounted(() => {
       <div class="flex gap-2">
         <div class="w-12 h-12 rounded-2xl overflow-hidden"><img src="/favicons/nextjs-13.png" /></div>
         <div>
-          <p class="text-white font-bold">
+          <p class="text-white font-bold text-sm lg:text-base whitespace-nowrap">
             Next.js 13 en Français 🇫🇷
           </p>
-          <p class="text-xs font-bold">
+          <p class="font-bold text-[10px] lg:text-base">
             par Codewithguillaume.com
           </p>
         </div>
