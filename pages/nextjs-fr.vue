@@ -21,7 +21,7 @@ const hasOrdered = computed(() => {
 
 useHead({
   title:
-    getCourse.value.title,
+    "Devenir développeur full-stack avec Next.js 13",
   link: [{ rel: 'icon', type: 'image/png', href: "/favicons/nextjs-13-favicon.ico" }],
   meta: [
     {
