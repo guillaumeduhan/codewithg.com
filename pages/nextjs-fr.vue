@@ -1,14 +1,23 @@
 <script setup>
 definePageMeta({
-  layout: 'landing'
+  layout: 'landing',
+  middleware: 'default'
 })
 
+const router = useRouter()
+const { getOrdersCourses } = useStore();
 const { courses } = useHelpers();
+const slug = 'nextjs-fr'
 
 const getCourse = computed(() => {
-  const find = courses.find((x) => x.slug === 'nextjs-fr')
+  const find = courses.find((x) => x.slug === slug)
   return find ? find.landing : null;
 });
+
+const hasOrdered = computed(() => {
+  const find = getOrdersCourses.value.find((x) => x.slug === slug);
+  return find || false
+})
 
 useHead({
   title:
@@ -45,6 +54,12 @@ useHead({
     { property: "og:site_name", content: "codewithguillaume.com" },
   ],
 });
+
+onMounted(() => {
+  if (hasOrdered.value) {
+    router.push(`/course/${slug}`)
+  }
+})
 </script>
 
 <template>

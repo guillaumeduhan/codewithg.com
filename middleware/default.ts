@@ -5,5 +5,7 @@ export default defineNuxtRouteMiddleware(async (to, _from) => {
   if (response) {
     const { data } = response;
     user.value = data.user;
+    const { fetchOrders } = useSupabase();
+    await fetchOrders();
   }
 });
