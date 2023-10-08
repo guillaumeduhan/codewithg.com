@@ -7,6 +7,8 @@ const supUrl = Deno.env.get("_SUPABASE_URL") as string;
 const supKey = Deno.env.get("_SUPABASE_SERVICE_KEY") as string;
 const supabase = createClient(supUrl, supKey);
 
+let start = true;
+
 const headers = {
   "Content-type": "application/json",
   supasecret: "my_secret_telegram_brooooo",
@@ -28,6 +30,11 @@ const stripe: any = new Stripe(Deno.env.get("STRIPE_API_KEY_LIVE") as string, {
 const cryptoProvider: any = Stripe.createSubtleCryptoProvider();
 
 console.log("✅ Supabase Function new-order running...");
+
+if (start) {
+  await sendMessage("✅ supabase function running!");
+  start = false;
+}
 
 serve(async (request: any) => {
   const signature = request.headers.get("Stripe-Signature");
@@ -52,7 +59,7 @@ serve(async (request: any) => {
       status: 400,
     });
   }
-    let receivedEvent;
+  let receivedEvent;
   try {
     receivedEvent = await stripe.webhooks.constructEventAsync(
       body,
@@ -107,7 +114,7 @@ serve(async (request: any) => {
     let { error } = await supabase.from("orders").insert(new_order);
 
     if (error) {
-      message = `❌ Erreur enregistrement Supabase commande stripe: ${id}`;
+      message = `❌ Erreur enregistrement: Supabase commande stripe: ${id}`;
       await sendMessage(message);
       return new Response(message, { status: 400 });
     }
