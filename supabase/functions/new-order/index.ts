@@ -1,13 +1,17 @@
+// logs: https://supabase.com/dashboard/project/jpbegoqdzfcsctsvohia/functions/new-order/logs
+// POUR LA PRODUCTION: ne pas oublier de switcher STRIPE_API_KEY_LIVE & STRIPE_WEBHOOK_SIGNING_SECRET
+// POUR LA PRODUCTION: BESOIN D'UN WEBHOOk !
+// TODO: essayer de switcher entre prod et staging ici, locale? deno n'aime pas l'env
+
 import { serve } from "https://deno.land/std/http/server.ts";
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.0";
-import Stripe from "https://esm.sh/stripe@13.8.0?target=deno&target=deno&no-check";
+import Stripe from "https://esm.sh/stripe@13.8.0?target=deno&no-check";
 
 const supUrl = Deno.env.get("_SUPABASE_URL") as string;
 const supKey = Deno.env.get("_SUPABASE_SERVICE_KEY") as string;
 const supabase = createClient(supUrl, supKey);
-
-let start = true;
+let message;
 
 const headers = {
   "Content-type": "application/json",
@@ -31,35 +35,31 @@ const cryptoProvider: any = Stripe.createSubtleCryptoProvider();
 
 console.log("✅ Supabase Function new-order running...");
 
-if (start) {
-  await sendMessage("✅ supabase function running!");
-  start = false;
-}
-
 serve(async (request: any) => {
+  if (request.method === "OPTIONS") {
+    return new Response("ok");
+  }
+  console.log("👍 Nouvelle requête...");
+
   const signature = request.headers.get("Stripe-Signature");
-  let message;
 
   if (!signature) {
-    message = `❌ Pas de signature Stripe.`;
+    message = `❌ Pas de signature Stripe — hacker?`;
     console.log(message);
     await sendMessage(message);
-    return new Response(message, {
-      status: 400,
-    });
+    return new Response(null);
   }
 
   const body = await request.text();
 
   if (!body) {
-    message = `❌ Tentative de paiement échouée: body n'a pas été complété.`;
+    message = `❌ Pas de body — hacker?`;
     console.log(message);
     await sendMessage(message);
-    return new Response(message, {
-      status: 400,
-    });
+    return new Response(null);
   }
   let receivedEvent;
+
   try {
     receivedEvent = await stripe.webhooks.constructEventAsync(
       body,
@@ -68,20 +68,20 @@ serve(async (request: any) => {
       undefined,
       cryptoProvider
     );
-    // erreur ici: signature et header
-  } catch (err) {
-    console.log(err);
-    message = `❌ Impossible de construire l'appel Stripe.`;
-    await sendMessage(message);
-    return new Response(message, { status: 400 });
+  } catch (error) {
+    const { message: errMsg }: any = error;
+    // message = `❌ Impossible de construire l'appel Stripe.`;
+    // await sendMessage(message);
+    // // @ts-ignore
+    return new Response(errMsg);
   }
 
   const { type } = receivedEvent;
 
   if (!type) {
-    message = `❌ Pas de type reçu de l'event.`;
+    message = `❌ Pas de type reçu de l'event — hacker?`;
     await sendMessage(message);
-    return new Response(message, {
+    return new Response(null, {
       status: 400,
     });
   }
@@ -101,34 +101,37 @@ serve(async (request: any) => {
       message = `❌ Modèle incomplet pour continuer.`;
       console.log(message);
       await sendMessage(message);
-      return new Response(message, { status: 400 });
+      return new Response(null, { status: 400 });
     }
-    const new_order: any = {
-      stripe_transaction_id: id,
-      stripe_payment_intent: payment_intent,
-      amount: _amount,
-      email: customer_details.email || "no email",
-      course_id: metadata.course_id,
-    };
     console.log("--------------------------------");
-    let { error } = await supabase.from("orders").insert(new_order);
+
+    let { data, error }: any = await supabase
+      .from("orders")
+      .insert({
+        stripe_transaction_id: id,
+        stripe_payment_intent: payment_intent,
+        amount: _amount,
+        email: customer_details.email || "no email",
+        course_id: metadata.course_id,
+      })
+      .select()
+      .single();
 
     if (error) {
-      message = `❌ Erreur enregistrement: Supabase commande stripe: ${id}`;
+      message = `❌ ${error.message}: ${customer_details.email}`;
       await sendMessage(message);
-      return new Response(message, { status: 400 });
+      return new Response(null);
     }
 
-    message = `💶 ${new_order.amount}€ — ${new_order.email} — ${metadata.name}`;
-    console.log(message);
-    await sendMessage(message);
+    console.log(data);
 
-    return new Response(message, { status: 200 });
+    // data ici
+    const { amount, email } = data;
+    await sendMessage(
+      `💶 ${amount}€ — ${email} ${metadata.name ? "—" : ""} ${metadata.name}`
+    );
+    return new Response(null);
   }
 
-  // message =
-  //   "❌ Transaction inhabituelle, sans entrer dans checkout.session.completed. Checker Stripe!";
-  // console.log(message);
-  // await sendMessage(message);
-  return new Response(message, { status: 400 });
+  return new Response(null);
 });

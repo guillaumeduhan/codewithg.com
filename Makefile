@@ -5,6 +5,9 @@ gt:
 
 # new order
 
+# 1. create api webhook endpoint from supabase
+# 2. update signing secret
+
 # stripe login if api_key problem
 sl:
 	stripe listen --forward-to localhost:54321/functions/v1/
