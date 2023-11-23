@@ -1,9 +1,4 @@
 <script setup>
-definePageMeta({
-  middleware: "default",
-  layout: "school",
-});
-
 useHead({
   title:
     "Codewithguillaume.com | An online School for Developers | Learn to Code with the Best | Advance Your Career",
@@ -43,9 +38,10 @@ useHead({
 
 <template>
   <div class="relative Main">
-    <Hero class="mb-24" />
-    <CoursesList />
-    <!-- <Testimonials />
-    <QuestionsFrequently /> -->
+    <p class="font-light">hello test</p>
+    <p class="font-medium">hello test</p>
+    <p>hello test</p>
+    <p class="font-bold">hello test</p>
+    <p class="font-black">hello test</p>
   </div>
 </template>
