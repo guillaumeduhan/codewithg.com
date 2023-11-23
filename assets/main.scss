@@ -4,8 +4,30 @@
 
 @layer base {
   html {
-    @apply min-h-screen text-lg text-black dark:text-white font-normal;
+    @apply min-h-screen text-base text-black dark:text-white font-normal;
     font-family: "Geist";
-    font-weight: normal;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  a {
+    @apply font-semibold underline underline-offset-8 decoration-slate-300 group-hover:decoration-green-500 hover:decoration-green-500 text-gray-700 hover:text-black cursor-pointer transition;
+  }
+
+  button {
+    @apply item;
+  }
+
+  h2 {
+    @apply font-[500] text-xl mt-12 mb-8;
+  }
+
+  .item {
+    @apply px-5 py-2 border rounded-md shadow-sm transition hover:bg-slate-50 font-[600];
+  }
+
+  .container {
+    width: 900px!important;
+    @apply max-w-[900px] mx-auto my-8 px-4 lg:px-0;
   }
 }

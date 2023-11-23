@@ -37,11 +37,22 @@ useHead({
 </script>
 
 <template>
-  <div class="relative Main">
-    <p class="font-light">hello test</p>
-    <p class="font-medium">hello test</p>
-    <p>hello test</p>
-    <p class="font-bold">hello test</p>
-    <p class="font-black">hello test</p>
+  <div class="relative container">
+    <Header />
+    <div class="mb-12">
+      <p class="mb-4">I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact through Udemy, academic contributions, and my YouTube channel "@codewithguillaume".</p>
+      <div class="grid gap-3">
+        <NuxtLink to="https://tally.so/r/npDeOP" target="_blank">Newsletter: Top 5 articles, links, videos of the week every Sunday →</NuxtLink>
+        <NuxtLink to="https://dub.sh/top-10-ctos" target="_blank">Article on Business Times: Top 10 CTOs to follow in 2024 →</NuxtLink>
+        <NuxtLink to="https://www.malt.fr/profile/guillaumed" target="_blank">Freelancing: hire me →</NuxtLink>
+      </div>
+    </div>
+    <h2>Private courses</h2>
+    <Courses />
+    <h2>Templates</h2>
+    <h2>Wallpapers</h2>
+    <h2>Videos</h2>
+    <h2>Articles</h2>
+    <h2>Posts</h2>
   </div>
 </template>

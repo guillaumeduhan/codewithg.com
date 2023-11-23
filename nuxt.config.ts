@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     },
   },
   ssr: true,
-  modules: ["@nuxtjs/supabase", "@pinia/nuxt", "nuxt-lodash"],
+  modules: ["@nuxtjs/supabase", "@pinia/nuxt", "nuxt-lodash", '@nuxtjs/color-mode'],
   supabase: {
     url: process.env.SUPABASE_URL,
     key: process.env.SUPABASE_API_KEY,
