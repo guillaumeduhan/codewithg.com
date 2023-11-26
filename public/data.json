@@ -1,0 +1,28 @@
+{
+  "courses": [
+    {
+      "title": "Build a SaaS with Nuxt, Supabase & Stripe — 2023",
+      "description": "We'll create a complete app with payment system with Nuxt 3, Supabase, Stripe & ChatGPT.",
+      "path": "https://buy.stripe.com/bIY3eO6aj6Nn5Nu4gj",
+      "trailer_url": "https://player.vimeo.com/video/821197744",
+      "price": 29
+    },
+    {
+      "title": "Next.js 14 en Français — 2023 ",
+      "description": "Pour devenir développeur full-stack sur Next.js 14 ou pour lancer son SaaS.",
+      "path": "https://buy.stripe.com/bIYg1A1U3fjTb7O149",
+      "trailer_url": "https://player.vimeo.com/video/821197744",
+      "price": 29
+    }
+  ],
+  "wallpapers": [
+    {
+      "title": "Celestial Wallpaper Pack",
+      "description": "Celestial Wallpaper Pack: Includes 10 unique desktop and 10 mobile wallpapers in stunning 4K resolution, optimized for both desktop and mobile displays.",
+      "img_url": "/celestial.jpg",
+      "path": "",
+      "trailer_url": "",
+      "price": 11.99
+    }
+  ]
+}

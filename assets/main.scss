@@ -7,7 +7,11 @@
     @apply min-h-screen text-base text-black dark:text-white font-normal;
     font-family: "Geist";
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  body {
+    @apply bg-white;
   }
 
   a {
