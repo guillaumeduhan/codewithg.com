@@ -34,4 +34,8 @@
     width: 900px!important;
     @apply max-w-[900px] mx-auto my-8 px-4 lg:px-0;
   }
+
+  input[type="text"] {
+    @apply outline-none item font-light hover:bg-transparent;
+  }
 }

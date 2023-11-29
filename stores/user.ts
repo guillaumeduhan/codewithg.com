@@ -1,17 +1,12 @@
 import { defineStore } from "pinia";
 
-interface User {
-  name?: string;
-  email?: string;
-}
-
 export const useUserStore = defineStore("user", () => {
-  let user: User = reactive({});
+  let user: any = ref(undefined);
 
-  const getUser = computed(() => user);
+  const getUser = computed(() => user.value);
 
-  function setUser(_user: User) {
-    user = _user;
+  function setUser(_user: any) {
+    user.value = _user;
   }
 
   return { getUser, setUser };

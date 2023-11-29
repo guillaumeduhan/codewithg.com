@@ -1,7 +1,6 @@
 <script setup>
-import data from "public/data.json"
+import data from "../data.json"
 
-console.log(data)
 useHead({
   title:
     "Codewithguillaume.com | An online School for Developers | Learn to Code with the Best | Advance Your Career",
@@ -37,6 +36,8 @@ useHead({
     { property: "og:site_name", content: "codewithguillaume.com" },
   ],
 });
+
+
 </script>
 
 <template>
@@ -62,11 +63,9 @@ useHead({
         <h2>Wallpapers</h2>
         <List :images="true" :list="data.wallpapers" />
       </div>
-      <div>
+      <!-- <div>
         <h2>Templates</h2>
-        <!-- <List :list="data.courses" /> -->
-        <!-- <Templates /> -->
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
