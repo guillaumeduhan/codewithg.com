@@ -51,19 +51,19 @@ onMounted(() => getCurrentUser());
         <h1 class="text-base font-[600]">codewithguillaume</h1>
       </div>
     </div>
-    <div v-if="!getUser">
-      <a v-if="!login" @click="login = true">Create an account →</a>
-      <div v-if="login">
-        <div v-if="!success" class="flex items-center gap-3">
-          <input type="text" placeholder="me@gmail.com" />
-          <Button label="Login / Signup" :loading="loading" @click="sendLogin" />
-        </div>
-        <div v-else class="bg-green-50 border border-green-50 border-xl text-green-800 px-4 py-1">
-          Success. Check your e-mail.
+    <div class="flex gap-4 items-center">
+      <div v-if="!getUser">
+        <a v-if="!login" @click="login = true">Create an account →</a>
+        <div v-if="login">
+          <div v-if="!success" class="flex items-center gap-3">
+            <input type="text" placeholder="me@gmail.com" />
+            <Button label="Login / Signup" :loading="loading" @click="sendLogin" />
+          </div>
+          <div v-else class="bg-green-50 border border-green-50 border-xl text-green-800 px-4 py-1">
+            Success. Check your e-mail.
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex gap-4 items-center">
       <IconsSun class="text-2xl cursor-pointer hover:dark:text-white transition" @click="switchColors" />
       <UserItem v-if="getUser" :user="getUser" />
     </div>
