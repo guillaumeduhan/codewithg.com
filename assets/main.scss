@@ -3,19 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply min-h-screen text-base text-black dark:text-white font-normal;
+  body {
+    @apply min-h-screen text-base text-black dark:bg-slate-900 dark:text-slate-200 font-normal;
     font-family: "Geist";
     font-weight: 500;
     font-size: 18px;
   }
 
-  body {
-    @apply bg-white;
-  }
-
   a {
-    @apply font-semibold underline underline-offset-8 decoration-slate-300 group-hover:decoration-green-500 hover:decoration-green-500 text-gray-700 hover:text-black cursor-pointer transition;
+    @apply font-semibold underline underline-offset-8 decoration-slate-300  group-hover:decoration-green-500 hover:decoration-green-500 text-gray-700 dark:text-slate-200 hover:text-black  cursor-pointer transition;
   }
 
   button {

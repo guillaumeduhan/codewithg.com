@@ -6,8 +6,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
-        { src: "https://tally.so/widgets/embed.js" },
-        { src: "https://player.vimeo.com/api/player.js" },
         {
           defer: true,
           "data-domain": "codewithguillaume.com",
@@ -26,6 +24,9 @@ export default defineNuxtConfig({
   },
   ssr: true,
   modules: ["@nuxtjs/supabase", "@pinia/nuxt", "nuxt-lodash", '@nuxtjs/color-mode'],
+  colorMode: {
+    classSuffix: ''
+  },
   supabase: {
     url: process.env.SUPABASE_URL,
     key: process.env.SUPABASE_API_KEY,

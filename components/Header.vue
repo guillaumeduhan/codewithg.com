@@ -1,6 +1,7 @@
 <script setup>
 const { supabase, getCurrentUser } = useSupabase()
 const { getUser } = useStore();
+const colorMode = useColorMode()
 
 const loading = ref(false)
 const login = ref(false)
@@ -30,6 +31,10 @@ const sendLogin = async () => {
   }
 };
 
+const switchColors = () => {
+  return colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
+}
+
 onMounted(() => getCurrentUser());
 </script>
 
@@ -58,6 +63,9 @@ onMounted(() => getCurrentUser());
         </div>
       </div>
     </div>
-    <UserItem v-if="getUser" :user="getUser" />
+    <div class="flex gap-4 items-center">
+      <IconsSun class="text-2xl cursor-pointer hover:dark:text-white transition" @click="switchColors" />
+      <UserItem v-if="getUser" :user="getUser" />
+    </div>
   </header>
 </template>

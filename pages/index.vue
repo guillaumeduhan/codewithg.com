@@ -57,7 +57,7 @@ useHead({
     <div class="grid">
       <div>
         <h2>Private courses</h2>
-        <List :list="data.courses" />
+        <List :images="true" :list="data.courses" />
       </div>
       <div>
         <h2>Wallpapers</h2>
