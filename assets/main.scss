@@ -34,4 +34,12 @@
   input[type="text"] {
     @apply outline-none item font-light hover:bg-transparent;
   }
+
+  .code-container {
+    @apply bg-gray-900 p-6 rounded-lg whitespace-pre-wrap;
+
+    .language-text {
+      @apply p-1 uppercase rounded right-0 top-0 text-xs;
+    }
+  }
 }
