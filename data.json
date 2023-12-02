@@ -15,6 +15,7 @@
   ],
   "courses": [
     {
+      "course_id": "8d953dc4-8649-42c5-90ba-f36d4ccebfe8",
       "title": "Build a SaaS with Nuxt, Supabase & Stripe — 2023",
       "description": "We'll create a complete app with payment system with Nuxt 3, Supabase, Stripe & ChatGPT.",
       "img_url": "/nuxt3.png",
@@ -23,6 +24,7 @@
       "price": 49
     },
     {
+      "course_id": "78f0bd87-0fbe-4be6-9b9b-d7f897ab6906",
       "title": "Next.js 14 en Français — 2023 ",
       "description": "Pour devenir développeur full-stack sur Next.js 14 ou pour lancer son SaaS.",
       "img_url": "/next14.png",
