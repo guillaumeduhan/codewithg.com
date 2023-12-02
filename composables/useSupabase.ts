@@ -2,7 +2,7 @@ export const useSupabase = () => {
   const supabase = useSupabaseAuthClient();
   const client = useSupabaseClient();
   
-  const { setOrders, setUser } = useStore();
+  const { getUser, setOrders, setUser } = useStore();
 
   const getCurrentUser = async () => {
     const {data}: any = await supabase.auth.getUser();
@@ -11,11 +11,12 @@ export const useSupabase = () => {
 
   const fetchOrders = async () => {
     const response = await supabase.auth.getUser();
+    let user;
     if (response) {
       const { data } = response;
-      user.value = data.user;
+      user = data.user;
     }
-    if (!user.value) return;
+    if (!user) return;
     try {
       const { data } = await client
         .from("orders")
@@ -25,7 +26,7 @@ export const useSupabase = () => {
             *
           )`
         )
-        .eq("email", user.value.email);
+        .eq("email", user.email);
 
       if (data) {
         setOrders(data);

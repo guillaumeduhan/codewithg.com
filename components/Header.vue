@@ -16,7 +16,7 @@ const sendLogin = async () => {
     const { data, error } = await supabase
       .auth
       .signInWithOtp({
-        email
+        email: email.value
       })
 
     if (data) {
@@ -56,7 +56,7 @@ onMounted(() => getCurrentUser());
         <a v-if="!login" @click="login = true">Create an account →</a>
         <div v-if="login">
           <div v-if="!success" class="flex items-center gap-3">
-            <input type="text" placeholder="me@gmail.com" />
+            <input v-model="email" type="text" placeholder="me@gmail.com" />
             <Button label="Login / Signup" :loading="loading" @click="sendLogin" />
           </div>
           <div v-else class="bg-green-50 border border-green-50 border-xl text-green-800 px-4 py-1">

@@ -1,5 +1,9 @@
 <script setup>
-import data from "../data.json"
+import data from "../data.json";
+
+definePageMeta({
+  middleware: 'default',
+})
 
 useHead({
   title:
@@ -40,14 +44,17 @@ useHead({
 
 <template>
   <div class="mb-0 pb-12 border-b border-dashed border-slate-500">
-    <p class="mb-4">I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact through Udemy, academic contributions, and my YouTube channel @codewithguillaume.</p>
+    <p class="mb-4">I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities
+      like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact
+      through Udemy, academic contributions, and my YouTube channel @codewithguillaume.</p>
     <div class="grid gap-3">
-      <NuxtLink to="https://tally.so/r/npDeOP" target="_blank"> Top 5 articles, links, videos of the week every Sunday →</NuxtLink>
-      <NuxtLink to="https://dub.sh/top-10-ctos" target="_blank">Top 10 CTOs to follow in 2024 →</NuxtLink>
-      <NuxtLink to="https://www.malt.fr/profile/guillaumed" target="_blank">Freelancing →</NuxtLink>
-      <NuxtLink to="https://dub.sh/AsYiLzg" target="_blank">
-        Social Blade →
+      <NuxtLink to="https://tally.so/r/npDeOP" target="_blank"> Top 5 articles, links, videos of the week every Sunday →
       </NuxtLink>
+      <NuxtLink to="https://dub.sh/top-10-ctos" target="_blank">Top 10 CTOs to follow in 2024 →</NuxtLink>
+      <NuxtLink to="https://dub.sh/AsYiLzg" target="_blank">
+        Statistics →
+      </NuxtLink>
+      <NuxtLink to="https://www.malt.fr/profile/guillaumed" target="_blank">Malt →</NuxtLink>
     </div>
   </div>
   <div class="grid">
@@ -59,8 +66,9 @@ useHead({
       <h2>Wallpapers</h2>
       <List :images="true" :list="data.wallpapers" />
     </div>
-    <!-- <div>
-      <h2>Templates</h2>
-    </div> -->
+    <div>
+      <h2>Articles</h2>
+      <List :list="data.articles" />
+    </div>
   </div>
 </template>

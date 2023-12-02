@@ -1,4 +1,18 @@
 {
+  "articles": [
+    {
+      "title": "Top 10 CTOs to Watch in 2024",
+      "description": "Guillaume Duhan is a seasoned Chief Technology Officer with an extensive 15-year background in shaping the tech scene...",
+      "path": "https://www.ibtimes.co.uk/top-10-ctos-watch-2024-1721202",
+      "date": "November, 2023"
+    },
+    {
+      "title": "How Allocations keep real-time communication with their customers",
+      "description": "Resend finally makes integrating email into your product fast, effective, and fun.",
+      "path": "https://resend.com/customers/allocations",
+      "date": "June, 2023"
+    }
+  ],
   "courses": [
     {
       "title": "Build a SaaS with Nuxt, Supabase & Stripe — 2023",
