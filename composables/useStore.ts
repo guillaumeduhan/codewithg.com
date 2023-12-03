@@ -1,6 +1,6 @@
 import { storeToRefs } from "pinia";
+import { useOrders } from "~/stores/orders";
 import { useUserStore } from "~/stores/user";
-import { useOrders } from "../stores/orders";
 
 export function useStore() {
   const ordersStore = useOrders();

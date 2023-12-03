@@ -44,7 +44,7 @@ useHead({
 
 <template>
   <div class="mb-0 pb-12 border-b border-dashed border-slate-500">
-    <p class="mb-4">I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities
+    <p class="mb-8">I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities
       like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact
       through Udemy, academic contributions, and my YouTube channel @codewithguillaume.</p>
     <div class="grid gap-3">

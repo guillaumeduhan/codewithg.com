@@ -16,6 +16,10 @@
 
   button {
     @apply item;
+
+    &.small {
+      @apply text-sm;
+    }
   }
 
   h2 {

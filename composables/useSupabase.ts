@@ -22,6 +22,9 @@ export const useSupabase = () => {
         .from("orders")
         .select(
           `*,
+          products (
+            *
+          ),
           courses (
             *
           )`

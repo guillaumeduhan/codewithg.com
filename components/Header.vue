@@ -40,7 +40,7 @@ onMounted(() => getCurrentUser());
 
 <template>
   <header class="flex items-center justify-between gap-2 mb-12">
-    <div class="flex items-center justify-center gap-2">
+    <div class="flex items-center justify-center gap-2 cursor-pointer" @click="$router.push('/')">
       <div class="relative cursor-pointer hover:scale-105 transition">
         <div class="bg-emerald-500 absolute bottom-0 right-0 rounded-full border-2 border-white h-4 w-4"></div>
         <div class="rounded-full overflow-hidden w-12 h-12">
@@ -65,7 +65,7 @@ onMounted(() => getCurrentUser());
         </div>
       </div>
       <IconsSun class="text-2xl cursor-pointer hover:dark:text-white transition" @click="switchColors" />
-      <UserItem v-if="getUser" :user="getUser" />
+      <UserItem v-if="getUser" :user="getUser" @click="$router.push('/profile')" />
     </div>
   </header>
 </template>
