@@ -11,11 +11,11 @@
   }
 
   a {
-    @apply font-semibold underline underline-offset-8 decoration-slate-300  group-hover:decoration-green-500 hover:decoration-green-500 text-gray-700 dark:text-slate-200 hover:text-black  cursor-pointer transition;
+    @apply font-semibold underline underline-offset-8 decoration-slate-300  group-hover:decoration-green-500 hover:decoration-green-500 text-gray-700 dark:text-slate-200 hover:text-black cursor-pointer transition;
   }
 
   button {
-    @apply item;
+    @apply item dark:bg-green-500 border-none dark:text-black;
 
     &.small {
       @apply text-sm;
@@ -36,7 +36,7 @@
   }
 
   input[type="text"] {
-    @apply outline-none item font-light hover:bg-transparent;
+    @apply outline-none item font-light hover:bg-transparent dark:bg-slate-800 hover:dark:bg-slate-800 dark:border-slate-800;
   }
 
   .code-container {
