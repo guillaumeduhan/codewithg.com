@@ -58,7 +58,7 @@ const openItem = async () => {
           <p v-if="date" class="text-gray-400 text-sm transition group-hover:text-black dark:group-hover:text-slate-200">
             {{ date }}
           </p>
-          <NuxtLink class="whitespace-nowrap" target="_blank" :to='path'>
+          <NuxtLink target="_blank" :to='path'>
             {{ limitString(title, isImage ? 28 : 120) }} →
           </NuxtLink>
           <p class="text-gray-400 text-sm transition group-hover:text-black dark:group-hover:text-slate-200">{{

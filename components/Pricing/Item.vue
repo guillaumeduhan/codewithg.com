@@ -16,9 +16,9 @@ const {
 
 <template>
   <div :class="`group items-center gap-4 cursor-pointer flex`">
-    <NuxtLink class="whitespace-nowrap" target="_blank" :to="url">
-      {{ title }} → {{ room }}
+    <NuxtLink target="_blank" :to="url">
+      {{ title }} →
     </NuxtLink>
-    <p>${{ price }}</p>
+    <p>${{ price }} <span class="text-xs text-gray-400">per session</span></p>
   </div>
 </template>

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply min-h-screen text-base text-black dark:bg-slate-900 dark:text-slate-200 font-normal;
+    @apply relative w-full min-h-screen text-base text-black bg-white dark:bg-slate-900 dark:text-slate-200 font-normal;
     font-family: "Geist";
     font-weight: 500;
     font-size: 18px;
@@ -44,7 +44,7 @@
 
   .container {
     width: 900px !important;
-    @apply max-w-[900px] mx-auto my-8 px-4 lg:px-0;
+    @apply max-w-[900px] mx-auto;
   }
 
   input[type="text"] {
