@@ -9,8 +9,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <button :class="`btn btn-primary ${props.loading ? 'btn-loading' : ''} ${className} ${small ? 'small' : ''}`"
+  <button
+    :class="`btn btn-primary flex items-center gap-2 ${props.loading ? 'btn-loading' : ''} ${className} ${small ? 'small' : ''}`"
     :disabled="props.loading || props.disabled">
+    <slot />
     <Spinner class="my-[2px]" v-if="props.loading" />
     <span v-else>{{ props.label }}</span>
   </button>

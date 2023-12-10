@@ -57,14 +57,18 @@ useHead({
       <NuxtLink to="https://www.malt.fr/profile/guillaumed" target="_blank">Malt →</NuxtLink>
     </div>
   </div>
-  <div class="grid">
-    <div>
+  <div class="grid menu">
+    <!-- <div>
       <h2>Private courses</h2>
       <List :images="true" :list="data.courses" />
     </div>
     <div>
       <h2>Wallpapers</h2>
       <List :images="true" :list="data.wallpapers" />
+    </div> -->
+    <div>
+      <h2>Coachings</h2>
+      <Pricing />
     </div>
     <div>
       <h2>Articles</h2>

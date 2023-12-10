@@ -16,11 +16,13 @@ const sendLogin = async () => {
     const { data, error } = await supabase
       .auth
       .signInWithOtp({
-        email: email.value
+        email: email.value,
+        options: {
+          emailRedirectTo: window.location.href
+        }
       })
 
     if (data) {
-      console.log(data)
       success.value = true;
     }
     console.log(error)
@@ -59,7 +61,7 @@ onMounted(() => getCurrentUser());
             <input v-model="email" type="text" placeholder="me@gmail.com" />
             <Button label="Login / Signup" :loading="loading" @click="sendLogin" />
           </div>
-          <div v-else class="bg-green-50 dark:bg-green-600/25 border border-green-50 dark:border-green-900/25 border-xl text-green-800 dark:text-green-500 px-4 rounded py-1">
+          <div v-else class="notification notification-success">
             Success. Check your e-mail.
           </div>
         </div>

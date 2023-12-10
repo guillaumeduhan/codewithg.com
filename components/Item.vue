@@ -13,6 +13,11 @@ const props = defineProps({
     type: Boolean,
     required: false,
     default: false
+  },
+  hasPreview: {
+    type: Boolean,
+    required: false,
+    default: true
   }
 });
 const {
@@ -65,8 +70,9 @@ const openItem = async () => {
         <div v-else>
           <div v-if="price" class="flex items-center gap-2">
             <p>${{ price }}</p>
-            <span>•</span>
-            <NuxtLink class="text-gray-500 underline underline-offset-4 font-medium text-sm decoration-dashed"
+            <span v-if="hasPreview">•</span>
+            <NuxtLink v-if="hasPreview"
+              class="text-gray-500 underline underline-offset-4 font-medium text-sm decoration-dashed"
               @click="open = !open">{{ open ? 'Close' : 'Video preview' }}
             </NuxtLink>
           </div>

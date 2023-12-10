@@ -1,0 +1,15 @@
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-5l-5 3v-3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12z"></path>
+      <path d="m13 8l3 3l-3 3m3-3H8"></path>
+    </g>
+  </svg>
+</template>
+
+<script lang="ts">
+export default {
+  name: 'TablerMessageForward'
+}
+</script>
