@@ -2,15 +2,15 @@
 const prices = ref([{
   price: 99,
   title: 'Beginner',
-  url: 'https://calendly.com/guillaumeduhan/beginner-session'
+  // url: 'https://calendly.com/guillaumeduhan/beginner-session'
 }, {
   price: 199,
   title: 'Intermediate',
-  url: 'https://calendly.com/guillaumeduhan/intermediate-session'
+  // url: 'https://calendly.com/guillaumeduhan/intermediate-session'
 }, {
   price: 299,
   title: 'Advanced',
-  url: 'https://calendly.com/guillaumeduhan/advanced-session'
+  // url: 'https://calendly.com/guillaumeduhan/advanced-session'
 }])
 </script>
 
