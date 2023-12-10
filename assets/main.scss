@@ -11,14 +11,18 @@
   }
 
   a {
-    @apply font-semibold underline underline-offset-8 decoration-slate-300  group-hover:decoration-green-500 hover:decoration-green-500 text-gray-700 dark:text-slate-200 hover:text-black cursor-pointer transition;
+    @apply font-semibold underline underline-offset-8 decoration-slate-300  group-hover:decoration-green-500 hover:decoration-green-500 text-gray-900 dark:text-slate-200 hover:text-black cursor-pointer transition;
   }
 
   button {
-    @apply item dark:bg-green-500 border-none dark:text-black;
+    @apply item dark:bg-green-500 dark:border-none dark:text-black;
 
     &.small {
       @apply text-sm;
+    }
+
+    ::placeholder {
+      @apply text-black;
     }
   }
 
@@ -39,12 +43,12 @@
   }
 
   .container {
-    width: 900px!important;
+    width: 900px !important;
     @apply max-w-[900px] mx-auto my-8 px-4 lg:px-0;
   }
 
   input[type="text"] {
-    @apply outline-none item font-light hover:bg-transparent dark:bg-slate-800 hover:dark:bg-slate-800 dark:border-slate-800;
+    @apply outline-none item font-normal hover:bg-transparent dark:bg-slate-800 hover:dark:bg-slate-800 dark:border-slate-800 text-base px-3;
   }
 
   .code-container {

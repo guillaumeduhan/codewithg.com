@@ -13,6 +13,8 @@ const sendLogin = async () => {
   try {
     loading.value = true;
 
+    console.log(window.location)
+
     const { data, error } = await supabase
       .auth
       .signInWithOtp({

@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       script: [
         {
           defer: true,
-          "data-domain": "codewithguillaume.com",
+          "data-domain": "codewithg.com",
           crossorigin: "anonymous",
           src: "https://plausible.io/js/script.js",
         },

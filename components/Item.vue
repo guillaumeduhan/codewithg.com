@@ -79,7 +79,7 @@ const openItem = async () => {
         </div>
       </div>
       <div v-if="open">
-        Video preview
+        Video preview to come
       </div>
     </div>
   </div>
