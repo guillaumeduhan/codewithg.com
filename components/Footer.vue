@@ -26,7 +26,7 @@ const topVideos = [
 </script>
 
 <template>
-  <footer class="bg-white container px-4 lg:px-0">
+  <footer class="container px-4 lg:px-0">
     <div class="grid lg:grid-cols-2">
       <div class="col-span-1 sm:col-span-1 grid gap-4">
         <p class="font-medium text-gray-900">Top videos</p>
@@ -80,9 +80,6 @@ const topVideos = [
           </li>
         </ul>
       </div>
-    </div>
-    <div class="pt-8">
-      <NuxtLink class="text-xs text-gray-500" to="/snippets">Secret snippets</NuxtLink>
     </div>
     <div class="mt-8 border-t border-gray-100 py-8">
       <div class="sm:flex sm:justify-between">

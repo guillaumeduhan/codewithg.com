@@ -3,14 +3,17 @@ const prices = ref([{
   price: 99,
   title: 'Beginner',
   // url: 'https://calendly.com/guillaumeduhan/beginner-session'
+  url: "https://tally.so/r/mJOvjr"
 }, {
   price: 199,
   title: 'Intermediate',
   // url: 'https://calendly.com/guillaumeduhan/intermediate-session'
+  url: "https://tally.so/r/mJOvjr"
 }, {
   price: 299,
   title: 'Advanced',
   // url: 'https://calendly.com/guillaumeduhan/advanced-session'
+  url: "https://tally.so/r/mJOvjr"
 }])
 </script>
 
@@ -22,21 +25,16 @@ const prices = ref([{
       year, depending on your goals.</p>
     <div class="flex items-center justify-start gap-4">
       <div class="flex gap-2">
-        <Avatar v-for="item, index in ['B', 'B', 'B', 'B', 'B', 'B', 'I', 'I', 'A']" :key="index" :offline="true"
+        <Avatar v-for="item, index in ['B', 'B', 'B', 'B', 'B', 'I', 'I', 'A']" :key="index" :offline="true"
           :user="{ email: item }" />
-        <Avatar :online="true" />
+        <Avatar v-for="item, index in [1, 2]" :key="index" :online="true" />
       </div>
       <div>
-        <p class="block text-sm">1 room left on 10.</p>
+        <p class="block text-sm">Currently 2 rooms left on 10.</p>
       </div>
     </div>
     <div :class="`grid gap-3 py-8`">
       <PricingItem v-for="item, index in prices" :key="index" :item="item" :isImage="true" :hasPreview="false" />
-    </div>
-    <div>
-      <Button label="Apply">
-        <IconsSend />
-      </Button>
     </div>
   </div>
 </template>

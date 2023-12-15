@@ -24,10 +24,11 @@ const {
   title,
   description,
   price,
-  path,
+  url,
   img_url,
   date,
-  product_id
+  product_id,
+  tags
 } = props.item;
 
 const hasOrder = computed(() => {
@@ -39,9 +40,8 @@ const hasOrder = computed(() => {
 })
 
 const openItem = async () => {
-  if (!hasOrder) return openUrl(path);
+  if (!hasOrder) return openUrl(url);
   const { products: { download_url } }: any = hasOrder.value;
-  console.log(download_url);
   await openUrl(download_url);
 }
 </script>
@@ -58,11 +58,14 @@ const openItem = async () => {
           <p v-if="date" class="text-gray-400 text-sm transition group-hover:text-black dark:group-hover:text-slate-200">
             {{ date }}
           </p>
-          <NuxtLink target="_blank" :to='path'>
+          <NuxtLink target="_blank" :to='url'>
             {{ limitString(title, isImage ? 28 : 120) }} →
           </NuxtLink>
           <p class="text-gray-400 text-sm transition group-hover:text-black dark:group-hover:text-slate-200">{{
             limitString(description, isImage ? 92 : 120) }}</p>
+          <div v-if="tags" class="flex">
+            <div v-for="tag, index in tags" :key="index" class="capitalize text-xs rounded-full px-2 py-1 bg-neutral-100 font-semibold">{{ tag }}</div>
+          </div>
         </div>
         <div v-if="hasOrder" @click="openItem()">
           <Button label="Download" small />
