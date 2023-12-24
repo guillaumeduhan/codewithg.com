@@ -7,12 +7,12 @@ definePageMeta({
 
 useHead({
   title:
-    "Codewithguillaume.com | An online School for Developers | Learn to Code with the Best | Advance Your Career",
+    "Codewithguillaume.com | Learn to Code with the Best | Advance Your Career",
   meta: [
     {
       name: "description",
       content:
-        "Our online school for developers offers a comprehensive curriculum that will help you advance your career in the field of coding and software development. With expert instruction, hands-on projects, and flexible learning options, we make it easy for you to learn and grow.",
+        "I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact through Udemy, academic contributions, and my YouTube channel @codewithguillaume.",
     },
     {
       name: "keywords",
@@ -24,7 +24,7 @@ useHead({
     {
       property: "og:title",
       content:
-        "Online School for Developers | Learn to Code with the Best | Advance Your Career",
+        "CodewithGuillaume.com | I'm @Codewithguillaume, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin.",
     },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://codewithguillaume.com/" },
@@ -35,7 +35,7 @@ useHead({
     {
       property: "og:description",
       content:
-        "Our online school for developers offers a comprehensive curriculum that will help you advance your career in the field of coding and software development. With expert instruction, hands-on projects, and flexible learning options, we make it easy for you to learn and grow.",
+        "I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact through Udemy, academic contributions, and my YouTube channel @codewithguillaume.",
     },
     { property: "og:site_name", content: "codewithguillaume.com" },
   ],
@@ -48,18 +48,18 @@ useHead({
       like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact
       through Udemy, academic contributions, and my YouTube channel @codewithguillaume.</p>
     <div class="grid gap-3">
-      <NuxtLink to="https://tally.so/r/npDeOP" target="_blank"> Top 5 articles, links, videos of the week every Sunday →
-      </NuxtLink>
       <NuxtLink to="https://dub.sh/top-10-ctos" target="_blank">Top 10 CTOs to follow in 2024 →</NuxtLink>
+      <NuxtLink to="https://tally.so/r/npDeOP" target="_blank">Newsletter →
+      </NuxtLink>
       <NuxtLink to="https://dub.sh/AsYiLzg" target="_blank">
         Statistics →
       </NuxtLink>
-      <NuxtLink to="https://www.malt.fr/profile/guillaumed" target="_blank">Malt →</NuxtLink>
+      <NuxtLink to="https://www.malt.fr/profile/guillaumed" target="_blank">Freelancing →</NuxtLink>
     </div>
   </div>
   <div class="grid">
     <Section title="Coachings">
-      <Pricing />
+      <Coachings />
     </Section>
     <Section title="Interviews, podcasts & articles">
       <List :list="data.articles" />

@@ -1,7 +1,7 @@
 <template>
   <div class="code-container relative">
-  <header class="flex gap-2 cursor-pointer relative items-center justify-end text-white" @click="copy(code)">
-    <div class="text-xl text-white">
+  <header class="flex gap-2 cursor-pointer relative items-center justify-end" @click="copy(code)">
+    <div class="text-xl ">
       <span class="copied-text" v-if="copied">Copied code!</span>
       <div v-else class="text-2xl">
         <IconsCopy />

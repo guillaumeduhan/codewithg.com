@@ -64,7 +64,7 @@ const openItem = async () => {
           <p class="text-gray-400 text-sm transition group-hover:text-black dark:group-hover:text-slate-200">{{
             limitString(description, isImage ? 92 : 120) }}</p>
           <div v-if="tags" class="flex">
-            <div v-for="tag, index in tags" :key="index" class="capitalize text-xs rounded-full px-2 py-1 bg-neutral-100 font-semibold">{{ tag }}</div>
+            <div v-for="tag, index in tags" :key="index" class="capitalize text-xs rounded-full px-2 py-1 bg-neutral-100 dark:bg-neutral-800 font-semibold">{{ tag }}</div>
           </div>
         </div>
         <div v-if="hasOrder" @click="openItem()">

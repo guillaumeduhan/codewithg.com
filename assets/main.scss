@@ -2,64 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply relative w-full min-h-screen text-base text-black bg-white dark:bg-slate-900 dark:text-slate-200 font-normal;
-    font-family: "Geist";
-    font-weight: 500;
-    font-size: 18px;
+body {
+  @apply relative w-full min-h-screen text-base text-black bg-white dark:bg-neutral-900 dark:text-neutral-400 font-normal;
+  font-family: "Geist";
+  font-weight: 500;
+  font-size: 18px;
+}
+
+a {
+  @apply font-semibold underline underline-offset-8 decoration-neutral-300  group-hover:decoration-green-500 hover:decoration-green-500 text-gray-900 dark:text-neutral-200 hover:text-black cursor-pointer transition;
+}
+
+button {
+  @apply item dark:bg-green-500 dark:border-none dark:text-black;
+
+  &.small {
+    @apply text-sm;
   }
 
-  a {
-    @apply font-semibold underline underline-offset-8 decoration-slate-300  group-hover:decoration-green-500 hover:decoration-green-500 text-gray-900 dark:text-slate-200 hover:text-black cursor-pointer transition;
+  ::placeholder {
+    @apply text-black;
+  }
+}
+
+h2 {
+  @apply font-[500] text-xl;
+}
+
+.item {
+  @apply px-5 py-2 border rounded-md shadow-sm transition hover:bg-neutral-50 font-[600];
+}
+
+.container {
+  @apply w-[900px] max-w-[900px] mx-auto;
+}
+
+input[type="text"] {
+  @apply outline-none item font-normal hover:bg-transparent dark:bg-neutral-800 hover:dark:bg-neutral-800 dark:border-neutral-800 text-base px-3;
+}
+
+.code-container {
+  @apply bg-gray-900 p-6 rounded-lg whitespace-pre-wrap;
+
+  .language-text {
+    @apply p-1 uppercase rounded right-0 top-0 text-xs;
+  }
+}
+
+.notification {
+  @apply border px-4 rounded py-1;
+
+  &-success {
+    @apply text-green-800  bg-green-50 dark:bg-green-600/25 border border-green-50 dark:border-green-900/25 text-green-800 dark:text-green-500;
   }
 
-  button {
-    @apply item dark:bg-green-500 dark:border-none dark:text-black;
-
-    &.small {
-      @apply text-sm;
-    }
-
-    ::placeholder {
-      @apply text-black;
-    }
-  }
-
-  h2 {
-    @apply font-[500] text-xl mt-12 mb-8;
-  }
-
-  .item {
-    @apply px-5 py-2 border rounded-md shadow-sm transition hover:bg-slate-50 font-[600];
-  }
-
-  .container {
-    width: 900px !important;
-    @apply max-w-[900px] mx-auto;
-  }
-
-  input[type="text"] {
-    @apply outline-none item font-normal hover:bg-transparent dark:bg-slate-800 hover:dark:bg-slate-800 dark:border-slate-800 text-base px-3;
-  }
-
-  .code-container {
-    @apply bg-gray-900 p-6 rounded-lg whitespace-pre-wrap;
-
-    .language-text {
-      @apply p-1 uppercase rounded right-0 top-0 text-xs;
-    }
-  }
-
-  .notification {
-    @apply border px-4 rounded py-1;
-
-    &-success {
-      @apply text-green-800  bg-green-50 dark:bg-green-600/25 border border-green-50 dark:border-green-900/25 text-green-800 dark:text-green-500;
-    }
-
-    &-danger {
-      @apply text-rose-800  bg-rose-50 dark:bg-rose-600/25 border border-rose-50 dark:border-rose-900/25 text-rose-800 dark:text-rose-500;
-    }
+  &-danger {
+    @apply text-rose-800  bg-rose-50 dark:bg-rose-600/25 border border-rose-50 dark:border-rose-900/25 text-rose-800 dark:text-rose-500;
   }
 }

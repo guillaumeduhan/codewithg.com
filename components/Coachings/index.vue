@@ -34,7 +34,7 @@ const prices = ref([{
       </div>
     </div>
     <div :class="`grid gap-3 py-8`">
-      <PricingItem v-for="item, index in prices" :key="index" :item="item" :isImage="true" :hasPreview="false" />
+      <CoachingsItem v-for="item, index in prices" :key="index" :item="item" :isImage="true" :hasPreview="false" />
     </div>
   </div>
 </template>
