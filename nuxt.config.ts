@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/assets/main.scss", "~/assets/Geist/fonts.css"],
+  css: ["~/assets/main.scss", "~/assets/Hellix/fonts.css"],
   content: {
     highlight: {
       theme: {

@@ -1,9 +1,9 @@
 <template>
-  <div class="relative py-12">
-    <div class="container px-4 lg:px-0">
+  <div class="relative py-4 lg:py-12">
+    <div class="px-4 lg:px-12 max-w-[1600px] mx-auto">
       <Header />
       <slot />
     </div>
   </div>
-  <Footer />
+  <!-- <Footer /> -->
 </template>

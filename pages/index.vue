@@ -43,22 +43,10 @@ useHead({
 </script>
 
 <template>
-  <div class="mb-0 pb-12 border-b border-dashed border-slate-500">
-    <p class="mb-8">I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities
-      like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact
-      through Udemy, academic contributions, and my YouTube channel @codewithguillaume.</p>
-    <div class="grid gap-3">
-      <NuxtLink to="https://dub.sh/top-10-ctos" target="_blank">Top 10 CTOs to follow in 2024 →</NuxtLink>
-      <NuxtLink to="https://tally.so/r/npDeOP" target="_blank">Newsletter →
-      </NuxtLink>
-      <NuxtLink to="https://dub.sh/AsYiLzg" target="_blank">
-        Statistics →
-      </NuxtLink>
-      <NuxtLink to="https://www.malt.fr/profile/guillaumed" target="_blank">Freelancing →</NuxtLink>
-    </div>
-  </div>
+  <Subheader />
+  <Bento />
   <div class="grid">
-    <Section title="Coachings">
+    <!-- <Section title="Coachings">
       <Coachings />
     </Section>
     <Section title="Interviews, podcasts & articles">
@@ -72,6 +60,6 @@ useHead({
     </Section>
     <Section title="Snippets">
       <Snippets />
-    </Section>
+    </Section> -->
   </div>
 </template>

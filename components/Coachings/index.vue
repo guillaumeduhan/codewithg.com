@@ -18,22 +18,9 @@ const prices = ref([{
 </script>
 
 <template>
-  <div class="mb-12">
-
-    <p class="mb-8">Limited to 10 students per year, our sessions, which include private lessons, code and project
-      reviews, as well as job search support, typically last for 1 hour every 2 weeks and can range from 6 weeks to 1
-      year, depending on your goals.</p>
-    <div class="flex items-center justify-start gap-4">
-      <div class="flex gap-2">
-        <Avatar v-for="item, index in ['B', 'B', 'B', 'B', 'B', 'I', 'I', 'A']" :key="index" :offline="true"
-          :user="{ email: item }" />
-        <Avatar v-for="item, index in [1, 2]" :key="index" :online="true" />
-      </div>
-      <div>
-        <p class="block text-sm">Currently 2 rooms left on 10.</p>
-      </div>
-    </div>
-    <div :class="`grid gap-3 py-8`">
+  <div class="grid gap-4">
+    <p>Every year, I support a maximum of 10 students in their careers through private lessons, code reviews, and job search assistance.</p>
+    <div :class="`flex items-start justify-between gap-3`">
       <CoachingsItem v-for="item, index in prices" :key="index" :item="item" :isImage="true" :hasPreview="false" />
     </div>
   </div>

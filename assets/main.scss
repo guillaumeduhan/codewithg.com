@@ -4,7 +4,7 @@
 
 body {
   @apply relative w-full min-h-screen text-base text-black bg-white dark:bg-neutral-900 dark:text-neutral-400 font-normal;
-  font-family: "Geist";
+  font-family: "Hellix";
   font-weight: 500;
   font-size: 18px;
 }
@@ -14,7 +14,7 @@ a {
 }
 
 button {
-  @apply item dark:bg-green-500 dark:border-none dark:text-black;
+  @apply item text-[14px] md:text-base dark:border-none dark:text-white bg-neutral-800 hover:bg-neutral-700 rounded-full;
 
   &.small {
     @apply text-sm;
@@ -26,11 +26,24 @@ button {
 }
 
 h2 {
-  @apply font-[500] text-xl;
+  @apply font-semibold text-xl lg:text-[29px];
+}
+
+.card {
+  @apply relative border w-full border-neutral-200 dark:border-neutral-500 rounded-3xl p-6 lg:p-8 shadow-sm cursor-pointer hover:scale-[1.005] transition duration-200 ease-in grid gap-6;
+
+  &--youtube {
+    @apply bg-red-600 relative text-white border-none bg-cover bg-no-repeat overflow-hidden;
+    // background-image: url("../assets/guillaume.png");
+  }
+
+  p {
+    @apply font-normal;
+  }
 }
 
 .item {
-  @apply px-5 py-2 border rounded-md shadow-sm transition hover:bg-neutral-50 font-[600];
+  @apply px-5 py-2 rounded-full shadow-sm transition bg-neutral-800 text-white hover:bg-neutral-50 font-[600];
 }
 
 .container {

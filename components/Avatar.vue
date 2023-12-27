@@ -11,7 +11,6 @@ const { user, online, offline } = props;
       style="width:36px; height: 36px;">
       <span className="font-medium capitalize text-sm" v-if="user?.email">{{ user.email[0] || 'A' }}</span>
     </div>
-    <div v-if="offline" class="bg-rose-500 absolute -bottom-1 -right-1 rounded-full border-2 border-white h-4 w-4" />
-    <div v-if="online" class="bg-emerald-500 absolute -bottom-1 -right-1 rounded-full border-2 border-white h-4 w-4" />
+    <div :class="`${online ? 'bg-emerald-500' : 'bg-rose-500'} absolute -bottom-1 -right-1 rounded-full border-2 border-white h-4 w-4`" />
   </div>
 </template>

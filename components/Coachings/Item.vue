@@ -15,10 +15,10 @@ const {
 </script>
 
 <template>
-  <div :class="`group items-center gap-4 cursor-pointer flex`">
+  <div :class="`group grid gap-2 cursor-pointer font-semibold`">
     <NuxtLink target="_blank" :to="url">
-      {{ title }} →
+      {{ title }}
     </NuxtLink>
-    <p>${{ price }} <span class="text-xs text-gray-400">per session</span></p>
+    <div class="text-xs">${{ price }} per session</div>
   </div>
 </template>
