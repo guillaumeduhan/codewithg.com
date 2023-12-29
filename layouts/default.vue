@@ -3,7 +3,7 @@
     <div class="px-4 lg:px-12 max-w-[1600px] mx-auto">
       <Header />
       <slot />
+      <Footer />
     </div>
   </div>
-  <!-- <Footer /> -->
 </template>

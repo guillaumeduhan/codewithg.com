@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-0 pb-16 mb-16 border-b border-dashed border-slate-500">
+  <div class="mb-12 pb-16 border-b border-dashed border-slate-500">
     <p class="mb-8 text-[32px] leading-[42px] lg:text-[48px] lg:leading-[64px]">I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping web apps in cities like Paris, London, and Berlin; I'm also known for my YouTube channel @codewithguillaume.</p>
     <div class="grid lg:grid-cols-4 gap-3">
       <NuxtLink to="https://dub.sh/top-10-ctos" target="_blank">Top 10 CTOs to follow in 2024 →</NuxtLink>

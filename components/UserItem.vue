@@ -7,7 +7,7 @@ const { limitString } = useHelpers()
 
 <template>
   <div
-    class="flex items-center justify-start gap-3 px-2 py-2 text-black dark:text-slate-200 transition shadow-sm cursor-pointer border border-slate-300 dark:border-slate-600 rounded-xl hover:bg-gray-50 hover:dark:bg-gray-700">
+    class="flex items-center justify-start gap-3 px-2 py-2 text-black dark:text-neutral-200 transition shadow-sm cursor-pointer border border-neutral-300 dark:border-neutral-800 rounded-xl hover:bg-neutral-50 hover:dark:bg-neutral-800">
     <div class="relative">
       <Avatar :user="user">
         <!-- image here -->

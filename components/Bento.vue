@@ -5,7 +5,7 @@
         <Card
           title="Youtube"
           description="I created this YouTube channel in 2022 to share all my knowledge about web development. Since then, I've been posting 3 videos per week. Subscribe now!"
-          label="Subscribe now →"
+          label="Subscribe →"
         />
       </div>
       <div class="grid lg:col-span-2 gap-6">
@@ -17,7 +17,7 @@
           />
           <Card
             title="Coachings"
-            label="Book now →"
+            label="Book →"
           >
             <Coachings />
           </Card>
@@ -34,6 +34,26 @@
             label="Read →"
           />
         </div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div class="grid xl:col-span-2">
+        <div class="grid gap-6">
+          <Card />
+          <div class="grid gap-6 grid-cols-1 xl:grid-cols-2">
+            <div class="grid gap-6">
+              <Card />
+              <Card />
+            </div>
+            <div class="grid gap-6">
+              <Card />
+              <Card />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid xl:col-span-1">
+        <Card />
       </div>
     </div>
   </div>
