@@ -7,6 +7,7 @@ const loading = ref(false)
 const login = ref(false)
 const success = ref(false)
 const email = ref('')
+const open = ref(true)
 
 const sendLogin = async () => {
   if (!email) { return alert('Please enter your email address') }
@@ -39,7 +40,12 @@ const switchColors = () => {
   return colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
 }
 
-onMounted(() => getCurrentUser())
+onMounted(() => {
+  getCurrentUser()
+  setInterval(() => {
+    // open.value = !open.value
+  }, 1500)
+})
 </script>
 
 <template>
@@ -71,7 +77,12 @@ onMounted(() => getCurrentUser())
         </div>
       </div>
       <IconsSun class="text-2xl cursor-pointer hover:dark:text-white transition" @click="switchColors" />
-      <UserItem v-if="getUser" :user="getUser" @click="$router.push('/profile')" />
+      <div>
+        <Slidebar :open="open" @onClose="open = !open">
+          <Profile @onLogout="open = !open" />
+        </Slidebar>
+        <UserItem v-if="getUser" :user="getUser" @click="open = !open" />
+      </div>
     </div>
   </header>
 </template>

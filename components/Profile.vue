@@ -3,12 +3,15 @@ definePageMeta({
   middleware: 'auth',
 })
 
-const { supabase } = useSupabase()
+const emit = defineEmits(['onLogout']);
+
+const { supabase } = useSupabase()
 const { getUser } = useStore()
 const router = useRouter()
 
 const logout = () => {
   supabase.auth.signOut()
+  emit("onLogout")
   router.push('/')
 }
 </script>

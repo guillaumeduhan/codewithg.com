@@ -2,7 +2,11 @@ export const useSupabase = () => {
   const supabase = useSupabaseAuthClient();
   const client = useSupabaseClient();
   
-  const { getUser, setOrders, setUser } = useStore();
+  const {
+    getUser,
+    setOrders,
+    setUser
+  } = useStore();
 
   const getCurrentUser = async () => {
     const {data}: any = await supabase.auth.getUser();

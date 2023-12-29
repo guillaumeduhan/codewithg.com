@@ -29,7 +29,7 @@
             label="Subscribe →"
           />
           <Card
-            title="Blog on Hashnode"
+            title="Blog"
             description="In addition to videos, I write articles on Hashnode, tutorials, and guides to help people learn how to code."
             label="Read →"
           />
