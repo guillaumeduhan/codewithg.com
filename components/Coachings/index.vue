@@ -20,8 +20,8 @@ const prices = ref([{
 <template>
   <div class="grid gap-4">
     <p>Every year, I support a maximum of 10 students in their careers through private lessons, code reviews, and job search assistance.</p>
-    <div :class="`flex items-start justify-between gap-3`">
+    <!-- <div :class="`flex items-start justify-between gap-3`">
       <CoachingsItem v-for="item, index in prices" :key="index" :item="item" :isImage="true" :hasPreview="false" />
-    </div>
+    </div> -->
   </div>
 </template>

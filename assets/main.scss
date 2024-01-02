@@ -50,7 +50,7 @@ h2 {
 }
 
 input[type="text"] {
-  @apply outline-none item font-normal hover:bg-transparent dark:bg-neutral-800 hover:dark:bg-neutral-800 dark:border-neutral-800 text-base px-3;
+  @apply outline-none font-bold bg-transparent dark:bg-neutral-800 hover:dark:bg-neutral-800 dark:border-neutral-800 text-base px-6 border rounded-full py-2;
 }
 
 .code-container {

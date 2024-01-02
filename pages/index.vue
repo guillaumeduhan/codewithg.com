@@ -45,21 +45,4 @@ useHead({
 <template>
   <Subheader />
   <Bento />
-  <div class="grid">
-    <!-- <Section title="Coachings">
-      <Coachings />
-    </Section>
-    <Section title="Interviews, podcasts & articles">
-      <List :list="data.articles" />
-    </Section>
-    <Section title="Courses">
-      <List :images="true" :list="data.courses" />
-    </Section>
-    <Section title="Wallpapers">
-      <List :images="true" :list="data.wallpapers" />
-    </Section>
-    <Section title="Snippets">
-      <Snippets />
-    </Section> -->
-  </div>
 </template>

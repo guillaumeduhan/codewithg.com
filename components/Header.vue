@@ -7,7 +7,7 @@ const loading = ref(false)
 const login = ref(false)
 const success = ref(false)
 const email = ref('')
-const open = ref(true)
+const open = ref(false)
 
 const sendLogin = async () => {
   if (!email) { return alert('Please enter your email address') }

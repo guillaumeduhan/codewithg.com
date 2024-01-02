@@ -6,7 +6,9 @@
           title="Youtube"
           description="I created this YouTube channel in 2022 to share all my knowledge about web development. Since then, I've been posting 3 videos per week. Subscribe now!"
           label="Subscribe →"
-        />
+        >
+          <img src="../assets/guillaume.png" />
+        </Card>
       </div>
       <div class="grid lg:col-span-2 gap-6">
         <div class="grid xl:grid-cols-2 xl:col-span-2 gap-6">
