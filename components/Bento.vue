@@ -16,7 +16,7 @@
           <Card
             title="Freelance"
             description="Since 2015, I've held a place among the prestigious top 1% of freelancers on Malt, the leading freelance platform in Europe."
-            label="Contact →"
+            label="Contact me →"
             url="https://www.malt.fr/profile/guillaumed"
           />
           <Card
@@ -37,7 +37,7 @@
             title="Partnerships"
             description="If you would like me to create a series of videos about your product, appear as a sponsor, or feature in one of my newsletters, you can contact me here."
             label="Request →"
-            url="https://dub.sh/codewithg-hashnode"
+            url="https://dub.sh/codewithg-business"
           />
         </div>
       </div>
@@ -83,15 +83,15 @@
       </div>
     </div>
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-      <div class="col-span-1">
+      <!-- <div class="col-span-1">
         <Card
           title="Github"
           description="I am very active on GitHub, where I regularly publish new projects and templates. I also contribute to numerous open-source projects."
           label="Subscribe to my profile →"
           url="https://www.linkedin.com/in/guillaumeduhan/"
         />
-      </div>
-      <div class="col-span-2 grid xl:grid-cols-2 gap-6">
+      </div> -->
+      <!-- <div class="col-span-2 grid xl:grid-cols-2 gap-6">
         <Card
           :social="true"
           title="X"
@@ -116,7 +116,7 @@
           label="Follow →"
           url="https://threads.net/@codewithguillaume"
         />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
