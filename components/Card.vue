@@ -4,9 +4,9 @@ const { openUrl } = useHelpers();
 </script>
 
 <template>
-  <div class="card flex flex-col gap-4" :class="color">
+  <div class="card flex gap-4" :class="`${color} ${social ? 'items-center' : 'flex-col'}`">
     <h2 :class="social ? 'text-2xl' : ''">{{ title }}</h2>
-    <div class="grow h-full flex flex-col justify-end gap-4">
+    <div class="grow h-full flex gap-4" :class="`${social ? 'w-full items-end' : 'flex-col justify-end'}`">
       <div class="grow grid items-center">
         <slot />
       </div>

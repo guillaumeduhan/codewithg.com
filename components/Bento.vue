@@ -47,39 +47,23 @@
         <div class="grid gap-6">
           <Card
             title="Supabase"
-            description="Supabase is, in my opinion, the best Database as a Service since Firebase."
+            description="Supabase is the best Database as a Service since Firebase."
             label="Create an account →"
             url="https://dub.sh/create-supabase"
           />
-          <div class="grid gap-6 grid-cols-1 xl:grid-cols-2">
-            <div class="grid gap-6">
-              <Card
-                :social="true"
-                title="X"
-                label="Follow →"
-                url="https://twitter.com/blackevilgoblin"
-              />
-              <Card
-                :social="true"
-                title="Threads"
-                label="Follow →"
-                url="https://threads.net/@codewithguillaume"
-              />
-            </div>
-            <div class="grid gap-6">
-              <Card
-                :social="true"
-                title="LinkedIn"
-                label="Follow →"
-                url="https://www.linkedin.com/in/guillaumeduhan/"
-              />
-              <Card
-                :social="true"
-                title="Pinterest"
-                label="Follow →"
-                url="https://www.pinterest.fr/codewithguillaume/"
-              />
-            </div>
+          <div class="grid xl:grid-cols-2 gap-6">
+            <Card
+              title="Malt"
+              description="The most effective platform for finding freelance missions."
+              label="Start an account →"
+              url="https://dub.sh/malt-codewithguillaume"
+            />
+            <Card
+              title="Dub.co"
+              description="A tool that I use everyday to track my links. Very useful & powerful for marketing."
+              label="Create an account →"
+              url="https://dub.sh/h2uLEmW"
+            />
           </div>
         </div>
       </div>
@@ -90,7 +74,48 @@
           label="Read →"
           url="https://dub.sh/codewithg-hashnode"
         />
-        <Card />
+        <Card
+          title="Resend"
+          label="Create an account →"
+          description="Resend is the most powerful and user-friendly email marketing tool on the market."
+          url="https://dub.sh/resend-codewithguillaume"
+        />
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div class="col-span-1">
+        <Card
+          title="Github"
+          description="I am very active on GitHub, where I regularly publish new projects and templates. I also contribute to numerous open-source projects."
+          label="Subscribe to my profile →"
+          url="https://www.linkedin.com/in/guillaumeduhan/"
+        />
+      </div>
+      <div class="col-span-2 grid xl:grid-cols-2 gap-6">
+        <Card
+          :social="true"
+          title="X"
+          label="Follow →"
+          url="https://twitter.com/blackevilgoblin"
+        />
+        <Card
+          :social="true"
+          title="LinkedIn"
+          label="Follow →"
+          url="https://www.linkedin.com/in/guillaumeduhan/"
+        />
+        <Card
+          :social="true"
+          title="Pinterest"
+          label="Follow →"
+          url="https://www.pinterest.fr/codewithguillaume/"
+        />
+        <Card
+          :social="true"
+          title="Threads"
+          label="Follow →"
+          url="https://threads.net/@codewithguillaume"
+        />
       </div>
     </div>
   </div>
