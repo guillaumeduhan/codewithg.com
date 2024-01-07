@@ -16,16 +16,6 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/main.scss", "~/assets/Hellix/fonts.css"],
-  content: {
-    highlight: {
-      theme: {
-        // Default theme (same as single string)
-        default: 'min-dark',
-        // Theme used if `html.dark`
-        dark: 'min-dark'
-      }
-    }
-  },
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -33,7 +23,7 @@ export default defineNuxtConfig({
     },
   },
   ssr: true,
-  modules: ["@nuxtjs/supabase", "@pinia/nuxt", "nuxt-lodash", '@nuxtjs/color-mode', '@nuxt/content'],
+  modules: ["@nuxtjs/supabase", "@pinia/nuxt", '@nuxtjs/color-mode'],
   colorMode: {
     classSuffix: ''
   },

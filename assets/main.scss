@@ -30,7 +30,7 @@ h2 {
 }
 
 .card {
-  @apply relative rounded-3xl p-6 lg:p-8 shadow-sm cursor-pointer hover:scale-[1.005] transition duration-200 ease-in gap-6 border w-full border-neutral-200 dark:border-neutral-800 flex flex-col bg-gradient-to-br from-transparent via-transparent to-neutral-50/50 dark:from-transparent dark:via-transparent dark:to-neutral-800/50;
+  @apply relative rounded-3xl p-6 lg:p-8 shadow-sm cursor-pointer hover:scale-[1.005] transition duration-200 ease-in border w-full border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-transparent via-transparent to-neutral-50/50 dark:from-transparent dark:via-transparent dark:to-neutral-800/50;
 
   h2 {
     @apply grow;
@@ -50,7 +50,7 @@ h2 {
 }
 
 input[type="text"] {
-  @apply outline-none font-bold bg-transparent dark:bg-neutral-800 hover:dark:bg-neutral-800 dark:border-neutral-800 text-base px-6 border rounded-full py-2;
+  @apply outline-none font-semibold bg-transparent dark:bg-neutral-800 hover:dark:bg-neutral-800 dark:border-neutral-800 text-base px-6 border rounded-full py-2;
 }
 
 .code-container {

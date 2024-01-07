@@ -1,5 +1,7 @@
 export const useHelpers = () => {
-  const openUrl = (url: string) => window.open(url, "_blank");
+  const openUrl = (link: string) => {
+    if (process.browser) window.open(link, "_blank");
+  }
 
   const limitString = (str: string, limit = 22) => {
     if (!str) return;
