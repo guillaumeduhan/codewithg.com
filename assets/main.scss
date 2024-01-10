@@ -39,6 +39,10 @@ h2 {
   p {
     @apply font-medium;
   }
+
+  &.youtube {
+    @apply text-white border-none bg-gradient-to-br bg-red-500 to-red-500;
+  }
 }
 
 .item {

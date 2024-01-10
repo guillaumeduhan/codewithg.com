@@ -1,6 +1,8 @@
 <template>
   <div class="mb-12 pb-16 border-b border-dashed border-slate-500">
-    <p class="mb-8 text-[24px] leading-[42px] lg:text-[48px] lg:leading-[64px]">I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping web apps in cities like Paris, London, and Berlin; I'm also known for my YouTube channel @codewithguillaume.</p>
+    <p class="mb-8 text-[24px] leading-[42px] lg:text-[40px] lg:leading-[56px]">I'm Guillaume Duhan, an accomplished CTO
+      with over 15 years of experience shaping web apps in cities like Paris, London, and Berlin; I'm also known for my
+      YouTube channel @codewithguillaume.</p>
     <div class="grid lg:grid-cols-4 gap-3">
       <NuxtLink to="https://www.malt.fr/profile/guillaumed" target="_blank">Freelance →</NuxtLink>
       <NuxtLink to="https://dub.sh/codewithg" target="_blank">Newsletter →

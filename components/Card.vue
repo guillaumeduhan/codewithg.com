@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps(['title', 'description', 'label', 'color', 'url', 'social'])
-const { openUrl } = useHelpers();
+const { openUrl } = useHelpers();
 </script>
 
 <template>
@@ -8,7 +8,7 @@ const { openUrl } = useHelpers();
     <h2 :class="social ? 'text-2xl' : ''">{{ title }}</h2>
     <div class="grow h-full flex gap-4" :class="`${social ? 'w-full items-end' : 'flex-col justify-start'}`">
       <slot />
-      <p class="grow text-neutral-500" v-if="description">{{ description }}</p>
+      <p class="grow " v-if="description">{{ description }}</p>
       <div>
         <Button v-if="label && url" :label="label" @click="openUrl(url)" />
       </div>
