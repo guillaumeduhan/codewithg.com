@@ -1,17 +1,16 @@
 <script setup>
-const props = defineProps(['title', 'description', 'label', 'color', 'url', 'social'])
+const props = defineProps(['title', 'description', 'label', 'url', 'centered'])
 const { openUrl } = useHelpers();
 </script>
 
 <template>
-  <div class="card flex gap-4" :class="`${color} ${social ? 'items-center' : 'flex-col'}`">
-    <h2 :class="social ? 'text-2xl' : ''">{{ title }}</h2>
-    <div class="grow h-full flex gap-4" :class="`${social ? 'w-full items-end' : 'flex-col justify-start'}`">
-      <slot />
-      <p class="grow " v-if="description">{{ description }}</p>
-      <div>
-        <Button v-if="label && url" :label="label" @click="openUrl(url)" />
-      </div>
+  <div :class="`card card--dark flex flex-col gap-4`">
+    <slot />
+    <div class="grow">
+      <p class="text-3xl" v-if="description">{{ description }}</p>
+    </div>
+    <div :class="`flex ${centered ? 'justify-center' : 'justify-start'}`">
+      <Button v-if="label && url" :label="label" @click="openUrl(url)" />
     </div>
   </div>
 </template>
