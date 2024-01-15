@@ -16,27 +16,27 @@
     <div class="grid lg:grid-cols-12 gap-8">
       <Card 
         class="lg:col-span-6"
-        description="Top 1% of freelancers on Malt, Europe's leading freelance platform."
+        description="Top 1% of freelancers on Malt in 2023."
         label="Mission →"
         url="https://www.malt.fr/profile/guillaumed"
       />
       <Card 
         class="lg:col-span-6"
-        description="Each year, I mentor up to 10 students in their careers."
-        label="Book now →"
+        description="Mentoring. 10 students max per year."
+        label="Coaching →"
         url="https://calendly.com/guillaumeduhan/beginner-session"
       />
     </div>
     <div class="grid lg:grid-cols-12 gap-8">
       <Card
         class="lg:col-span-5"
-        description="Top 5 best links about tech twice a month."
+        description="Newsletter. Twice a month."
         label="Subscribe →"
         url="https://dub.sh/codewithg"
       />
       <Card
         class="lg:col-span-7"
-        description="The place where you can have a 24/7 conversation with the world."
+        description="Talk to me on X."
         label="Follow me →"
         url="https://twitter.com/blackevilgoblin"
       />
@@ -53,13 +53,13 @@
     <div class="grid lg:grid-cols-12 gap-8">
       <Card
         class="lg:col-span-6"
-        description="Find freelance missions."
+        description="Freelance missions."
         label="Malt →"
         url="https://dub.sh/malt-codewithguillaume"
       />
       <Card
         class="lg:col-span-6"
-        description="The most powerful tool for tracking links."
+        description="Tracking links."
         label="Dub.sh →"
         url="https://dub.sh/h2uLEmW"
       />
@@ -67,13 +67,13 @@
     <div class="grid lg:grid-cols-12 gap-8">
         <Card
           class="lg:col-span-7"
-          description="The blogging platform of my dreams."
+          description="Blogging platform of my dreams."
           label="Hashnode →"
           url="https://dub.sh/codewithg-hashnode"
         />
         <Card
           class="lg:col-span-5"
-          description="Best emailing tool on the market."
+          description="Best emailing tool."
           url="https://dub.sh/resend-codewithguillaume"
           label="Resend →"
         />
