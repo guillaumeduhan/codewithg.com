@@ -1,9 +1,9 @@
 <template>
-  <div class="mb-12 pb-16 border-b border-dashed border-slate-500">
-    <p class="mb-8 text-[24px] leading-[42px] lg:text-[40px] lg:leading-[56px]">I'm Guillaume Duhan, an accomplished CTO
-      with over 15 years of experience shaping web apps in cities like Paris, London, and Berlin; I'm also known for my
+  <div class="my-12">
+    <p class="mb-8 text-[24px] leading-[42px] lg:text-[40px] lg:leading-[56px]">CTO
+      with over 15 years of experience shaping web apps in cities like Paris, London, and Berlin; also known for my
       YouTube channel @codewithguillaume.</p>
-    <div class="grid lg:grid-cols-4 gap-3">
+    <!-- <div class="grid lg:grid-cols-4 gap-3">
       <NuxtLink to="https://dub.sh/top-10-ctos" target="_blank">Top 10 CTOs to follow in 2024 →</NuxtLink>
       <NuxtLink to="https://dub.sh/codewithg" target="_blank">Newsletter →
       </NuxtLink>
@@ -11,6 +11,6 @@
       <NuxtLink to="https://dub.sh/AsYiLzg" target="_blank">
         Statistics →
       </NuxtLink>
-    </div>
+    </div> -->
   </div>
 </template>

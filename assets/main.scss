@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply relative w-full min-h-screen text-base text-black bg-white dark:bg-black dark:text-neutral-400 font-normal;
+  @apply relative w-full min-h-screen text-base text-white bg-[#0e0e0e] font-normal;
   font-family: "Hellix";
   font-weight: 500;
   font-size: 18px;
@@ -13,12 +13,8 @@ a {
   @apply font-semibold underline underline-offset-8 decoration-neutral-300  group-hover:decoration-emerald-500 hover:decoration-emerald-500 hover:text-black dark:hover:text-emerald-500 cursor-pointer transition;
 }
 
-.item {
-  @apply border border-neutral-200 dark:border-neutral-800  dark:text-neutral-400;
-}
-
 button {
-  @apply item px-5 py-2 shadow-sm transition font-[600] md:text-base rounded-full;
+  @apply px-5 py-2 shadow-sm transition font-[600] md:text-base rounded-full;
 
   &.small {
     @apply text-sm;
@@ -33,30 +29,15 @@ h2 {
   @apply font-semibold text-xl lg:text-[29px];
 }
 
+.rounded--card {
+  @apply relative h-full grid gap-8 rounded-xl p-6 lg:p-8 w-full transition duration-200 ease-in;
+}
+
 .card {
-  @apply relative rounded-xl p-6 lg:p-8 cursor-pointer hover:scale-[1.005] transition duration-200 ease-in w-full bg-gradient-to-br from-transparent via-transparent to-neutral-50;
+  @apply bg-gradient-to-br flex rounded-xl from-neutral-300 via-gray-900 to-[#0e0e0e] p-[0.5px] hover:scale-[102%] cursor-pointer transition duration-200 ease-in;
 
-  &--dark {
-    @apply item dark:bg-gradient-to-br dark:from-transparent dark:via-transparent dark:to-neutral-50/5 shadow-sm;
-  }
-
-  &.youtube {
-  }
-
-  &.supabase {
-    @apply border-none to-transparent bg-cover bg-center text-white flex flex-col justify-between py-12;
-    background-image: url("./supabase.jpeg");
-    -webkit-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
-    -moz-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
-    box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
-
-    button {
-      @apply border-none bg-emerald-500 px-8 transition duration-300 hover:scale-[102%] text-black;
-    }
-
-    p {
-      @apply h-[400px] text-neutral-200;
-    }
+  &--inner {
+    @apply rounded--card bg-gradient-to-br from-neutral-800 via-neutral-900 to-[#0e0e0e];
   }
 
   h2 {
@@ -93,5 +74,21 @@ input[type="text"] {
 
   &-danger {
     @apply text-rose-800  bg-rose-50 dark:bg-rose-600/25 border border-rose-50 dark:border-rose-900/25 text-rose-800 dark:text-rose-500;
+  }
+}
+
+.supabase {
+  @apply rounded--card border-none hover:scale-[102%] cursor-pointer  to-transparent bg-cover bg-center text-white py-12;
+  background-image: url("./supabase.jpeg");
+  -webkit-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
+  -moz-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
+  box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
+
+  button {
+    @apply border-none bg-emerald-500 px-8 transition duration-300 hover:scale-[102%] text-black;
+  }
+
+  h3 {
+    @apply h-[400px] text-neutral-200;
   }
 }

@@ -76,7 +76,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <IconsSun class="text-2xl cursor-pointer hover:dark:text-white transition" @click="switchColors" />
+      <!-- <IconsSun class="text-2xl cursor-pointer hover:dark:text-white transition" @click="switchColors" /> -->
       <div>
         <Slidebar :open="open" @onClose="open = !open">
           <Profile @onLogout="open = !open" />

@@ -4,7 +4,8 @@ const { openUrl } = useHelpers();
 </script>
 
 <template>
-  <div :class="`card card--dark flex flex-col gap-4 group`" @click="openUrl(url)">
+<div class="card">
+  <div :class="`card--inner`" @click="openUrl(url)">
     <slot />
     <div class="grow">
       <p class="text-3xl" v-if="description">{{ description }}</p>
@@ -13,4 +14,5 @@ const { openUrl } = useHelpers();
       <Button v-if="label && url" :label="label" />
     </div>
   </div>
+</div>
 </template>

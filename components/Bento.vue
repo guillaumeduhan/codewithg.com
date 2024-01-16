@@ -42,13 +42,12 @@
       />
     </div>
     <div class="grid lg:grid-cols-12 gap-8">
-     <Card
-        class="col-span-12 text-center supabase"
-        description="Supabase is the best Database as a Service since Firebase."
-        label="Create an account →"
-        url="https://dub.sh/create-supabase"
-        :centered="true"
-      />
+      <div class="col-span-12 text-center supabase">
+        <h3 class="text-3xl">Supabase is the best Database as a Service since Firebase.</h3>
+        <div>
+          <button>Create an account →</button>
+        </div>
+      </div>
     </div>
     <div class="grid lg:grid-cols-12 gap-8">
       <Card
