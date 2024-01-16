@@ -40,6 +40,26 @@ h2 {
     @apply dark:border-neutral-800 dark:bg-gradient-to-br dark:from-transparent dark:via-transparent dark:to-neutral-50/5 dark:text-neutral-400 shadow-sm;
   }
 
+  &.youtube {
+    @apply dark:border-none;
+  }
+
+  &.supabase {
+    @apply border-none to-transparent bg-cover bg-center text-white flex flex-col justify-between py-12;
+    background-image: url("./supabase.jpeg");
+    -webkit-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
+    -moz-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
+    box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
+
+    button {
+      @apply border-none bg-emerald-500 px-8 transition duration-300 hover:scale-[102%] text-black;
+    }
+
+    p {
+      @apply h-[400px] text-neutral-200;
+    }
+  }
+
   h2 {
     @apply grow;
   }

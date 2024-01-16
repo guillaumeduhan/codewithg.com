@@ -2,7 +2,7 @@
   <div class="bento grid gap-8">
     <div class="grid lg:grid-cols-12 gap-8">
       <Card
-        class="lg:col-span-7"
+        class="lg:col-span-7 youtube"
         description="20,000 subscribers the first year of my Youtube channel." label="Subscribe →"
         url="https://dub.sh/cvXSKdV"
       />
@@ -43,7 +43,7 @@
     </div>
     <div class="grid lg:grid-cols-12 gap-8">
      <Card
-        class="col-span-12 text-center"
+        class="col-span-12 text-center supabase"
         description="Supabase is the best Database as a Service since Firebase."
         label="Create an account →"
         url="https://dub.sh/create-supabase"
