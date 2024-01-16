@@ -22,8 +22,8 @@
       />
       <Card 
         class="lg:col-span-6"
-        description="Mentoring. 10 students max per year."
-        label="Coaching →"
+        description="Coachings. 10 students max per year at the same time."
+        label="Book now →"
         url="https://calendly.com/guillaumeduhan/beginner-session"
       />
     </div>
