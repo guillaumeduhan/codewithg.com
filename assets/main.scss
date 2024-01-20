@@ -80,12 +80,28 @@ input[type="text"] {
 .supabase {
   @apply rounded--card border-none hover:scale-[102%] cursor-pointer  to-transparent bg-cover bg-center text-white py-12;
   background-image: url("./supabase.jpeg");
-  -webkit-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
-  -moz-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
-  box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 1);
+  -webkit-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 0.5);
+  -moz-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 0.5);
+  box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 0.5);
 
   button {
     @apply border-none bg-emerald-500 px-8 transition duration-300 hover:scale-[102%] text-black;
+  }
+
+  h3 {
+    @apply h-[400px] text-neutral-200;
+  }
+}
+
+.malt {
+  @apply rounded--card border-none hover:scale-[102%] cursor-pointer  to-transparent bg-cover bg-center text-white py-12;
+  background-image: url("./malt-bg.jpg");
+  -webkit-box-shadow: 0px 3px 41px -11px rgba(255, 92, 87, 0.5);
+  -moz-box-shadow: 0px 3px 41px -11px rgba(255, 92, 87, 0.5);
+  box-shadow: 0px 3px 41px -11px hsl(2, 100%, 67%, 0.5);
+
+  button {
+    @apply border-none bg-[#ff5c57] px-8 transition duration-300 hover:scale-[102%] text-black;
   }
 
   h3 {
