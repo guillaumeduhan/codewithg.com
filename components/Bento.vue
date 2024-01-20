@@ -27,7 +27,7 @@ const { openUrl } = useHelpers()
       <div class="lg:col-span-8 grid gap-8">
         <Card url="https://dub.sh/codewithg">
           <div class="rounded-xl overflow-hidden">
-            <img src="../assets/codewithg.png" />
+            <img src="../assets/newsletter.jpg" />
           </div>
           <p>
             <span class="text-white">Newsletter →</span>
@@ -38,7 +38,7 @@ const { openUrl } = useHelpers()
       <div class="lg:col-span-4 grid gap-8">
         <Card url="https://dub.sh/top-10-ctos">
           <div class="rounded-xl overflow-hidden">
-            <img src="../assets/ibt.png" />
+            <img src="../assets/ibt.jpg" />
           </div>
           <p>
             <span class="text-white">Top 10 CTos of 2024 →</span>
