@@ -17,6 +17,10 @@ p {
   @apply text-neutral-500 text-xl;
 }
 
+img {
+  @apply max-w-full;
+}
+
 button {
   @apply px-5 py-2 shadow-sm transition font-[600] md:text-base rounded-full;
 

@@ -13,8 +13,8 @@ const { limitString } = useHelpers()
         <!-- image here -->
       </Avatar>
     </div>
-    <div class="grid grow w-full">
-      <div class="text-sm antialiased font-semibold whitespace-nowrap">
+    <div class="grow w-full hidden md:grid">
+      <div class="text-sm flex  antialiased font-semibold whitespace-nowrap">
         <span>{{ limitString(user.email, 20) }}</span>
       </div>
       <div class="flex gap-1">

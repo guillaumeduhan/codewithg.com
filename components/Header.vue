@@ -49,7 +49,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="flex items-center justify-between gap-2 mb-12">
+  <header class="flex items-center justify-between gap-2 mb-12 w-full">
     <div class="flex items-center justify-center gap-2 cursor-pointer" @click="$router.push('/')">
       <div class="relative cursor-pointer hover:scale-105 transition">
         <div class="bg-emerald-500 absolute bottom-0 right-0 rounded-full border-2 border-white h-4 w-4" />
@@ -57,7 +57,7 @@ onMounted(() => {
           <img src="/logo.jpeg" alt="Guillaume Duhan">
         </div>
       </div>
-      <div class="flex gap-2 items-start">
+      <div class="gap-2 items-start hidden lg:flex">
         <h1 class="text-lg font-[600]">
           CodewithGuillaume
         </h1>
