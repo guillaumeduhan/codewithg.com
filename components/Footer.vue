@@ -24,7 +24,7 @@ const topVideos = [
 <template>
   <div class="mt-12 pt-16 mb-16 border-t border-dashed border-slate-500">
     <div class="grid gap-4 mb-8">
-      <p class="text-[24px] leading-[42px] lg:text-[48px] lg:leading-[64px]">The best solution is always the simpliest and
+      <p class="headline">The best solution is always the simpliest and
         quickiest.</p>
       <p class="text-neutral-500">Codewithguillaume</p>
     </div>

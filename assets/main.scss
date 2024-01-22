@@ -69,6 +69,10 @@ input[type="text"] {
   }
 }
 
+.headline {
+  @apply text-[24px] leading-[42px] lg:text-[48px] lg:leading-[64px];
+}
+
 .notification {
   @apply border px-4 rounded py-1;
 
