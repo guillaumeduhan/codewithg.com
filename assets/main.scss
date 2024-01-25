@@ -38,7 +38,7 @@ button {
 }
 
 .card {
-  @apply bg-gradient-to-br flex rounded-xl from-gray-900 via-neutral-500 to-[#0e0e0e] p-[0.5px] hover:scale-[102%] cursor-pointer transition duration-200 ease-in;
+  @apply bg-gradient-to-br flex rounded-xl from-gray-900 via-neutral-500 to-[#0e0e0e] p-[1px] hover:scale-[102%] cursor-pointer transition duration-200 ease-in;
 
   &--inner {
     @apply rounded--card bg-gradient-to-br from-neutral-800 via-neutral-900 to-neutral-900;
@@ -49,6 +49,22 @@ button {
 
     h2 {
       @apply font-bold text-[92px] leading-[82px];
+    }
+  }
+
+  &.dead {
+    background-image: unset;
+    @apply bg-transparent bg-red-500;
+    .card--inner {
+      @apply bg-transparent py-2 px-4;
+    }
+  }
+
+  &.alive {
+    background-image: unset;
+    @apply bg-transparent bg-green-500;
+    .card--inner {
+      @apply bg-transparent py-2 px-4;
     }
   }
 }
