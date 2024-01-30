@@ -362,7 +362,7 @@ const ideasList = [
     },
     {
         "year": "2024",
-        "title": "Featured.co",
+        "title": "featured.co",
         "description": "A website to submit new feature to any product on market.",
         "dead": true
     }

@@ -54,12 +54,12 @@ onMounted(() => {
       <div class="relative cursor-pointer hover:scale-105 transition">
         <div class="bg-emerald-500 absolute bottom-0 right-0 rounded-full border-2 border-white h-4 w-4" />
         <div class="rounded-full overflow-hidden w-12 h-12">
-          <img src="/logo.jpeg" alt="Guillaume Duhan">
+          <img src="/end.png" alt="Guillaume Duhan">
         </div>
       </div>
       <div class="gap-2 items-start hidden lg:flex">
         <h1 class="text-lg font-[600]">
-          CodewithGuillaume
+          Codewithg.com
         </h1>
       </div>
     </div>
