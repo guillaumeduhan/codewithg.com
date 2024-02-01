@@ -4,12 +4,12 @@ import numeral from "numeral";
 const loading = ref(false)
 
 const stats = {
-  'Youtube': 28353,
-  'LinkedIn': 13397,
+  'Youtube': 28855,
+  'LinkedIn': 13455,
   'X': 867,
-  'Lancerocket.com (newsletter)': 981,
-  'Codewithg (newsletter)': 279,
-  'Codewithg.com': 167,
+  'Newsletter Freelance': 1004,
+  'Newsletter code': 279,
+  'Website': 167,
   'Medium': 189,
   'Dev.to': 150,
   'Hashnode': 20,
