@@ -11,7 +11,11 @@ export default defineNuxtConfig({
           "data-domain": "codewithg.com",
           crossorigin: "anonymous",
           src: "https://plausible.io/js/script.js",
-        },
+        }, {
+          defer: true,
+          async: true,
+          src:"https://platform.twitter.com/widgets.js"
+        }
       ],
     },
   },

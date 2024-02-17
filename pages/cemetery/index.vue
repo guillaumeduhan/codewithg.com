@@ -345,7 +345,7 @@ const ideasList = [
     {
         "year": "2023",
         "title": "chrome-amazon-products.com",
-        "description": "A chrome extension to detect every product and link them to Amazon",
+        "description": "A chrome extension.",
         "dead": true
     },
     {
@@ -371,19 +371,19 @@ const ideasList = [
 </script>
 
 <template>
-  <div class="grid gap-6">
+  <div class="grid gap-6 max-w-[600px] mx-auto">
     <header class="text-center">
       <h1 class="headline">My cemetery of ideas 💀</h1>
-      <p>Green = I made it. Red = I failed. Feel free to pick.</p>
     </header>
     <div class="grid gap-4">
-      <Card v-for="idea, index in ideasList.reverse()" :key="index" :class="idea.dead ? 'dead' : 'alive'">
-        <div class="flex gap-1 text-base">
-          <span class="text-white">{{ idea.year }} –</span>
-          <span class="text-white">{{ idea.title }} –</span>
-          <p class="text-base">{{ idea.description }}</p>
-        </div>
-      </Card>
+      <div v-for="idea, index in ideasList.reverse()" :key="index" class="flex items-start gap-2">
+				<div class="min-h-[10px] min-w-[10px] max-h-[10px] max-w-[10px] rounded-full my-2" :class="idea.dead ? 'bg-red-500' : 'bg-green-500'"></div>
+        <p class="text-[15px] leading-1">
+            <span class="text-white">{{ idea.year }}</span>{{' '}}
+            <span class="text-white">{{ idea.title }}</span>{{' '}}
+            <span>{{ idea.description }}</span>
+        </p>
+      </div>
     </div>
   </div>
 </template>
