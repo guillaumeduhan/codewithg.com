@@ -7,12 +7,12 @@ definePageMeta({
 
 useHead({
   title:
-    "Codewithguillaume.com | Learn to Code with the Best | Advance Your Career",
+    "Codewithg.com | CTO & Youtuber",
   meta: [
     {
       name: "description",
       content:
-        "I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact through Udemy, academic contributions, and my YouTube channel @codewithguillaume.",
+        "I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact through Udemy, academic contributions, and my YouTube channel @codewithg.",
     },
     {
       name: "keywords",
@@ -24,20 +24,20 @@ useHead({
     {
       property: "og:title",
       content:
-        "CodewithGuillaume.com | I'm @Codewithguillaume, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin.",
+        "Codewithg.com | CTO & Youtuber",
     },
     { property: "og:type", content: "website" },
-    { property: "og:url", content: "https://codewithguillaume.com/" },
+    { property: "og:url", content: "https://codewithg.com/" },
     {
       property: "og:image",
-      content: "https://codewithguillaume.com/images/logo.jpg",
+      content: "https://codewithg.com/images/logo.jpg",
     },
     {
       property: "og:description",
       content:
         "I'm Guillaume Duhan, an accomplished CTO with over 15 years of experience shaping technology in cities like Paris, London, and Berlin, currently leading Allocations.com in Miami; I'm also known for my educational impact through Udemy, academic contributions, and my YouTube channel @codewithguillaume.",
     },
-    { property: "og:site_name", content: "codewithguillaume.com" },
+    { property: "og:site_name", content: "codewithg.com" },
   ],
 });
 </script>

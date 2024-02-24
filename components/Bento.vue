@@ -8,11 +8,22 @@ const { openUrl } = useHelpers()
       <CardsYoutube />
     </Card>
     <div class="lg:col-span-12 grid lg:grid-cols-12 gap-8">
-      <Card class="lg:col-span-6" url="https://dub.sh/codewithg-business">
-        <CardsPartnership />
+      <Card class="lg:col-span-6" url="https://dub.sh/codewithg-mentor">
+        <div class="rounded-xl overflow-hidden">
+          <img src="/coaching.png" alt="codewithg.com" />
+        </div>
+        <p>
+          <span class="text-white">Coaching →</span>
+          1 hour session.
+        </p>
       </Card>
-      <Card class="lg:col-span-6" url="https://calendly.com/guillaumeduhan/beginner-session">
-        <CardsCoachings />
+      <Card class="lg:col-span-6" url="https://dub.sh/codewithg-business">
+        <div class="rounded-xl overflow-hidden">
+          <img src="/youtube.png" alt="codewithg.com" />
+        </div>
+        <p>
+          <span class="text-white">Partnership →</span> Just hit me up here!
+        </p>
       </Card>
     </div>
     <div class="lg:col-span-12 grid lg:grid-cols-12 gap-8">
@@ -58,26 +69,5 @@ const { openUrl } = useHelpers()
         </Card>
       </div>
     </div>
-    <!-- <div class="lg:col-span-12 grid lg:grid-cols-12 gap-8">
-      <div class="malt lg:col-span-12" @click="openUrl('https://dub.sh/malt-codewithguillaume')">
-        <h3 class="text-3xl text-center">Malt, Europe's leading freelancing platform.</h3>
-        <div class="flex items-center justify-center">
-          <button class="mx-auto">Join now →</button>
-        </div>
-      </div>
-    </div>
-    <div class="lg:col-span-12 grid lg:grid-cols-12 gap-8">
-      <div class="lg:col-span-8 grid gap-8">
-        <Card url="https://dub.sh/codewithg-freelance">
-          <div class="rounded-xl overflow-hidden">
-            <img src="../assets/malt.png" />
-          </div>
-          <p>
-            <span class="text-white">Freelance →</span>
-            Malt, Europe's leading freelancing platform.
-          </p>
-        </Card>
-      </div>
-    </div> -->
   </div>
 </template>
