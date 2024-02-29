@@ -4,11 +4,11 @@ import numeral from "numeral";
 const loading = ref(false)
 
 const stats = {
-  'Youtube': 37567,
-  'LinkedIn': 13404,
-  'X': 908,
-  'Newsletter Freelance': 1360,
-  'Newsletter code': 300,
+  'Youtube': 46565,
+  'LinkedIn': 13707,
+  'X': 920,
+  'Newsletter Freelance': 1450,
+  'Newsletter code': 320,
   'Website': 167,
   'Medium': 189,
   'Dev.to': 150,
