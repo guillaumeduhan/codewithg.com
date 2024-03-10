@@ -65,7 +65,7 @@ onMounted(() => {
     </div>
     <div class="flex gap-4 items-center">
       <div v-if="!getUser">
-        <Button v-if="!login" label="Create an account →" @click="login = true" />
+        <!-- <Button v-if="!login" label="Create an account →" @click="login = true" /> -->
         <div v-if="login">
           <div v-if="!success" class="flex items-center gap-3">
             <input v-model="email" type="text" placeholder="me@gmail.com">

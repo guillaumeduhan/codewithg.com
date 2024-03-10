@@ -1,5 +1,5 @@
 <script setup>
-const { openUrl } = useHelpers()
+const { openUrl } = useHelpers()
 </script>
 
 <template>
