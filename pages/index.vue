@@ -1,10 +1,4 @@
 <script setup>
-import data from "../data.json";
-
-definePageMeta({
-  middleware: 'default',
-})
-
 useHead({
   title:
     "Codewithg.com | CTO & Youtuber",

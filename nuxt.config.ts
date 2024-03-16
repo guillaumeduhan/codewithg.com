@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
   alias: {
     "@": "/<srcDir>",
@@ -27,22 +28,8 @@ export default defineNuxtConfig({
     },
   },
   ssr: true,
-  modules: ["@nuxtjs/supabase", "@pinia/nuxt", '@nuxtjs/color-mode'],
   colorMode: {
     classSuffix: ''
   },
-  supabase: {
-    url: process.env.SUPABASE_URL,
-    key: process.env.SUPABASE_API_KEY,
-    //   redirect: {
-    //     login: "/",
-    //     callback: "/profile",
-    //   },
-  },
-  runtimeConfig: {
-    public: {
-      SUPABASE_SECRET: process.env.SUPABASE_SECRET,
-      SUPABASE_SERVICE_KEY: process.env.SUPABASE_SERVICE_KEY,
-    },
-  },
+  modules: ["@pinia/nuxt", "nuxt-icon"],
 });

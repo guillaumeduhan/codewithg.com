@@ -4,6 +4,7 @@
       <Header />
       <slot />
       <Footer />
+      <Offer />
     </div>
   </div>
 </template>

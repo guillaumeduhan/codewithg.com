@@ -1,5 +1,5 @@
 export const useHelpers = () => {
-  const openUrl = (link: string) => {
+  const openUrl: any = (link: string) => {
     if (!link) return;
     if (process.browser) window.open(link, "_blank");
   }
