@@ -27,8 +27,8 @@ const program = [
       </ul>
       <div class="grid gap-2">
         <button class="bg-[#009862] text-white font-[600] flex gap-1 mx-auto hover:scale-[101%] hover:bg-[#009862]/90 text-[14px] lg:text-base " @click="openUrl('https://dub.sh/thedevelopercourse')">
-          <span>Pre-order for $299</span>
-          <span class="line-through text-neutral-800">$600</span>
+          <span>Pre-order for $324.50</span>
+          <span class="line-through text-neutral-800">$649</span>
         </button>
         <p class="text-sm text-neutral-400">87 left. July 2024.</p>
       </div>
