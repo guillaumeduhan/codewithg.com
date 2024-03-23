@@ -30,7 +30,7 @@ const program = [
           <span>Pre-order for $324.50</span>
           <span class="line-through text-neutral-800">$649</span>
         </button>
-        <p class="text-sm text-neutral-400">87 left. July 2024.</p>
+        <p class="text-sm text-neutral-400">64 left. July 2024.</p>
       </div>
       <footer class="flex justify-center">
         <div class="text-sm border-b pb-1 cursor-pointer border-neutral-400 text-neutral-400" @click="openUrl('https://tally.so/r/31l9DW')">Telegram or Whatsapp?</div>
