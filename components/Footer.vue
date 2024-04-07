@@ -3,12 +3,12 @@ const loading = ref(false)
 
 const topVideos = [
   {
-    title: 'Learn Nuxt 3',
-    url: 'https://www.youtube.com/watch?v=ww94Jvi8JJo'
+    title: 'thedevelopercourse',
+    url: 'https://dub.sh/thedevelopercourse'
   },
   {
-    title: 'Full-Stack Web App with Next.js 13',
-    url: 'https://www.youtube.com/watch?v=kDGovtwtcyU'
+    title: 'Learn Nuxt 3',
+    url: 'https://www.youtube.com/watch?v=ww94Jvi8JJo'
   },
   {
     title: 'Learn Next.js 14',
