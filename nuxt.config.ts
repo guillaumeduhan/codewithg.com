@@ -28,8 +28,5 @@ export default defineNuxtConfig({
     },
   },
   ssr: true,
-  colorMode: {
-    classSuffix: ''
-  },
-  modules: ["@pinia/nuxt", "nuxt-icon"],
+  modules: ["nuxt-icon", "@nuxt/image"],
 });

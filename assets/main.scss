@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-  @apply relative w-full min-h-screen text-base text-white bg-[#0e0e0e] font-normal;
+  @apply relative w-full min-h-screen text-base text-white bg-[#161616] font-normal;
   font-family: "Hellix";
   font-weight: 500;
   font-size: 18px;
@@ -20,125 +20,22 @@ h1 {
 }
 
 a {
-  @apply text-emerald-500 font-semibold underline underline-offset-4 decoration-emerald-300  cursor-pointer transition;
+  @apply text-green-500 font-semibold underline underline-offset-4 decoration-green-300  cursor-pointer transition;
 }
 
 p {
-  @apply text-neutral-500 text-xl;
-}
-
-img {
-  @apply max-w-full;
-}
-
-button {
-  @apply px-5 py-2 shadow-sm transition font-[600] md:text-base rounded-lg;
-
-  &.small {
-    @apply text-sm;
-  }
-
-  ::placeholder {
-    @apply text-black;
-  }
-}
-
-.rounded--card {
-  @apply grid gap-4 relative h-full rounded-xl p-6 lg:p-8 w-full transition duration-200 ease-in;
+  @apply text-neutral-500 font-[500];
 }
 
 .card {
-  @apply bg-gradient-to-br flex rounded-xl from-gray-900 via-neutral-500 to-[#0e0e0e] p-[1px] hover:scale-[102%] cursor-pointer transition duration-200 ease-in;
+  @apply overflow-hidden relative min-h-24 transition w-full rounded-[24px] cursor-pointer hover:scale-[101%] p-[1px];
+  background: rgb(36,36,36);
+  background: -moz-linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
+  background: -webkit-linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
+  background: linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242424",endColorstr="#242424",GradientType=1);
 
-  &--inner {
-    @apply rounded--card bg-gradient-to-br from-neutral-800 via-neutral-900 to-neutral-900;
-
-    .title {
-      @apply font-semibold text-neutral-500 mb-4;
-    }
-
-    h2 {
-      @apply font-bold text-[92px] leading-[82px];
-    }
-  }
-
-  &.dead {
-    background-image: unset;
-    @apply bg-transparent bg-red-500;
-    .card--inner {
-      @apply bg-transparent py-2 px-4;
-    }
-  }
-
-  &.alive {
-    background-image: unset;
-    @apply bg-transparent bg-green-500;
-    .card--inner {
-      @apply bg-transparent py-2 px-4;
-    }
-  }
-}
-
-.container {
-  @apply w-[900px] max-w-[900px] mx-auto;
-}
-
-input[type="text"] {
-  @apply outline-none font-semibold bg-transparent dark:bg-neutral-800 hover:dark:bg-neutral-800 dark:border-neutral-800 text-base px-6 border rounded-full py-2;
-}
-
-.code-container {
-  @apply bg-gray-900 p-6 rounded-lg whitespace-pre-wrap;
-
-  .language-text {
-    @apply p-1 uppercase rounded right-0 top-0 text-xs;
-  }
-}
-
-.headline {
-  @apply text-[24px] leading-[42px] lg:text-[48px] lg:leading-[64px];
-}
-
-.notification {
-  @apply border px-4 rounded py-1;
-
-  &-success {
-    @apply text-emerald-800  bg-emerald-50 dark:bg-emerald-600/25 border border-emerald-50 dark:border-emerald-900/25 text-emerald-800 dark:text-emerald-500;
-  }
-
-  &-danger {
-    @apply text-rose-800  bg-rose-50 dark:bg-rose-600/25 border border-rose-50 dark:border-rose-900/25 text-rose-800 dark:text-rose-500;
-  }
-}
-
-.supabase {
-  @apply rounded--card border-none hover:scale-[102%] cursor-pointer  to-transparent bg-cover bg-center text-white py-12;
-  background-image: url("./supabase.jpeg");
-  -webkit-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 0.5);
-  -moz-box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 0.5);
-  box-shadow: 0px 3px 41px -11px rgba(16, 185, 129, 0.5);
-
-  button {
-    @apply border-none bg-emerald-500 px-8 transition duration-300 hover:scale-[102%] text-black;
-  }
-
-  h3 {
-    @apply h-[400px] text-neutral-200;
-  }
-}
-
-.malt {
-  @apply rounded--card border-none hover:scale-[102%] cursor-pointer  to-transparent bg-cover bg-center text-white py-12;
-  background-image: url("./malt-bg.jpg");
-  -webkit-box-shadow: 0px 3px 41px -11px rgba(255, 92, 87, 0.5);
-  -moz-box-shadow: 0px 3px 41px -11px rgba(255, 92, 87, 0.5);
-  box-shadow: 0px 3px 41px -11px hsl(2, 100%, 67%, 0.5);
-
-  button {
-    @apply border-none bg-[#ff5c57] px-8 transition duration-300 hover:scale-[102%] text-black;
-  }
-
-  h3 {
-    @apply h-[400px] text-neutral-200;
+  &--inside {
+    @apply bg-[#161616] w-full min-h-24 h-full rounded-[23px];
   }
 }
