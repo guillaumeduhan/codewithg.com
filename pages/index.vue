@@ -48,10 +48,10 @@ useHead({
       <p class="mx-auto" style="line-height: 1.63;">CTO of Allocations.com, a SaaS for finance based in Miami, I have also a YouTube channel: @codewithguillaume. With 15 years of experience in tech as a freelancer, consultant, and Lead Developer, I have led dozens of engineering teams across Paris, London, and Berlin.</p>
     </header>
     <div class="grid gap-4">
-      <Card title="THEDEVELOPERCOURSE" url="https://dub.sh/thedevelopercourse">
-        <!-- <NuxtImg src="/thedev.png" height="300px" class="mx-auto" /> -->
+      <Card title="Access now my private course" url="https://dub.sh/thedevelopercourse">
+        <NuxtImg src="/thedevelopercourse.png" height="600px" class="mx-auto" />
       </Card>
-      <div class="grid lg:grid-cols-6 gap-4">
+      <!-- <div class="grid lg:grid-cols-6 gap-4">
         <div class="lg:col-span-2">
           <Card title="Newsletter" url="https://dub.sh/codewithg" />
         </div>
@@ -77,7 +77,7 @@ useHead({
         <div class="lg:col-span-2">
           <Card title="X" url="https://dub.sh/codewithg-x" />
         </div>
-      </div>
+      </div> -->
     </div>
   </main>
 </template>
