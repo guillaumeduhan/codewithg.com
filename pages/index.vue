@@ -37,7 +37,7 @@ useHead({
 </script>
 
 <template>
-  <main class="grid gap-8">
+  <!-- <main class="grid gap-8">
     <header class="text-left grid lg:grid-cols-2 items-center py-4 lg:py-6 gap-8 lg:gap-2">
       <div class="grid">
         <h1 class="text-[48px] lg:text-[72px]">
@@ -51,33 +51,25 @@ useHead({
       <Card title="Access now my private course" url="https://dub.sh/thedevelopercourse">
         <NuxtImg src="/thedevelopercourse.png" height="600px" class="mx-auto" />
       </Card>
-      <!-- <div class="grid lg:grid-cols-6 gap-4">
-        <div class="lg:col-span-2">
-          <Card title="Newsletter" url="https://dub.sh/codewithg" />
-        </div>
-        <div class="lg:col-span-4">
-          <Card title="Youtube" url="https://dub.sh/cvXSKdV" />
-        </div>
+    </div>
+  </main> -->
+  <main class="grid gap-12 max-w-[1000px] mx-auto">
+    <div class="grid gap-4 text-center py-12">
+      <div>
+        <h1 class="bg-gradient-to-br from-white via-neutral-400 to-zinc-800 text-[48px] lg:text-[72px] inline-block text-transparent bg-clip-text">
+        @Codewithguillaume
+      </h1>
+      <h2 class="text-2xl text-neutral-700 font-[600]">Chief Technical Officer & Youtuber</h2>
       </div>
-      <div class="grid lg:grid-cols-6 gap-4">
-        <div class="lg:col-span-4">
-          <Card title="Supabase" url="https://dub.sh/supabase" />
-        </div>
-        <div class="lg:col-span-2">
-          <Card title="Business Request" url="https://dub.sh/codewithg-business" />
-        </div>
-      </div>
-      <div class="grid lg:grid-cols-8 gap-4">
-        <div class="lg:col-span-3">
-          <Card title="LinkedIn" url="https://dub.sh/6vbNPaH" />
-        </div>
-        <div class="lg:col-span-3">
-          <Card title="Coaching" url="https://dub.sh/codewithg-mentor" />
-        </div>
-        <div class="lg:col-span-2">
-          <Card title="X" url="https://dub.sh/codewithg-x" />
-        </div>
-      </div> -->
+      <p class="mx-auto max-w-[800px]" style="line-height: 1.53!important;">CTO of Allocations.com, a SaaS for finance based in Miami, I have also a YouTube channel: @codewithguillaume. With 15 years of experience in tech as a freelancer, consultant, and Lead Developer, I have led dozens of engineering teams across Paris, London, and Berlin.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-4 max-w-full">
+      <Card title="THEDEVELOPERCOURSE" description="The ultimate full-stack developer course." url="https://dub.sh/thedevelopercourse">
+        <NuxtImg src="/thedevelopercourse.png" height="600px" class="mx-auto" />
+      </Card>
+      <Card title="Next.js, le cours complet — 2024" description="Un cours complet de 2 heures 30 en Français." url="https://dub.sh/nextjs-fr">
+        <NuxtImg src="/nextfr.png" height="600px" class="mx-auto" />
+      </Card>
     </div>
   </main>
 </template>

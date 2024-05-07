@@ -1,14 +1,15 @@
 <script setup>
-const props = defineProps(["title", "url"])
+const props = defineProps(["title", "url", "description"])
 const { openUrl } = useHelpers();
 </script>
 
 <template>
-  <div class="text-neutral-500 hover:text-white cursor-pointer border rounded-xl overflow-hidden border-neutral-600 hover:border-neutral-400" @click="openUrl(props.url)">
+  <div class="card" @click="openUrl(props.url)">
     <div class="card--inside grid w-full">
       <slot />
-      <div class="flex items-center justify-center p-8">
-        <h2>{{props.title}}</h2>
+      <div class="grid gap-1 text-left px-5 pt-8 pb-4">
+        <h2 class="font-[600]">{{props.title}}</h2>
+        <p class="text-base leading-1">{{props.description}}</p>
       </div>
     </div>
   </div>
