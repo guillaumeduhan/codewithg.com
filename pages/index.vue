@@ -56,7 +56,7 @@ useHead({
   <main class="grid gap-12 max-w-[1000px] mx-auto">
     <div class="grid gap-4 text-center py-12">
       <div>
-        <h1 class="bg-gradient-to-br from-white via-neutral-400 to-zinc-800 text-[48px] lg:text-[72px] inline-block text-transparent bg-clip-text">
+        <h1 class="bg-gradient-to-br from-white via-neutral-400 to-zinc-800 text-[40px] lg:text-[72px] inline-block text-transparent bg-clip-text">
         @Codewithguillaume
       </h1>
       <h2 class="text-2xl text-neutral-700 font-[600]">Chief Technical Officer & Youtuber</h2>
