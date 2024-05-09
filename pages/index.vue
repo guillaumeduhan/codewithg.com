@@ -56,23 +56,13 @@ useHead({
   <main class="grid gap-12 max-w-[1000px] mx-auto">
     <div class="grid gap-4 text-center py-12">
       <div>
-        <h1 class="bg-gradient-to-br from-white via-neutral-400 to-zinc-800 text-[40px] lg:text-[72px] inline-block text-transparent bg-clip-text">
+        <h1>
         @Codewithguillaume
       </h1>
       <h2 class="text-2xl text-neutral-700 font-[600]">Chief Technical Officer & Youtuber</h2>
       </div>
       <p class="mx-auto max-w-[800px]" style="line-height: 1.53!important;">CTO of Allocations.com, a SaaS for finance based in Miami, I have also a YouTube channel: @codewithguillaume. With 15 years of experience in tech as a freelancer, consultant, and Lead Developer, I have led dozens of engineering teams across Paris, London, and Berlin.</p>
     </div>
-    <div class="grid md:grid-cols-3 gap-4 max-w-full">
-      <Card title="thedevelopercourse — 2024" description="The ultimate full-stack course." url="https://dub.sh/thedevelopercourse">
-        <NuxtImg src="/thedevelopercourse.jpg" height="600px" class="mx-auto" />
-      </Card>
-      <Card title="Supacourse — 2024" description="The ultime Supabase course." url="https://dub.sh/supacourse">
-        <NuxtImg src="/supacourse.jpg" height="600px" class="mx-auto" />
-      </Card>
-      <Card title="Next.js 14 — 2023" description="Cours complet de 2h30 en Français." url="https://dub.sh/nextjs-fr">
-        <NuxtImg src="/nextfr.jpg" height="600px" class="mx-auto" />
-      </Card>
-    </div>
+    <Courses />
   </main>
 </template>

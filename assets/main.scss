@@ -23,6 +23,10 @@ a {
   @apply text-green-500 font-semibold underline underline-offset-4 decoration-green-300  cursor-pointer transition;
 }
 
+h1 {
+  @apply bg-gradient-to-br from-white via-neutral-400 to-zinc-800 text-[40px] lg:text-[72px] inline-block text-transparent bg-clip-text;
+}
+
 p {
   @apply text-neutral-500 font-[500];
   line-height: 1.34!important;

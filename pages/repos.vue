@@ -2,7 +2,7 @@
 const loading = ref(false)
 const items = ref([
   {
-    title: "Supabase course — 2023 edition",
+    title: "Supabase course — 2023",
     link: "https://dub.sh/paSQB1N"
   }, {
     title: "Next.js Shadcn Dashboard",
@@ -24,11 +24,16 @@ const items = ref([
 </script>
 
 <template>
-  <div>
-    <h1 class="text-center text-[32px]">All repositories</h1>
-    <div class="flex gap-2" v-for='(item, index) in items' :key='index'>
-      <span>{{ item.title }}</span>
-      <NuxtLink class="text-primary-500" :href="item.link">{{ item.link }}</NuxtLink>
+  <main class="grid gap-12">
+    <header class="text-center">
+      <h1>All repositories</h1>
+    </header>
+    <div>
+      <div class="flex gap-2" v-for='(item, index) in items' :key='index'>
+        <span>{{ item.title }}</span>
+        <NuxtLink class="text-primary-500" :href="item.link">{{ item.link }}</NuxtLink>
+      </div>
     </div>
-  </div>
+    <Courses />
+  </main>
 </template>
