@@ -1,5 +1,7 @@
 <script setup>
-const loading = ref(false)
+definePageMeta({
+  title: 'All repositories'
+})
 const items = ref([
   {
     title: "Supabase course — 2023",
@@ -24,16 +26,11 @@ const items = ref([
 </script>
 
 <template>
-  <main class="grid gap-12">
-    <header class="text-center">
-      <h1>All repositories</h1>
-    </header>
-    <div>
-      <div class="flex gap-2" v-for='(item, index) in items' :key='index'>
-        <span>{{ item.title }}</span>
-        <NuxtLink class="text-primary-500" :href="item.link">{{ item.link }}</NuxtLink>
-      </div>
+  <div>
+    <div class="flex gap-2" v-for='(item, index) in items' :key='index'>
+      <span>{{ item.title }}</span>
+      <NuxtLink class="text-primary-500" :href="item.link">{{ item.link }}</NuxtLink>
     </div>
-    <Courses />
-  </main>
+  </div>
+  <Courses />
 </template>
