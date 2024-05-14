@@ -1,8 +1,10 @@
-import { defineNuxtConfig } from 'nuxt/config'
+import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
+  modules: ["nuxt-icon", "@nuxt/image", "@nuxtjs/tailwindcss", "shadcn-nuxt"],
   alias: {
     "@": "/<srcDir>",
+    "lib": "/lib"
   },
   app: {
     head: {
@@ -27,6 +29,15 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  ssr: true,
-  modules: ["nuxt-icon", "@nuxt/image"],
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "@/components/ui"
+     */
+    componentDir: '@/components/ui'
+  }
 });
