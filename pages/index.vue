@@ -1,10 +1,10 @@
 <script setup>
 definePageMeta({
-  title: 'Codewithg.com'
+  title: 'CODEWITHG.COM'
 })
 useHead({
   title:
-    "Codewithg.com — Guillaume Duhan, CTO & Youtuber",
+    "CODEWITHG.COM — Guillaume Duhan, CTO & Youtuber",
   meta: [
     {
       name: "description",
