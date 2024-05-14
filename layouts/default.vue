@@ -1,15 +1,18 @@
 <script setup>
 const route = useRoute()
 const isHome = computed(() => {
-  return route.meta.title === "Codewithguillaume"
+  return route.meta.title === "Codewithg.com"
 })
 </script>
 
 <template>
-  <div class="px-4 grid gap-16 max-w-[1400px] mx-auto">
+  <div class="px-4 grid gap-16 mx-auto">
     <Menu />
-    <div class="grid gap-4 text-center">
+    <div class="grid gap-4 text-center max-w-[1400px] mx-auto">
       <div>
+        <div class="flex items-center justify-center">
+          <Tag tag="📣 Twitter Official Announcement" url="https://twitter.com/blackevilgoblin/status/1790405503496958436" />
+        </div>
         <h1>{{ route.meta.title }}</h1>
         <h2 v-if="isHome" class="text-2xl text-neutral-600 font-[600]">Chief Technical Officer & Youtuber</h2>
       </div>

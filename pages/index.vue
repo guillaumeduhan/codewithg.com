@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  title: 'Codewithguillaume'
+  title: 'Codewithg.com'
 })
 useHead({
   title:

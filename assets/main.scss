@@ -24,7 +24,8 @@ a {
 }
 
 h1 {
-  @apply bg-gradient-to-br from-white via-neutral-400 to-zinc-800 text-[40px] lg:text-[72px] inline-block text-transparent bg-clip-text;
+  @apply text-[52px] lg:text-[80px] inline-block;
+  // @apply bg-gradient-to-br from-white via-neutral-400 to-zinc-800 text-[40px] lg:text-[72px] inline-block text-transparent bg-clip-text;
 }
 
 p {
@@ -33,14 +34,14 @@ p {
 }
 
 .card {
-  @apply overflow-hidden relative min-h-24 transition w-full rounded-[24px] cursor-pointer hover:scale-[101%] p-[1px];
+  @apply overflow-hidden relative transition rounded-[24px] cursor-pointer hover:scale-[101%] p-[1px];
   background: rgb(36, 36, 36);
-  // background: -moz-linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
-  // background: -webkit-linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
-  // background: linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242424",endColorstr="#242424",GradientType=1);
+  background: -moz-linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
+  background: -webkit-linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
+  background: linear-gradient(330deg, rgba(36,36,36,1) 0%, rgba(186,186,186,1) 25%, rgba(36,36,36,1) 50%, rgba(186,186,186,1) 75%, rgba(36,36,36,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242424",endColorstr="#242424",GradientType=1);
 
   &--inside {
-    @apply bg-[#161616] w-full min-h-24 h-full rounded-[23px];
+    @apply bg-[#161616] w-full h-full rounded-[23px] py-1 px-4 text-sm text-neutral-500;
   }
 }
