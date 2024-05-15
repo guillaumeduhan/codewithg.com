@@ -24,6 +24,7 @@
     "eslint-plugin-vue": "^9.19.2",
     "jwt-decode": "^3.1.2",
     "nuxt": "3.10.3",
+    "nuxt-svgo": "^4.0.1",
     "postcss": "^8.4.20",
     "shadcn-nuxt": "^0.10.4",
     "standard": "^17.1.0",

@@ -1,7 +1,13 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
-  modules: ["nuxt-icon", "@nuxt/image", "@nuxtjs/tailwindcss", "shadcn-nuxt"],
+  modules: [
+    "nuxt-icon",
+    "@nuxt/image",
+    "@nuxtjs/tailwindcss",
+    "shadcn-nuxt",
+    "nuxt-svgo"
+  ],
   alias: {
     "@": "/<srcDir>",
     "lib": "/lib"

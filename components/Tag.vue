@@ -5,9 +5,7 @@ const { openUrl } = useHelpers();
 </script>
 
 <template>
-  <div class="card border rounded-full px-2 py-1 text-sm border-neutral-700" @click="openUrl(url)">
-    <div class="card--inside">
-      {{ props.tag }}
-    </div>
+  <div class="px-3 py-1 cursor-pointer hover:scale-[105%] transition text-sm border rounded-full border-neutral-500" @click="openUrl(url)">
+    {{ props.tag }}
   </div>
 </template>
