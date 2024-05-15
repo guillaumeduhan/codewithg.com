@@ -4,7 +4,7 @@ const loading = ref(false)
 
 <template>
   <div class="grid max-w-full gap-4 md:grid-cols-3">
-    <Card :glow="true" title="thedevelopercourse — 2024" description="$12" url="https://dub.sh/thedevelopercourse">
+    <Card title="thedevelopercourse — 2024" description="$12" url="https://dub.sh/thedevelopercourse">
       <NuxtImg src="/thedevelopercourse.jpg" height="600px" class="mx-auto" />
     </Card>
     <Card title="Supacourse — 2024" description="$139" url="https://dub.sh/supacourse">
