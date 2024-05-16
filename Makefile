@@ -3,6 +3,10 @@ gt:
 	git commit -m "commit"
 	git push
 
+gm:
+	git pull
+	yarn && yarn dev
+
 # new order
 
 # 1. create api webhook endpoint from supabase
