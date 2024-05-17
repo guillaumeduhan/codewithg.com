@@ -17,7 +17,7 @@ const items = [
 </script>
 
 <template>
-  <div class="grid w-full gap-4">
+  <div class="grid items-start w-full gap-4">
     <CustomLink v-for='(item, index) in items' :key='index' :title="item.title" :url="item.url" />
   </div>
 </template>

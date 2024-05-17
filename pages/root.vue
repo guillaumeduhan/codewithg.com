@@ -1,11 +1,11 @@
 <script setup>
 definePageMeta({
-  title: 'root'
+  title: 'Root'
 })
 </script>
 
 <template>
-  <div>
+  <div class="w-full">
     <MenuList />
   </div>
 </template>

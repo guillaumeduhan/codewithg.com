@@ -3,7 +3,7 @@ const loading = ref(false)
 </script>
 
 <template>
-  <div class="grid max-w-full gap-4 md:grid-cols-3">
+  <div class="grid gap-4 md:grid-cols-3 max-w-[1400px] mx-auto">
     <Card title="thedevelopercourse — 2024" description="$12" url="https://dub.sh/thedevelopercourse">
       <NuxtImg src="/thedevelopercourse.jpg" height="600px" class="mx-auto" />
     </Card>

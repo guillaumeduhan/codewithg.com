@@ -3,7 +3,7 @@ import Folder from '../public/icons/folder.svg';
 </script>
 
 <template>
-  <div class="flex items-center justify-center gap-6 my-8">
+  <div class="w-full mt-4">
     <!-- <CustomLink title="root" url="/root" /> -->
   </div>
 </template>
