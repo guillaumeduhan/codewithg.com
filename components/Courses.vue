@@ -10,7 +10,7 @@ const loading = ref(false)
     <Card title="Supacourse — 2024" description="$139" url="https://dub.sh/supacourse">
       <NuxtImg src="/supacourse.jpg" height="600px" class="mx-auto" />
     </Card>
-    <Card title="Next.js 14 — 2023" description="$10" url="https://dub.sh/nextjs-fr">
+    <Card title="Next.js 14 en français — 2023" description="$10" url="https://dub.sh/nextjs-fr">
       <NuxtImg src="/nextfr.jpg" height="600px" class="mx-auto" />
     </Card>
   </div>
