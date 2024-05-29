@@ -1,7 +1,7 @@
 <script setup>
 definePageMeta({
   title: 'CODEWITHG.COM',
-  description: 'CTO of Allocations.com, a finance SaaS Miami-based, I am running a YouTube channel: @codewithguillaume. I have led dozens of engineering teams across Paris, London, and Berlin.'
+  description: 'CTO of Allocations.com, a finance SaaS Miami-based, I am running a YouTube channel: @codewithguillaume. Currently living in Dubai.'
 })
 useHead({
   title:
