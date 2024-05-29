@@ -34,5 +34,38 @@ p {
 }
 
 .card {
-  @apply overflow-hidden relative transition cursor-pointer hover:scale-[101%] border border-neutral-800 rounded-xl;
+  @apply relative flex items-center overflow-hidden p-[1px] overflow-hidden transition w-full cursor-pointer hover:scale-[101%];
+
+  &::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 250%;
+		background-color: #1a232a;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-image: conic-gradient(transparent, rgb(12, 205, 140), transparent 30%);
+		animation: rotate 4s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 16px);
+		height: calc(100% - 16px);
+		background: #161616;
+		border-radius: 5px;
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
 }

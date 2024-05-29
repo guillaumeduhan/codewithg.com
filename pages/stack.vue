@@ -19,25 +19,20 @@ const items = [{
   title: "I switched to Plausible for managing all my analytics a long time ago.",
   component: Plausible
 },
-// {
-//   title: "Hashnode is the go-to platform when it comes to blogging.",
-//   component: Hashnode
-// }
 ]
 </script>
 
 <template>
   <div class="container grid gap-8 text-center lg:grid-cols-3">
-    <div v-for='(item, index) in items' :key='index' class="shadow-lg card shadow-neutral-800/35">
-      <div class="flex items-center justify-center w-full py-16 border-b border-neutral-800">
+    <div v-for='(item, index) in items' :key='index' class="flex-col overflow-hidden border shadow-lg border-neutral-800 shadow-neutral-800/35">
+    <div class="bg-[#161616] p-1">
+      <div class="flex flex-col items-center justify-center w-full py-8 border-b border-neutral-800">
         <component :is="item.component" class="text-xl grayscale" :style="'width: 200px; height: 40px;'" />
       </div>
-      <div class="grid gap-4 p-6">
-        <p class="text-lg font-[400] text-left text-white">{{ item.title }}</p>
-        <!-- <div class="flex items-center justify-start">
-          <UiButton variant="text" class="bg-transparent bg-neutral-800">Know more</UiButton>
-        </div> -->
+      <div class="grid gap-4 rounded">
+        <p class="p-6 text-base font-[400] text-left text-white">{{ item.title }}</p>
       </div>
+    </div>
     </div>
   </div>
 </template>
