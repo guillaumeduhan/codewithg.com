@@ -41,7 +41,7 @@ useHead({
 </script>
 
 <template>
-  <main class="p-4 grid gap-8">
+  <main class="grid gap-8 p-4 max-w-[1600px] mx-auto">
     <!-- <div>
       <div class="rounded-lg overflow-hidden border border-neutral-100 max-w-[1200px] mx-auto cursor-pointer hover:scale-[102%] transition">
         <NuxtImg src="/wrapper.png" />
@@ -51,6 +51,9 @@ useHead({
         <p>this app is coming soon</p>
       </div>
     </div> -->
-    <Login />
+    <div class="grid items-start gap-4 lg:grid-cols-3">
+      <Login />
+      <ProfileCard />
+    </div>
   </main>
 </template>
