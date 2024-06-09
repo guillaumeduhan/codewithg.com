@@ -2,13 +2,13 @@ const animate = require("tailwindcss-animate")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: 'selector',
   content: [
     './pages/**/*.{ts,tsx,vue}',
     './components/**/*.{ts,tsx,vue}',
     './app/**/*.{ts,tsx,vue}',
     './src/**/*.{ts,tsx,vue}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,6 +19,21 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        primary: {
+          '50': '#effef6',
+          '100': '#d9ffec',
+          '200': '#b6fcd9',
+          '300': '#7df8bd',
+          '400': '#3deb98',
+          '500': '#13d479',
+          '600': '#0abd69',
+          '700': '#0b8a50',
+          '800': '#0f6c41',
+          '900': '#0e5938',
+          '950': '#01321d',
+        }
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

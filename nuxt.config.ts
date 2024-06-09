@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",
-    "nuxt-svgo"
+    "nuxt-svgo",
   ],
   alias: {
     "@": "/<srcDir>",
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/assets/main.scss", "~/assets/Hellix/fonts.css"],
+  css: ["~/assets/main.scss"],
   postcss: {
     plugins: {
       tailwindcss: {},

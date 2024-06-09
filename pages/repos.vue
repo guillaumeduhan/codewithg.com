@@ -26,7 +26,7 @@ const items = ref([
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <div class="flex gap-2" v-for='(item, index) in items' :key='index'>
       <span>{{ item.title }}</span>
       <NuxtLink class="text-primary-500" :href="item.link">{{ item.link }}</NuxtLink>
