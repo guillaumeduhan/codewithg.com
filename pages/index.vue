@@ -54,6 +54,7 @@ useHead({
     <div class="grid items-start gap-4 lg:grid-cols-3">
       <Login />
       <ProfileCard />
+      <analytics-card />
     </div>
   </main>
 </template>
