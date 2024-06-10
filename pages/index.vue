@@ -33,7 +33,7 @@ useHead({
     {
       property: "og:description",
       content:
-        "CTO of Allocations.com, a SaaS company in finance based in Miami, I have also a YouTube channel: @codewithguillaume. With 15 years of experience in tech as a freelancer, consultant, and Lead Developer, I have led dozens of engineering teams across Paris, London, and Berlin.Thedevelopercourse is the culmination of my experience, and it is a pleasure to deliver it to you today.",
+        "CTO of Allocations.com, a finance SaaS Miami-based, I am running a YouTube channel: @codewithguillaume. Currently living in Dubai.",
     },
     { property: "og:site_name", content: "codewithg.com" },
   ],
@@ -41,5 +41,31 @@ useHead({
 </script>
 
 <template>
-  <Courses />
+  <main class="grid gap-8 p-4 max-w-[1600px] mx-auto">
+    <!-- <div>
+      <div class="rounded-lg overflow-hidden border border-neutral-100 max-w-[1200px] mx-auto cursor-pointer hover:scale-[102%] transition">
+        <NuxtImg src="/wrapper.png" />
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <IconsArrowUp />
+        <p>this app is coming soon</p>
+      </div>
+    </div> -->
+    <div class="flex items-center justify-center gap-2">
+        <p>copy/paste these components soon</p>
+        <IconsArrowUp class="rotate-180" />
+      </div>
+    <div class="grid items-start gap-4 lg:grid-cols-3">
+      <div class="grid gap-4">
+        <Login />
+      </div>
+      <div class="grid gap-4">
+        <ProfileCard />
+      </div>
+      <div class="grid gap-4">
+        <analytics-card />
+        <Upload />
+      </div>
+    </div>
+  </main>
 </template>
