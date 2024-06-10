@@ -1,8 +1,12 @@
+<script setup>
+const { openUrl } = useHelpers();
+</script>
+
 <template>
   <header class="container grid gap-4 mx-auto">
     <h1><span class="font-bold">Codewithg.com</span>. CTO of Allocations.com, previously Google, freelance for 15 years. Running a YouTube channel: @codewithguillaume. Currently living in Dubai.</h1>
     <div class="flex gap-2">
-      <button class="primary">Masterclass — $12</button>
+      <button class="primary" @click="openUrl('https://dub.sh/thedevelopercourse')">Masterclass — $12</button>
       <button class="youtube">
         <IconsYoutube />
         <span>178k</span>

@@ -51,10 +51,21 @@ useHead({
         <p>this app is coming soon</p>
       </div>
     </div> -->
+    <div class="flex items-center justify-center gap-2">
+        <p>copy/paste these components soon</p>
+        <IconsArrowUp class="rotate-180" />
+      </div>
     <div class="grid items-start gap-4 lg:grid-cols-3">
-      <Login />
-      <ProfileCard />
-      <analytics-card />
+      <div class="grid gap-4">
+        <Login />
+      </div>
+      <div class="grid gap-4">
+        <ProfileCard />
+      </div>
+      <div class="grid gap-4">
+        <analytics-card />
+        <Upload />
+      </div>
     </div>
   </main>
 </template>
