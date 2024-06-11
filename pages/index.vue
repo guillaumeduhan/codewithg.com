@@ -58,10 +58,11 @@ useHead({
     <div class="grid items-start gap-4 lg:grid-cols-3">
       <div class="grid gap-4">
         <Login />
+        <ProductCard />
       </div>
       <div class="grid gap-4">
         <ProfileCard />
-        <Slider />
+        <!-- <Slider /> -->
       </div>
       <div class="grid gap-4">
         <Upload />
