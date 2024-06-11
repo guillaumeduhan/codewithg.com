@@ -61,9 +61,10 @@ useHead({
       </div>
       <div class="grid gap-4">
         <ProfileCard />
-        <Upload />
+        <Slider />
       </div>
       <div class="grid gap-4">
+        <Upload />
         <analytics-card />
       </div>
     </div>
