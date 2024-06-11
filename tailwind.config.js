@@ -34,6 +34,9 @@ module.exports = {
           '950': '#01321d',
         }
       },
+      transitionProperty: {
+        'width': 'width'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
