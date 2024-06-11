@@ -14,7 +14,7 @@ const {
 <template>
   <div class="grid gap-12 border dark:border-neutral-600 rounded-xl mx-auto max-w-[500px] w-full shadow overflow-hidden">
     <div class="relative w-full h-32" :style="`background-color: ${background_color}`">
-			<div class="absolute w-20 h-20 overflow-hidden bg-blue-500 bg-cover border-2 border-white rounded-full cursor-pointer -bottom-10 left-6 group" :style="`background-image: url(${background_url ? background_url : null})`">
+			<div class="absolute w-20 h-20 overflow-hidden bg-blue-500 bg-cover border-2 border-white dark:border-neutral-600 rounded-full cursor-pointer -bottom-10 left-6 group" :style="`background-image: url(${background_url ? background_url : null})`">
 				<div class="items-center justify-center hidden w-full h-full text-white bg-white/30 group-hover:flex">
 					<svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24"><path fill="currentColor" d="M13 19c0 .7.13 1.37.35 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v8.35c-.63-.22-1.3-.35-2-.35V5H5v14zm.96-6.71l-2.75 3.54l-1.96-2.36L6.5 17h6.85c.4-1.12 1.12-2.09 2.05-2.79zM20 18v-3h-2v3h-3v2h3v3h2v-3h3v-2z"></path></svg>
 				</div>
@@ -34,7 +34,7 @@ const {
         <p class="text-xs font-[600]">{{ count }} followers</p>
       </header>
 			<div class="flex items-center gap-2">
-				<button class="blue">Connect</button>
+				<button class="blue">Follow</button>
 				<button class="outline">Message</button>
 			</div>
     </div>
@@ -50,7 +50,7 @@ button {
 	}
 
 	&.outline {
-		@apply bg-transparent text-blue-500 border-blue-500 hover:bg-blue-50;
+		@apply bg-transparent text-blue-500 border-blue-500 hover:bg-blue-50 hover:dark:bg-neutral-800;
 	}
 }
 </style>

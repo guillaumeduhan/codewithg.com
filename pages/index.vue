@@ -42,15 +42,6 @@ useHead({
 
 <template>
   <main class="grid gap-8 p-4 max-w-[1600px] mx-auto">
-    <!-- <div>
-      <div class="rounded-lg overflow-hidden border border-neutral-100 max-w-[1200px] mx-auto cursor-pointer hover:scale-[102%] transition">
-        <NuxtImg src="/wrapper.png" />
-      </div>
-      <div class="flex items-center justify-center gap-2">
-        <IconsArrowUp />
-        <p>this app is coming soon</p>
-      </div>
-    </div> -->
     <div class="flex items-center justify-center gap-2">
         <p>copy/paste these components soon</p>
         <IconsArrowUp class="rotate-180" />
@@ -62,11 +53,12 @@ useHead({
       </div>
       <div class="grid gap-4">
         <ProfileCard />
+        <EditPost />
         <!-- <Slider /> -->
       </div>
       <div class="grid gap-4">
         <Upload />
-        <analytics-card />
+        <AnalyticsCard />
       </div>
     </div>
   </main>
