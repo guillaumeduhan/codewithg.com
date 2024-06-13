@@ -50,14 +50,14 @@ useHead({
       <div class="grid gap-4">
         <Login />
         <ProductCard />
+        <div class="grid grid-cols-2 gap-4">
+          <Story />
+        </div>
       </div>
       <div class="grid gap-4">
         <ProfileCard />
         <EditPost />
-        <div class="grid grid-cols-2 gap-4">
-          <Story />
-        </div>
-        <!-- <Slider /> -->
+        <DocumentsItem />
       </div>
       <div class="grid gap-4">
         <Upload />

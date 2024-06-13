@@ -4,6 +4,7 @@ gt:
 	git push
 
 gm:
+	git checkout main
 	git pull
 	yarn && yarn dev
 

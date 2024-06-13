@@ -3,11 +3,11 @@
 
 <template>
   <div class="grid relative border dark:border-neutral-600 rounded-xl mx-auto max-w-[500px] w-full shadow overflow-hidden">
-  <div class="flex absolute top-3 right-3 z-50">
-        <div class="rounded-full px-2 py-1 text-xs bg-blue-500 text-white font-bold">Very good deal</div>
-      </div>
+    <div class="absolute z-50 flex top-3 right-3">
+      <div class="px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded-full">Very good deal</div>
+    </div>
     <Slider />
-    <div class="p-4 grid gap-1">
+    <div class="grid gap-1 p-4">
       <header class="flex items-center justify-between">
         <h2>BMW 5 Series 530e</h2>
         <h2 class="font-bold">AED 165,000</h2>
