@@ -52,6 +52,7 @@ useHead({
         <ProductCard />
         <div class="grid grid-cols-2 gap-4">
           <Story />
+          <Stories />
         </div>
       </div>
       <div class="grid gap-4">
