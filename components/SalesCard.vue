@@ -38,7 +38,7 @@ const {
       </div>
       <div class="relative flex items-end justify-end gap-4 text-sm font-[500] text-neutral-400">
         <div v-for='(item, index) in items' :key='index' class="relative flex flex-col items-end justify-end h-24 h-full gap-2">
-          <div :class="`w-6 rounded ${index === items.length - 1 ? positive ? 'bg-emerald-500': 'bg-red-500' : 'bg-neutral-200 dark:bg-neutral-600'}`" :style="`height: ${item.value}%;`" />
+          <div :class="`w-6 rounded ${index === items.length - 1 ? positive ? 'bg-emerald-500': 'bg-red-500' : 'bg-neutral-200 dark:bg-neutral-600'}`" :style="`height: ${item.value / 2}px;`" />
           <span>{{item.legend}}</span>
         </div>
       </div>
