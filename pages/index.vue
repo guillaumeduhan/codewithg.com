@@ -54,11 +54,12 @@ useHead({
           <Story />
           <Stories />
         </div>
+        <DocumentsItem />
       </div>
       <div class="grid gap-4">
         <ProfileCard />
         <EditPost />
-        <DocumentsItem />
+        <Calendar />
       </div>
       <div class="grid gap-4">
         <Upload />

@@ -37,7 +37,7 @@ const getColor = computed(() => {
       <p :class="`${getColor} font-[500]`">{{ getMetric }}</p>
     </div>
     <div class="flex items-end justify-between">
-      <p class="text-[40px] font-[600]"><span class="text-neutral-400">$</span>{{value}}</p>
+      <p class="text-[40px] font-[600]"><span class="text-neutral-300">$</span>{{value}}</p>
       <p class="text-neutral-400">$2.737,21</p>
     </div>
   </div>

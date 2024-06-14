@@ -33,7 +33,7 @@ const {
     </header>
     <main class="grid items-end grid-cols-2 gap-4">
       <div>
-        <h2 class="text-[32px] font-[600]"><span class="text-neutral-400">$</span>{{value}}</h2>
+        <h2 class="text-[32px] font-[600]"><span class="text-neutral-300">$</span>{{value}}</h2>
         <p class="text-sm text-neutral-400">This month, your global revenue {{ positive ? 'increased' : 'decreased' }} by {{progression}}%</p>
       </div>
       <div class="relative flex items-end justify-end gap-4 text-sm font-[500] text-neutral-400">

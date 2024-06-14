@@ -50,7 +50,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class=" gap-4 min-h-[375px] border dark:border-neutral-600 rounded-xl mx-auto w-full shadow overflow-hidden cursor-pointer transition group cursor-pointer bg-cover bg-center bg-black transition duration-200" :style="`background-image: url(${stories[current].background_url ? stories[current].background_url : null})`" @click="nextStory">
+  <div class=" gap-4 min-h-[375px] border dark:border-transparent rounded-xl mx-auto w-full shadow overflow-hidden cursor-pointer transition group cursor-pointer bg-cover bg-center bg-black transition duration-200" :style="`background-image: url(${stories[current].background_url ? stories[current].background_url : null})`" @click="nextStory">
     <div class="flex items-center gap-2 p-3">
       <div class="w-full h-1 overflow-hidden rounded bg-neutral-200/20" v-for='(item, index) in stories' :key='index'>
         <div :class="`h-full ${current === index ? 'animate bg-neutral-300' : current < index ? '' : 'bg-neutral-300'}`"></div>
