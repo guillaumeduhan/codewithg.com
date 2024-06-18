@@ -50,21 +50,24 @@ useHead({
       <div class="grid gap-4">
         <Login />
         <ProductCard />
-        <div class="grid grid-cols-2 gap-4">
-          <Story />
-          <Stories />
-        </div>
-        <DocumentsItem />
       </div>
       <div class="grid gap-4">
         <ProfileCard />
         <EditPost />
+        <div class="grid grid-cols-2 gap-4">
+          <Story />
+          <Stories />
+        </div>
       </div>
       <div class="grid gap-4">
         <Upload />
         <AnalyticsCard />
         <CompletionCard />
         <SalesCard />
+        <div class="grid grid-cols-2 gap-4">
+          <Weather />
+          <Weather :night="true" />
+        </div>
       </div>
     </div>
   </main>
