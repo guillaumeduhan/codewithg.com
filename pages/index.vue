@@ -59,7 +59,6 @@ useHead({
       <div class="grid gap-4">
         <ProfileCard />
         <EditPost />
-        <Calendar />
       </div>
       <div class="grid gap-4">
         <Upload />
