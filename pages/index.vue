@@ -53,6 +53,7 @@ useHead({
       </div>
       <div class="grid gap-4">
         <ProfileCard />
+        <ProfileCard :small="true" />
         <EditPost />
         <div class="grid grid-cols-2 gap-4">
           <Story />
