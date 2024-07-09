@@ -65,6 +65,7 @@ useHead({
         <AnalyticsCard />
         <CompletionCard />
         <SalesCard />
+        <Job />
         <div class="grid grid-cols-2 gap-4">
           <Weather />
           <Weather :night="true" />
