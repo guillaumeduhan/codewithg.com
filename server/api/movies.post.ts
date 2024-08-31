@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
   console.log("here")
-  const movies = [
+  let movies = [
     {
       title: "Inception",
       director: "Christopher Nolan",
@@ -29,6 +29,7 @@ export default defineEventHandler(async (event) => {
   ]
 
   const body = await readBody(event)
-  console.log(body)
-  return movies.push(body)
+  return {
+    movies: [...movies, body]
+  }
 })
