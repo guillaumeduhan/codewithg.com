@@ -49,7 +49,7 @@ export default defineNuxtConfig({
   },
   security: {
     allowedMethodsRestricter: {
-      methods: ['GET']
+      methods: ['GET', 'POST']
     }
   }
 });
