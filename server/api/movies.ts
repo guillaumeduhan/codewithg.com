@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
-  console.log("here")
+  // Shared movies array
   let movies = [
     {
       title: "Inception",
@@ -26,10 +26,20 @@ export default defineEventHandler(async (event) => {
       director: "Quentin Tarantino",
       year: 1994
     }
-  ]
+  ];
 
-  const body = await readBody(event)
-  return {
-    movies: [...movies, body]
+  // Determine the HTTP method
+  if (event.req.method === 'GET') {
+    // Handle GET request
+    return {
+      movies
+    };
+  } else if (event.req.method === 'POST') {
+    // Handle POST request
+    const body = await readBody(event);
+    movies = [...movies, body]; // Add the new movie to the array
+    return {
+      movies
+    };
   }
-})
+});
