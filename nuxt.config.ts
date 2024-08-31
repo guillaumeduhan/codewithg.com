@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",
     "nuxt-svgo",
+    "nuxt-security"
   ],
   alias: {
     "@": "/<srcDir>",
@@ -23,7 +24,7 @@ export default defineNuxtConfig({
         }, {
           defer: true,
           async: true,
-          src:"https://platform.twitter.com/widgets.js"
+          src: "https://platform.twitter.com/widgets.js"
         }
       ],
     },
@@ -45,5 +46,10 @@ export default defineNuxtConfig({
      * @default "@/components/ui"
      */
     componentDir: '@/components/ui'
+  },
+  security: {
+    allowedMethodsRestricter: {
+      methods: ['GET']
+    }
   }
 });
