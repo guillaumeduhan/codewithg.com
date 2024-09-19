@@ -31,7 +31,7 @@ const { openUrl } = useHelpers();
         <h2 class="font-[600] text-xl">thedevelopercourse.com</h2>
         <p>A Masterclass for Full-Stack Devs I wish I had ten years ago.</p>
         <div>
-          <button class="font-[600] bg-emerald-500">Get access for $12</button>
+          <button class="font-[600] bg-emerald-500">Get access</button>
         </div>
       </div>
     </div>
