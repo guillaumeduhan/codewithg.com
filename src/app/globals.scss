@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+}
+
 a {
-  @apply text-blue-500 hover:text-blue-600 underline;
+  @apply text-blue-700 hover:text-blue-900 underline;
 
   &.aborted {
     @apply pointer-events-none;
