@@ -16,6 +16,10 @@ export default function Menu() {
       title: "Dream Garage",
       path: "/dream-garage"
     },
+    {
+      title: "Templates",
+      path: "/templates"
+    },
     // {
     //   title: "Projects",
     //   path: "/projects"
