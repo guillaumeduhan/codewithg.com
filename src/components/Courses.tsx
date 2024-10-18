@@ -11,9 +11,6 @@ export default function Courses() {
     }
   ]
   return <div className="grid gap-4">
-    <header>
-      <h1 className="font-[400]">Courses</h1>
-    </header>
     <div className="grid gap-1">
       {courses.map((item, index) => (
         <LinkItem key={index} {...{ item }} />

@@ -1,6 +1,6 @@
 {
-  "name": "best-of-nextjs",
-  "version": "0.1.0",
+  "name": "codewithg.com",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@number-flow/react": "^0.2.0",
+    "dayjs": "^1.11.13",
     "lucide-react": "^0.445.0",
     "next": "14.2.13",
+    "next-view-transitions": "^0.3.2",
+    "numeral": "^2.0.6",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.79.3"

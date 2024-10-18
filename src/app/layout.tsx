@@ -1,4 +1,6 @@
+import Menu from "@/components/Menu";
 import type { Metadata } from "next";
+import { ViewTransitions } from 'next-view-transitions';
 import "./globals.scss";
 
 export const metadata: Metadata = {
@@ -12,12 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`container`}
-      >
-        {children}
-      </body>
+    <html lang="en" >
+      <ViewTransitions>
+        <body
+          className={`p-6 grid gap-4`}
+        >
+          <Menu />
+          {children}
+        </body>
+      </ViewTransitions>
     </html>
   );
 }
