@@ -1,7 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/jobs/page": "app/jobs/page.js",
-  "/templates/page": "app/templates/page.js",
-  "/dream-garage/page": "app/dream-garage/page.js"
-}
