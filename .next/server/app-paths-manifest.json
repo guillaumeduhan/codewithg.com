@@ -1,3 +1,9 @@
 {
-  "/jobs/page": "app/jobs/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/dream-garage/page": "app/dream-garage/page.js",
+  "/jobs/page": "app/jobs/page.js",
+  "/courses/page": "app/courses/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import dayjs from "dayjs";
 import numeral from "numeral";
 var relativeTime = require("dayjs/plugin/relativeTime");
@@ -5,10 +6,10 @@ dayjs.extend(relativeTime)
 
 const JobItem = ({ item }: any) => {
   const { title, location, remote, created_at, entry_price, end_price, company_name } = item;
-  return <div className="grid p-1 border rounded-xl bg-neutral-100 shadow cursor-pointer transition overflow-hidden hover:scale-[102%] hover:rotate-3">
-    <div className="bg-white p-3 grid gap-2 rounded-lg shadow">
+  return <div className="grid p-1 border rounded-xl bg-neutral-100 dark:bg-transparent dark:border-slate-800 shadow cursor-pointer transition overflow-hidden hover:scale-[102%] hover:rotate-3">
+    <div className="bg-white dark:bg-slate-800 p-3 grid gap-2 rounded-lg shadow">
       <header className="flex gap-2 items-center ">
-        <div className="w-12 h-12 bg-neutral-200 rounded-lg" />
+        <div className="w-12 h-12 bg-neutral-200 dark:bg-slate-700 rounded-lg" />
         <p className="font-[600]">{company_name}</p>
       </header>
       <div>
@@ -55,7 +56,7 @@ export default function Jobs() {
     }
   ]
   return <div className="grid container">
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid lg:grid-cols-3 gap-4">
       {jobs.map((item, index) => (
         <JobItem key={index} {...{ item }} />
       ))}

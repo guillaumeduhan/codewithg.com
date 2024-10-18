@@ -9,12 +9,12 @@ export default function Menu() {
       path: "/"
     },
     {
-      title: "Courses",
-      path: "/courses"
-    },
-    {
       title: "Jobs",
       path: "/jobs"
+    },
+    {
+      title: "Dream Garage",
+      path: "/dream-garage"
     },
     // {
     //   title: "Projects",

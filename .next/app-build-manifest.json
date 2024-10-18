@@ -1,25 +1,55 @@
 {
   "pages": {
-    "/jobs/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/jobs/page.js"
+    "/_not-found/page": [
+      "static/chunks/webpack-9415a19e9d88b1e9.js",
+      "static/chunks/fd9d1056-51bf3050116b06f6.js",
+      "static/chunks/23-67c4e31e7a6fcfdb.js",
+      "static/chunks/main-app-815a6270215d1209.js",
+      "static/chunks/app/_not-found/page-f0f9368dab8201a2.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-9415a19e9d88b1e9.js",
+      "static/chunks/fd9d1056-51bf3050116b06f6.js",
+      "static/chunks/23-67c4e31e7a6fcfdb.js",
+      "static/chunks/main-app-815a6270215d1209.js",
+      "static/css/480d57d190ff8ea1.css",
+      "static/chunks/451-bbd07f003f384506.js",
+      "static/chunks/app/layout-cb51934c0770e89f.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+    "/dream-garage/page": [
+      "static/chunks/webpack-9415a19e9d88b1e9.js",
+      "static/chunks/fd9d1056-51bf3050116b06f6.js",
+      "static/chunks/23-67c4e31e7a6fcfdb.js",
+      "static/chunks/main-app-815a6270215d1209.js",
+      "static/chunks/app/dream-garage/page-83c6311512065f35.js"
+    ],
+    "/jobs/page": [
+      "static/chunks/webpack-9415a19e9d88b1e9.js",
+      "static/chunks/fd9d1056-51bf3050116b06f6.js",
+      "static/chunks/23-67c4e31e7a6fcfdb.js",
+      "static/chunks/main-app-815a6270215d1209.js",
+      "static/chunks/app/jobs/page-9294b13de1c9576a.js"
     ],
     "/courses/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/courses/page.js"
+      "static/chunks/webpack-9415a19e9d88b1e9.js",
+      "static/chunks/fd9d1056-51bf3050116b06f6.js",
+      "static/chunks/23-67c4e31e7a6fcfdb.js",
+      "static/chunks/main-app-815a6270215d1209.js",
+      "static/chunks/app/courses/page-282d89fccfa0aa6f.js"
+    ],
+    "/projects/page": [
+      "static/chunks/webpack-9415a19e9d88b1e9.js",
+      "static/chunks/fd9d1056-51bf3050116b06f6.js",
+      "static/chunks/23-67c4e31e7a6fcfdb.js",
+      "static/chunks/main-app-815a6270215d1209.js",
+      "static/chunks/app/projects/page-76f73c46c064c362.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-9415a19e9d88b1e9.js",
+      "static/chunks/fd9d1056-51bf3050116b06f6.js",
+      "static/chunks/23-67c4e31e7a6fcfdb.js",
+      "static/chunks/main-app-815a6270215d1209.js",
+      "static/chunks/app/page-5c541be01fbc70c0.js"
     ]
   }
 }

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  @apply bg-transparent dark:bg-slate-900 dark:text-neutral-200;
 }
 
 a {

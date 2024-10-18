@@ -1,3 +1,4 @@
+import DarkMode from '@/components/DarkMode';
 import Menu from "@/components/Menu";
 import type { Metadata } from "next";
 import { ViewTransitions } from 'next-view-transitions';
@@ -17,9 +18,12 @@ export default function RootLayout({
     <html lang="en" >
       <ViewTransitions>
         <body
-          className={`p-6 grid gap-4`}
+          className={`p-2 xl:p-6 grid gap-4`}
         >
-          <Menu />
+          <header className="flex items-center justify-between">
+            <Menu />
+            <DarkMode />
+          </header>
           {children}
         </body>
       </ViewTransitions>
