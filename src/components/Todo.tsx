@@ -80,7 +80,7 @@ const TodoList: React.FC = () => {
   }
 
   return (
-    <div className="max-w-[600px] grid gap-4">
+    <div className="max-w-[600px] mx-auto grid gap-4">
       <header>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 px-3 py-2">
           <div>
@@ -105,7 +105,7 @@ const TodoList: React.FC = () => {
             <p className="text-neutral-400 mb-4">All tasks here are going to be saved locally.</p>
             <div className="grid gap-2">
               <Input
-                className="bg-white text-center"
+                className="text-center"
                 type="text"
                 value={newTask}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTask(e.target.value)}
@@ -122,7 +122,15 @@ const TodoList: React.FC = () => {
       <div className="grid gap-1">
         {Object.entries(groupedTasks).map(([date, dateTasks]) => (
           <div key={date} className="grid gap-1">
-            <div className="px-3 py-2 dark:bg-slate-800">{date} ({dateTasks.length})</div>
+            <header className="flex gap-1 items-center justify-between dark:bg-slate-800 px-3 py-2">
+              <div className="whitespace-nowrap">{date} ({dateTasks.length})</div>
+              <div className="w-32 overflow-hidden bg-gray-200 rounded-full h-1 dark:bg-slate-700">
+                <div
+                  className="bg-black dark:bg-neutral-400 h-1 rounded-full"
+                  style={{ width: `${Math.round((dateTasks.filter((task: Task) => task.done).length / dateTasks.length) * 100)}%` }}
+                ></div>
+              </div>
+            </header>
             <div className="grid gap-2 bg-white dark:bg-transparent py-2">
               {dateTasks.map((task: Task, i: number) => (
                 <div key={task.id} className={`flex items-center gap-2 cursor-pointer bg-white dark:bg-transparent transition group px-4 py-3 dark:hover:bg-slate-800 border dark:border-slate-800 rounded-lg shadow z-${i + 1}`}>
