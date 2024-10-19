@@ -2,6 +2,7 @@ import DarkMode from '@/components/DarkMode';
 import Menu from "@/components/Menu";
 import type { Metadata } from "next";
 import { ViewTransitions } from 'next-view-transitions';
+import { Suspense } from 'react';
 import "./globals.scss";
 
 export const metadata: Metadata = {
@@ -24,7 +25,9 @@ export default function RootLayout({
             <Menu />
             <DarkMode />
           </header>
-          {children}
+          <Suspense>
+            {children}
+          </Suspense>
         </body>
       </ViewTransitions>
     </html>

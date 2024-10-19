@@ -13,13 +13,17 @@ export default function Menu() {
       path: "/jobs"
     },
     {
-      title: "Dream Garage",
-      path: "/dream-garage"
+      title: "Todo",
+      path: "/todo"
     },
-    {
-      title: "Templates",
-      path: "/templates"
-    },
+    // {
+    //   title: "Dream Garage",
+    //   path: "/dream-garage"
+    // },
+    // {
+    //   title: "Templates",
+    //   path: "/templates"
+    // },
     // {
     //   title: "Projects",
     //   path: "/projects"

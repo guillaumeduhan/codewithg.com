@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply outline-none focus:ring-0 ring-0 #{!important};
+}
+
 body {
   @apply bg-transparent dark:bg-slate-900 dark:text-neutral-200;
 }
@@ -23,5 +27,15 @@ a {
   }
   &.alive {
     @apply text-green-500 bg-green-50;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  input {
+    @apply bg-transparent #{!important};
   }
 }
