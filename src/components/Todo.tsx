@@ -68,12 +68,27 @@ const TodoList: React.FC = () => {
 
   const totalTasks: number = tasks.length;
   const averageTasksPerDay: number = totalTasks / (Object.keys(groupedTasks).length || 1);
-  const averageTimeSpent: number = tasks.reduce((acc: number, task: Task) => {
-    if (task.done && task.finished_at) {
-      return acc + dayjs(task.finished_at).diff(task.created_at, 'minute');
-    }
-    return acc;
-  }, 0) / (tasks.filter((task: any) => task.done).length || 1);
+
+  function averageTimeSpent() {
+    const totalMinutes = tasks.reduce((acc: number, task: Task) => {
+      if (task.done && task.finished_at) {
+        return acc + dayjs(task.finished_at).diff(task.created_at, 'minute');
+      }
+      return acc;
+    }, 0);
+
+    const doneTasksCount = tasks.filter((task: any) => task.done).length || 1;
+
+    const averageTimeSpent: number = totalMinutes / doneTasksCount;
+
+    // Convert the average time spent from minutes to days, hours, and minutes
+    const days = Math.floor(averageTimeSpent / (60 * 24)); // 1 day = 60 * 24 minutes
+    const hours = Math.floor((averageTimeSpent % (60 * 24)) / 60); // 1 hour = 60 minutes
+    const minutes = Math.floor(averageTimeSpent % 60); // Remaining minutes
+
+    return `${days} days, ${hours}h${minutes}min`;
+  }
+
 
   if (!hasMounted) {
     return null; // Or a loader if you want to show one
@@ -92,7 +107,7 @@ const TodoList: React.FC = () => {
             <h2>Average per Day</h2>
           </div>
           <div>
-            <p className="text-2xl">{averageTimeSpent.toFixed(0)} min</p>
+            <p className="text-2xl">{averageTimeSpent()}</p>
             <h2>Average time</h2>
           </div>
         </div>
@@ -120,33 +135,30 @@ const TodoList: React.FC = () => {
       </header>
 
       <div className="grid gap-1">
-        {Object.entries(groupedTasks).map(([date, dateTasks]) => (
-          <div key={date} className="grid gap-1">
-            <header className="flex gap-1 items-center justify-between dark:bg-slate-800 px-3 py-2">
-              <div className="whitespace-nowrap">{date} ({dateTasks.length})</div>
-              <div className="w-32 overflow-hidden bg-gray-200 rounded-full h-1 dark:bg-slate-700">
-                <div
-                  className="bg-black dark:bg-neutral-400 h-1 rounded-full"
-                  style={{ width: `${Math.round((dateTasks.filter((task: Task) => task.done).length / dateTasks.length) * 100)}%` }}
-                ></div>
-              </div>
-            </header>
-            <div className="grid gap-2 bg-white dark:bg-transparent py-2">
-              {dateTasks.map((task: Task, i: number) => (
-                <div key={task.id} className={`flex items-center gap-2 cursor-pointer bg-white dark:bg-transparent transition group px-4 py-3 dark:hover:bg-slate-800 border dark:border-slate-800 rounded-lg shadow z-${i + 1}`}>
-                  <div onClick={() => toggleTask(task.id)} className="w-full grid gap-2">
-                    {!task.done && <Circle className="text-neutral-300" />}
-                    {task.done && <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 13.8l-2.15-2.15q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7L9.9 15.9q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" /></svg>}
-                    <div>{task.title}</div>
-                  </div>
+        {tasks
+          .sort((a: any, b: any) => {
+            const dateA = new Date(a.created_at).getTime();
+            const dateB = new Date(b.created_at).getTime();
+            return dateB - dateA; // Descending order
+          })
+          .map((task: Task, i: number) => (
+            <div key={task.id} className={`flex items-center gap-2 cursor-pointer bg-white dark:bg-transparent transition group px-4 py-3 dark:hover:bg-slate-800 border dark:border-slate-800 rounded-lg shadow z-${i + 1}`}>
+              <div onClick={() => toggleTask(task.id)} className="w-full grid gap-2">
+                <div className="flex items-start justify-between">
+                  {!task.done && <Circle className="text-neutral-300" />}
+                  {task.done && <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 13.8l-2.15-2.15q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7L9.9 15.9q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" /></svg>}
+                  <span className="text-neutral-500">{dayjs(task.created_at).format('dddd DD MMM')}</span>
+                </div>
+                <div className="flex items-center justify-between gap-1">
+                  <span>{task.title}</span>
+
                   <div onClick={() => removeTask(task.id)} className="hidden group-hover:flex">
-                    <Trash2 className="h-4 w-4" />
+                    <Trash2 className="h-4 w-4 text-red-400" />
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
