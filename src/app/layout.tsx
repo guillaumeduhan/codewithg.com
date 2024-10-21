@@ -1,5 +1,5 @@
 import DarkMode from '@/components/DarkMode';
-import Menu from "@/components/Menu";
+import Menu from '@/components/Menu';
 import type { Metadata } from "next";
 import { ViewTransitions } from 'next-view-transitions';
 import { Suspense } from 'react';
