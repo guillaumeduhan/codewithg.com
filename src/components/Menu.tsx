@@ -15,6 +15,10 @@ export default function Menu() {
       path: "/jobs"
     },
     {
+      title: "Repositories",
+      path: "/repos"
+    },
+    {
       title: "Todo",
       path: "/todo"
     },
