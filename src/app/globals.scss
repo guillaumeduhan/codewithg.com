@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply outline-none focus:ring-0 ring-0 #{!important};
+}
+
+body {
+  @apply bg-transparent dark:bg-slate-900 dark:text-neutral-200;
+}
+
+a {
+  @apply text-blue-700 hover:text-blue-900 underline;
+
+  &.aborted {
+    @apply pointer-events-none;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  input {
+    @apply #{!important};
+  }
+
+  .tag {
+    @apply bg-neutral-50 dark:bg-transparent text-neutral-600 border dark:border-slate-700 dark:text-slate-500 rounded-full px-2 py-1 text-[12px];
+  }
+}
