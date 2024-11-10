@@ -1,5 +1,4 @@
 import DarkMode from '@/components/DarkMode';
-import Menu from '@/components/Menu';
 import type { Metadata } from "next";
 import { ViewTransitions } from 'next-view-transitions';
 import { Suspense } from 'react';
@@ -22,7 +21,7 @@ export default function RootLayout({
           className={`p-2 xl:p-6 grid gap-4`}
         >
           <header className="flex items-center justify-between">
-            <Menu />
+            {/* <Menu /> */}
             <DarkMode />
           </header>
           <Suspense>
