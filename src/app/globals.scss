@@ -31,3 +31,9 @@ a {
     @apply bg-neutral-50 dark:bg-transparent text-neutral-600 border dark:border-slate-700 dark:text-slate-500 rounded-full px-2 py-1 text-[12px];
   }
 }
+
+pre code {
+  display: block;
+  white-space: pre;
+  font-family: monospace;
+}
