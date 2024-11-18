@@ -1,6 +1,0 @@
-const Header_vue_vue_type_style_index_0_scoped_fbb0381b_lang = "button[data-v-fbb0381b]{border-radius:.25rem;font-size:.875rem;line-height:1.25rem;padding:.5rem 1rem;--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}button.primary[data-v-fbb0381b]{--tw-bg-opacity:1;background-color:rgb(23 23 23/var(--tw-bg-opacity));--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}button.primary[data-v-fbb0381b]:hover{--tw-bg-opacity:1;background-color:rgb(38 38 38/var(--tw-bg-opacity))}button.primary[data-v-fbb0381b]:where(.dark,.dark *){--tw-bg-opacity:1;background-color:rgb(38 38 38/var(--tw-bg-opacity))}button.youtube[data-v-fbb0381b]{display:flex;gap:.25rem;--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity))}button.youtube[data-v-fbb0381b]:hover{--tw-bg-opacity:1;background-color:rgb(239 68 68/var(--tw-bg-opacity))}button.youtube[data-v-fbb0381b]:where(.dark,.dark *){--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity))}button.youtube[data-v-fbb0381b]:where(.dark,.dark *){--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}";
-
-const HeaderStyles_cicmIwJ6 = [Header_vue_vue_type_style_index_0_scoped_fbb0381b_lang];
-
-export { HeaderStyles_cicmIwJ6 as default };
-//# sourceMappingURL=Header-styles.cicmIwJ6.mjs.map
