@@ -3,7 +3,7 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from 'react';
 import { useLocalStorage } from 'react-use';
 
-export default function DarkMode() {
+const DarkMode = () => {
   const [dark, setDark] = useState(false);
   const [value, setValue, remove] = useLocalStorage('dark-mode', false);
 
@@ -27,3 +27,5 @@ export default function DarkMode() {
     {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
   </div>;
 }
+
+export default DarkMode;
